@@ -28,26 +28,27 @@ export default function ProductCard({ product }: ProductCardProps) {
           />
           {/* Badge */}
           {product.badge && (
-            <span className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold text-white ${
+            <span className={`absolute top-3 right-3 px-3 py-1.5 rounded-full text-xs font-bold text-white ${
               product.isSale ? 'bg-red-400' : 'bg-pink-primary'
             }`}>
               {product.badge}
             </span>
           )}
-          {/* Hover actions */}
-          <div className="absolute bottom-3 left-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          {/* Wishlist */}
+          <button
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+            className="absolute top-3 left-3 bg-white/80 backdrop-blur-sm text-text-primary border-none p-2 rounded-full cursor-pointer hover:bg-white hover:text-pink-primary transition-all opacity-0 group-hover:opacity-100"
+          >
+            <Heart size={16} />
+          </button>
+          {/* Add to cart */}
+          <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <button
               onClick={handleAddToCart}
-              className="flex-1 bg-pink-primary text-white border-none py-2.5 rounded-xl font-bold text-sm cursor-pointer hover:bg-pink-dark transition-colors flex items-center justify-center gap-2"
+              className="w-full bg-pink-primary text-white border-none py-2.5 rounded-xl font-bold text-sm cursor-pointer hover:bg-pink-dark transition-colors flex items-center justify-center gap-2"
             >
               <ShoppingBag size={16} />
               הוסף לסל
-            </button>
-            <button
-              onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
-              className="bg-white text-pink-primary border-none p-2.5 rounded-xl cursor-pointer hover:bg-pink-light transition-colors shadow-sm"
-            >
-              <Heart size={16} />
             </button>
           </div>
         </div>
@@ -56,9 +57,9 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="p-4">
           <h3 className="text-text-primary font-medium text-sm mb-2 truncate">{product.name}</h3>
           <div className="flex items-center gap-2">
-            <span className="text-pink-primary font-bold text-lg">₪{product.price}</span>
+            <span className="text-pink-primary font-bold text-lg">{product.price} &#8362;</span>
             {product.originalPrice && (
-              <span className="text-text-secondary line-through text-sm">₪{product.originalPrice}</span>
+              <span className="text-text-secondary line-through text-sm">{product.originalPrice} &#8362;</span>
             )}
           </div>
           {/* Color dots */}
