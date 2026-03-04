@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ShoppingBag, Search, User, Menu, X } from 'lucide-react';
+import { ShoppingBag, Search, User, Heart, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { useCart } from '../../context/CartContext';
 
@@ -8,13 +8,8 @@ export default function Header() {
   const { totalItems } = useCart();
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
-      {/* Top bar */}
-      <div className="bg-pink-primary text-white text-center py-2 text-sm font-light">
-        משלוח חינם בקנייה מעל ₪200 ✨
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Mobile menu button */}
         <button
           className="md:hidden bg-transparent border-none p-1"
@@ -25,37 +20,37 @@ export default function Header() {
 
         {/* Logo */}
         <Link to="/" className="flex items-center no-underline">
-          <h1 className="text-3xl font-black tracking-wide text-pink-primary" style={{ fontFamily: 'Heebo' }}>
+          <h1 className="text-3xl font-black tracking-wider text-pink-primary" style={{ fontFamily: 'Heebo' }}>
             DORO
           </h1>
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link to="/" className="text-text-primary no-underline hover:text-pink-primary transition-colors font-medium">
-            דף הבית
-          </Link>
-          <Link to="/shop" className="text-text-primary no-underline hover:text-pink-primary transition-colors font-medium">
+          <Link to="/shop" className="text-text-primary no-underline hover:text-pink-primary transition-colors font-medium text-sm">
             חנות
           </Link>
-          <Link to="/shop?category=מבצעים" className="text-text-primary no-underline hover:text-pink-primary transition-colors font-medium">
-            מבצעים
-          </Link>
-          <a href="#about" className="text-text-primary no-underline hover:text-pink-primary transition-colors font-medium">
-            אודות
+          <a href="#about" className="text-text-primary no-underline hover:text-pink-primary transition-colors font-medium text-sm">
+            מי אנחנו
           </a>
-          <a href="#contact" className="text-text-primary no-underline hover:text-pink-primary transition-colors font-medium">
-            צרו קשר
+          <a href="#loyalty" className="text-text-primary no-underline hover:text-pink-primary transition-colors font-medium text-sm">
+            הצטרפות לדורו
+          </a>
+          <a href="#contact" className="text-text-primary no-underline hover:text-pink-primary transition-colors font-medium text-sm">
+            יצירת קשר
           </a>
         </nav>
 
         {/* Icons */}
-        <div className="flex items-center gap-4">
-          <button className="bg-transparent border-none p-1 cursor-pointer text-text-primary hover:text-pink-primary transition-colors">
+        <div className="flex items-center gap-5">
+          <button className="bg-transparent border-none p-0 cursor-pointer text-text-primary hover:text-pink-primary transition-colors">
             <Search size={20} />
           </button>
-          <button className="bg-transparent border-none p-1 cursor-pointer text-text-primary hover:text-pink-primary transition-colors">
+          <button className="bg-transparent border-none p-0 cursor-pointer text-text-primary hover:text-pink-primary transition-colors">
             <User size={20} />
+          </button>
+          <button className="bg-transparent border-none p-0 cursor-pointer text-text-primary hover:text-pink-primary transition-colors">
+            <Heart size={20} />
           </button>
           <Link to="/cart" className="relative text-text-primary hover:text-pink-primary transition-colors">
             <ShoppingBag size={20} />
@@ -72,20 +67,17 @@ export default function Header() {
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4">
           <nav className="flex flex-col gap-4">
-            <Link to="/" onClick={() => setMenuOpen(false)} className="text-text-primary no-underline hover:text-pink-primary font-medium py-2">
-              דף הבית
-            </Link>
             <Link to="/shop" onClick={() => setMenuOpen(false)} className="text-text-primary no-underline hover:text-pink-primary font-medium py-2">
               חנות
             </Link>
-            <Link to="/shop?category=מבצעים" onClick={() => setMenuOpen(false)} className="text-text-primary no-underline hover:text-pink-primary font-medium py-2">
-              מבצעים
-            </Link>
             <a href="#about" onClick={() => setMenuOpen(false)} className="text-text-primary no-underline hover:text-pink-primary font-medium py-2">
-              אודות
+              מי אנחנו
+            </a>
+            <a href="#loyalty" onClick={() => setMenuOpen(false)} className="text-text-primary no-underline hover:text-pink-primary font-medium py-2">
+              הצטרפות לדורו
             </a>
             <a href="#contact" onClick={() => setMenuOpen(false)} className="text-text-primary no-underline hover:text-pink-primary font-medium py-2">
-              צרו קשר
+              יצירת קשר
             </a>
           </nav>
         </div>
