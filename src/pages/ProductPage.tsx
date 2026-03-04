@@ -42,16 +42,16 @@ export default function ProductPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
-      <div className="flex items-center gap-2 text-sm text-text-secondary mb-6">
-        <Link to="/" className="text-text-secondary no-underline hover:text-pink-primary">דף הבית</Link>
+      <div className="flex items-center gap-2 text-sm text-text-secondary mb-8">
+        <Link to="/" className="text-text-secondary no-underline hover:text-pink-primary transition-colors">דף הבית</Link>
         <ChevronLeft size={14} />
-        <Link to="/shop" className="text-text-secondary no-underline hover:text-pink-primary">חנות</Link>
+        <Link to="/shop" className="text-text-secondary no-underline hover:text-pink-primary transition-colors">חנות</Link>
         <ChevronLeft size={14} />
-        <span className="text-text-primary">{product.name}</span>
+        <span className="text-text-primary font-medium">{product.name}</span>
       </div>
 
       {/* Product Detail */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14">
         {/* Images */}
         <div>
           <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-beige mb-4">
@@ -67,7 +67,7 @@ export default function ProductPage() {
                 <button
                   key={i}
                   onClick={() => setCurrentImage(i)}
-                  className={`w-20 h-20 rounded-lg overflow-hidden border-2 cursor-pointer p-0 ${
+                  className={`w-20 h-20 rounded-xl overflow-hidden border-2 cursor-pointer p-0 transition-all ${
                     currentImage === i ? 'border-pink-primary' : 'border-transparent'
                   }`}
                 >
@@ -81,22 +81,22 @@ export default function ProductPage() {
         {/* Info */}
         <div>
           {product.badge && (
-            <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white mb-4 ${
+            <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-bold text-white mb-4 ${
               product.isSale ? 'bg-red-400' : 'bg-pink-primary'
             }`}>
               {product.badge}
             </span>
           )}
 
-          <h1 className="text-2xl md:text-3xl font-black mb-2">{product.name}</h1>
+          <h1 className="text-2xl md:text-3xl font-black mb-3">{product.name}</h1>
 
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-3xl font-black text-pink-primary">₪{product.price}</span>
+            <span className="text-3xl font-black text-pink-primary">{product.price} &#8362;</span>
             {product.originalPrice && (
-              <span className="text-lg text-text-secondary line-through">₪{product.originalPrice}</span>
+              <span className="text-lg text-text-secondary line-through">{product.originalPrice} &#8362;</span>
             )}
             {product.originalPrice && (
-              <span className="bg-red-50 text-red-500 px-2 py-0.5 rounded text-sm font-bold">
+              <span className="bg-red-50 text-red-500 px-2.5 py-1 rounded-lg text-sm font-bold">
                 -{Math.round((1 - product.price / product.originalPrice) * 100)}%
               </span>
             )}
@@ -108,13 +108,13 @@ export default function ProductPage() {
 
           {/* Size Selection */}
           <div className="mb-6">
-            <h3 className="font-bold mb-3">מידה</h3>
+            <h3 className="font-bold mb-3 text-sm">מידה</h3>
             <div className="flex flex-wrap gap-2">
               {product.sizes.map(size => (
                 <button
                   key={size}
                   onClick={() => setSelectedSize(size)}
-                  className={`min-w-[56px] py-2 px-4 rounded-lg border-2 font-medium text-sm cursor-pointer transition-all ${
+                  className={`min-w-[56px] py-2.5 px-4 rounded-xl border-2 font-medium text-sm cursor-pointer transition-all ${
                     selectedSize === size
                       ? 'border-pink-primary bg-pink-light text-pink-primary'
                       : 'border-gray-200 bg-white text-text-primary hover:border-pink-primary'
@@ -128,14 +128,14 @@ export default function ProductPage() {
 
           {/* Color Selection */}
           <div className="mb-8">
-            <h3 className="font-bold mb-3">צבע</h3>
+            <h3 className="font-bold mb-3 text-sm">צבע</h3>
             <div className="flex gap-3">
               {product.colors.map(color => (
                 <button
                   key={color.name}
                   onClick={() => setSelectedColor(color.name)}
                   className={`w-10 h-10 rounded-full border-2 cursor-pointer p-0 transition-all ${
-                    selectedColor === color.name ? 'border-pink-primary scale-110' : 'border-gray-200'
+                    selectedColor === color.name ? 'border-pink-primary scale-110 shadow-md' : 'border-gray-200'
                   }`}
                   style={{ backgroundColor: color.hex }}
                   title={color.name}
@@ -155,7 +155,7 @@ export default function ProductPage() {
               }`}
             >
               <ShoppingBag size={20} />
-              {added ? 'נוסף בהצלחה! ✓' : 'הוסף לסל'}
+              {added ? 'נוסף בהצלחה!' : 'הוסף לסל'}
             </button>
             <button className="p-4 rounded-xl border-2 border-gray-200 bg-white cursor-pointer hover:border-pink-primary hover:text-pink-primary transition-all">
               <Heart size={20} />
@@ -163,18 +163,15 @@ export default function ProductPage() {
           </div>
 
           {/* Features */}
-          <div className="mt-8 grid grid-cols-3 gap-4">
-            <div className="text-center p-3 bg-beige rounded-xl">
-              <div className="text-lg mb-1">🚚</div>
-              <p className="text-xs text-text-secondary">משלוח חינם מעל ₪200</p>
+          <div className="mt-8 grid grid-cols-3 gap-3">
+            <div className="text-center p-4 bg-beige rounded-xl">
+              <p className="text-xs text-text-secondary font-medium">משלוח חינם מעל 200 &#8362;</p>
             </div>
-            <div className="text-center p-3 bg-beige rounded-xl">
-              <div className="text-lg mb-1">↩️</div>
-              <p className="text-xs text-text-secondary">החזרה תוך 14 יום</p>
+            <div className="text-center p-4 bg-beige rounded-xl">
+              <p className="text-xs text-text-secondary font-medium">החזרה תוך 14 יום</p>
             </div>
-            <div className="text-center p-3 bg-beige rounded-xl">
-              <div className="text-lg mb-1">💯</div>
-              <p className="text-xs text-text-secondary">100% כותנה</p>
+            <div className="text-center p-4 bg-beige rounded-xl">
+              <p className="text-xs text-text-secondary font-medium">100% כותנה</p>
             </div>
           </div>
         </div>
@@ -183,7 +180,7 @@ export default function ProductPage() {
       {/* Complementary Products */}
       {complementary.length > 0 && (
         <section className="mt-16">
-          <h2 className="text-2xl font-black mb-6">💫 משלימים את הסטייל עם</h2>
+          <h2 className="text-2xl font-black mb-6">משלימים את הסטייל עם</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {complementary.map(p => (
               <ProductCard key={p.id} product={p} />
@@ -195,7 +192,7 @@ export default function ProductPage() {
       {/* Related Products */}
       {relatedProducts.length > 0 && (
         <section className="mt-16">
-          <h2 className="text-2xl font-black mb-6">🛍️ מוצרים דומים</h2>
+          <h2 className="text-2xl font-black mb-6">מוצרים דומים</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {relatedProducts.map(p => (
               <ProductCard key={p.id} product={p} />
