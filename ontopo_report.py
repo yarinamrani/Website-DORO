@@ -107,7 +107,15 @@ def supabase_get_tokens():
     resp.raise_for_status()
     rows = resp.json()
     if not rows:
-        raise Exception("No tokens found in Supabase (table empty)")
+        # Create initial empty row so OTP flow can save into it
+        create_resp = requests.post(
+            f"{SUPABASE_URL}/rest/v1/ontopo_tokens",
+            headers={**SUPABASE_HEADERS, "Prefer": "return=representation"},
+            json={"id": 1, "status": "new", "login_token": None, "login_refresh": None},
+            timeout=15,
+        )
+        create_resp.raise_for_status()
+        return create_resp.json()[0]
     return rows[0]
 
 
@@ -434,42 +442,64 @@ def main():
 
     # Step 1: Load tokens from Supabase
     print("🔄 שלב 1: טוען טוקנים מ-Supabase...")
+    tokens = None
+    login_token = ""
+    login_refresh = ""
+    need_otp = False
+
     try:
         tokens = supabase_get_tokens()
         saved_at = tokens.get("saved_at", "לא ידוע")
-        print(f"✅ שלב 1: טוקנים נטענו מ-Supabase (נשמרו ב: {saved_at})")
+        status = tokens.get("status", "")
+        login_token = tokens.get("login_token", "") or ""
+        login_refresh = tokens.get("login_refresh", "") or ""
+
+        if status == "waiting_for_otp":
+            print("⏸️ שלב 1: סטטוס — ממתין ל-OTP. מדלג על הריצה.")
+            print("   שלח את קוד ה-OTP בטלגרם כדי להמשיך.")
+            sys.exit(0)
+
+        if not login_token or not login_refresh:
+            print("⚠️ שלב 1: אין טוקנים שמורים — צריך OTP ראשוני")
+            need_otp = True
+        else:
+            print(f"✅ שלב 1: טוקנים נטענו (נשמרו ב: {saved_at})")
     except Exception as e:
-        print(f"❌ שלב 1: שגיאה בטעינת טוקנים — {e}")
-        send_telegram(f"❌ דוח אונטופו נכשל — שגיאה בטעינת טוקנים:\n{e}")
-        sys.exit(1)
+        print(f"⚠️ שלב 1: לא נמצאו טוקנים — {e}")
+        print("   מתחיל תהליך התחברות ראשוני...")
+        need_otp = True
 
-    login_token = tokens.get("login_token", "")
-    login_refresh = tokens.get("login_refresh", "")
+    # Step 2: Refresh token or start OTP
+    if not need_otp:
+        print("🔄 שלב 2: מנסה לרענן טוקן...")
+        try:
+            new_tokens = refresh_token_api(login_refresh)
+            login_token = new_tokens["login_token"]
+            login_refresh = new_tokens["login_refresh"]
+            print("✅ שלב 2: טוקן רוענן בהצלחה")
+        except Exception as e:
+            print(f"❌ שלב 2: רענון טוקן נכשל — {e}")
+            need_otp = True
 
-    # Step 2: Try refresh token
-    print("🔄 שלב 2: מנסה לרענן טוקן...")
-    try:
-        new_tokens = refresh_token_api(login_refresh)
-        login_token = new_tokens["login_token"]
-        login_refresh = new_tokens["login_refresh"]
-        print("✅ שלב 2: טוקן רוענן בהצלחה")
-    except Exception as e:
-        print(f"❌ שלב 2: רענון טוקן נכשל — מתחיל תהליך OTP")
-        print(f"   שגיאה: {e}")
-
-        # Step 3: OTP flow
+    if need_otp:
+        print("🔄 מתחיל תהליך OTP...")
         try:
             anon = get_anonymous_token()
             send_otp_sms(anon, ONTOPO_PHONE)
             print(f"📱 SMS נשלח ל-{ONTOPO_PHONE}")
 
             supabase_save_otp_state(anon)
-            send_telegram("❗ הטוקן של אונטופו פג.\nשלח לי את קוד ה-OTP בן 4 ספרות שקיבלת ב-SMS.")
-            print("📨 הודעה נשלחה בטלגרם: \"שלח קוד OTP\"")
-            print("⏸️ ממתין לתשובה דרך Telegram webhook...")
+            send_telegram(
+                "🔐 *נדרש קוד OTP*\n\n"
+                f"SMS נשלח ל-{ONTOPO_PHONE}\n"
+                "שלח לי את הקוד בן 4 ספרות כדי להתחבר.\n\n"
+                "הדוח ירוץ אוטומטית אחרי שתשלח את הקוד."
+            )
+            print("📨 הודעה נשלחה בטלגרם — ממתין לקוד OTP")
+            print("⏸️ אחרי שתשלח את הקוד בטלגרם, ה-webhook ישלים את ההתחברות ויריץ דוח.")
         except Exception as otp_err:
             print(f"❌ שגיאה בתהליך OTP: {otp_err}")
-            send_telegram(f"❌ דוח אונטופו נכשל — גם OTP נכשל:\n{otp_err}")
+            send_telegram(f"❌ דוח אונטופו נכשל — שגיאה בתהליך OTP:\n{otp_err}")
 
         sys.exit(0)
 
