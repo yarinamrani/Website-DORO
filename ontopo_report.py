@@ -455,9 +455,23 @@ def main():
         login_refresh = tokens.get("login_refresh", "") or ""
 
         if status == "waiting_for_otp":
-            print("⏸️ שלב 1: סטטוס — ממתין ל-OTP. מדלג על הריצה.")
-            print("   שלח את קוד ה-OTP בטלגרם כדי להמשיך.")
-            sys.exit(0)
+            # If stuck in waiting_for_otp for more than 10 minutes, restart OTP flow
+            stale = False
+            try:
+                saved_at_dt = datetime.fromisoformat(saved_at)
+                age_minutes = (datetime.now(ISRAEL_TZ) - saved_at_dt).total_seconds() / 60
+                if age_minutes > 10:
+                    stale = True
+            except (ValueError, TypeError):
+                stale = True
+
+            if stale:
+                print("⚠️ שלב 1: סטטוס waiting_for_otp תקוע מעל 10 דקות — מתחיל OTP חדש")
+                need_otp = True
+            else:
+                print("⏸️ שלב 1: סטטוס — ממתין ל-OTP. מדלג על הריצה.")
+                print("   שלח את קוד ה-OTP בטלגרם כדי להמשיך.")
+                sys.exit(0)
 
         if not login_token or not login_refresh:
             print("⚠️ שלב 1: אין טוקנים שמורים — צריך OTP ראשוני")
