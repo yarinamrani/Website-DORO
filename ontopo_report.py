@@ -470,16 +470,31 @@ def main():
         need_otp = True
 
     # Step 2: Refresh token or start OTP
+    # Skip refresh if token was saved recently (within the last hour) — fresh login tokens
+    # from the OTP webhook don't need refreshing and may fail if refreshed too soon.
     if not need_otp:
-        print("🔄 שלב 2: מנסה לרענן טוקן...")
-        try:
-            new_tokens = refresh_token_api(login_refresh)
-            login_token = new_tokens["login_token"]
-            login_refresh = new_tokens["login_refresh"]
-            print("✅ שלב 2: טוקן רוענן בהצלחה")
-        except Exception as e:
-            print(f"❌ שלב 2: רענון טוקן נכשל — {e}")
-            need_otp = True
+        saved_at_str = (tokens or {}).get("saved_at", "")
+        skip_refresh = False
+        if saved_at_str:
+            try:
+                saved_at_dt = datetime.fromisoformat(saved_at_str)
+                age_minutes = (datetime.now(ISRAEL_TZ) - saved_at_dt).total_seconds() / 60
+                if age_minutes < 60:
+                    skip_refresh = True
+                    print(f"✅ שלב 2: טוקן טרי ({int(age_minutes)} דקות) — מדלג על רענון")
+            except (ValueError, TypeError):
+                pass
+
+        if not skip_refresh:
+            print("🔄 שלב 2: מנסה לרענן טוקן...")
+            try:
+                new_tokens = refresh_token_api(login_refresh)
+                login_token = new_tokens["login_token"]
+                login_refresh = new_tokens["login_refresh"]
+                print("✅ שלב 2: טוקן רוענן בהצלחה")
+            except Exception as e:
+                print(f"❌ שלב 2: רענון טוקן נכשל — {e}")
+                need_otp = True
 
     if need_otp:
         print("🔄 מתחיל תהליך OTP...")

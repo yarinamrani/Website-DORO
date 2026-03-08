@@ -114,24 +114,33 @@ async function triggerGitHubWorkflow(): Promise<void> {
 serve(async (req) => {
   try {
     const body = await req.json();
+    console.log("Received body:", JSON.stringify(body));
     const message = body?.message;
-    if (!message?.text) return new Response("ok");
+    if (!message?.text) {
+      console.log("No message text, ignoring");
+      return new Response("ok");
+    }
 
+    console.log("Chat ID from message:", message.chat.id, "Expected:", TELEGRAM_CHAT_ID);
     // Only accept messages from the authorized chat
     if (String(message.chat.id) !== TELEGRAM_CHAT_ID) {
+      console.log("Chat ID mismatch, ignoring");
       return new Response("ok");
     }
 
     const code = message.text.trim();
+    console.log("Received text:", code);
 
     // Validate 4-digit OTP
     if (!/^\d{4}$/.test(code)) {
+      console.log("Not a 4-digit OTP");
       await sendTelegram("❌ זה לא קוד OTP תקין. שלח 4 ספרות.");
       return new Response("ok");
     }
 
     // 1. Get state from Supabase
     const state = await supabaseGetState();
+    console.log("Supabase state:", JSON.stringify(state));
     if (state.status !== "waiting_for_otp") {
       await sendTelegram("ℹ️ אין צורך בקוד כרגע — הטוקן תקין.");
       return new Response("ok");
