@@ -2,19 +2,21 @@
  * One-time OAuth setup script.
  * Run with: npm run auth
  *
- * Opens a browser for Spotify login, then asks you to paste the
- * redirect URL from the browser to capture the authorization code.
+ * Opens a browser for Spotify login, captures the authorization code
+ * via a local HTTPS server, exchanges it for tokens, and saves them.
  */
 
 import 'dotenv/config';
-import { createInterface } from 'node:readline';
+import { createServer } from 'node:https';
 import { writeFileSync } from 'node:fs';
+import selfsigned from 'selfsigned';
 import { getEnvRequired, getTokensPath } from '../config/loader.js';
 import type { SpotifyTokens } from '../config/types.js';
 
 const CLIENT_ID = getEnvRequired('SPOTIFY_CLIENT_ID');
 const CLIENT_SECRET = getEnvRequired('SPOTIFY_CLIENT_SECRET');
-const REDIRECT_URI = process.env.SPOTIFY_REDIRECT_URI || 'https://localhost:8888/callback';
+const PORT = parseInt(process.env.PORT || '8888', 10);
+const REDIRECT_URI = process.env.SPOTIFY_REDIRECT_URI || `https://localhost:${PORT}/callback`;
 
 const SCOPES = [
   'user-read-playback-state',
@@ -65,53 +67,58 @@ async function exchangeCode(code: string): Promise<SpotifyTokens> {
   };
 }
 
-function prompt(question: string): Promise<string> {
-  const rl = createInterface({ input: process.stdin, output: process.stdout });
-  return new Promise((resolve) => {
-    rl.question(question, (answer) => {
-      rl.close();
-      resolve(answer.trim());
-    });
-  });
-}
-
 console.log('\n🎵 DORO Music Scheduler — Spotify Auth Setup\n');
 console.log('1. Open this URL in your browser:\n');
 console.log(`   ${buildAuthUrl()}\n`);
 console.log('2. Log in with the Spotify Premium account for the restaurant');
 console.log('3. Accept the permissions');
-console.log('4. The browser will redirect to a page that won\'t load (that\'s OK!)');
-console.log('5. Copy the FULL URL from the browser address bar and paste it below\n');
+console.log('4. If the browser shows a certificate warning, click "Advanced" → "Proceed to localhost"');
+console.log('5. Auth will complete automatically\n');
+console.log(`Waiting for callback on https://localhost:${PORT}...\n`);
 
-const redirectUrl = await prompt('Paste the redirect URL here: ');
+const pems = selfsigned.generate([{ name: 'commonName', value: 'localhost' }], { days: 1 });
+const server = createServer({ key: pems.private, cert: pems.cert }, async (req, res) => {
+  const url = new URL(req.url || '/', `https://localhost:${PORT}`);
 
-try {
-  const url = new URL(redirectUrl);
-  const code = url.searchParams.get('code');
-  const error = url.searchParams.get('error');
+  if (url.pathname === '/callback') {
+    const code = url.searchParams.get('code');
+    const error = url.searchParams.get('error');
 
-  if (error) {
-    console.error(`\n❌ Auth failed: ${error}`);
-    process.exit(1);
-  }
+    if (error) {
+      res.writeHead(400, { 'Content-Type': 'text/html' });
+      res.end(`<h1>Auth failed</h1><p>${error}</p>`);
+      console.error(`Auth failed: ${error}`);
+      process.exit(1);
+    }
 
-  if (!code) {
-    console.error('\n❌ No authorization code found in the URL. Make sure you copied the full URL.');
-    process.exit(1);
-  }
+    if (!code) {
+      res.writeHead(400, { 'Content-Type': 'text/html' });
+      res.end('<h1>No code received</h1>');
+      return;
+    }
 
-  console.log('\nExchanging code for tokens...');
-  const tokens = await exchangeCode(code);
-  const tokensPath = getTokensPath();
-  writeFileSync(tokensPath, JSON.stringify(tokens, null, 2));
+    try {
+      const tokens = await exchangeCode(code);
+      const tokensPath = getTokensPath();
+      writeFileSync(tokensPath, JSON.stringify(tokens, null, 2));
 
-  console.log(`\n✅ Tokens saved to ${tokensPath}`);
-  console.log('   You can now run: npm run dev\n');
-} catch (err) {
-  if (err instanceof TypeError && (err as Error).message.includes('Invalid URL')) {
-    console.error('\n❌ Invalid URL. Make sure you copied the full URL from the browser address bar.');
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end('<h1>Auth successful!</h1><p>Tokens saved. You can close this window.</p>');
+
+      console.log('✅ Tokens saved to', tokensPath);
+      console.log('   You can now run: npm run dev\n');
+
+      setTimeout(() => process.exit(0), 1000);
+    } catch (err) {
+      res.writeHead(500, { 'Content-Type': 'text/html' });
+      res.end(`<h1>Token exchange failed</h1><pre>${err}</pre>`);
+      console.error('Token exchange failed:', err);
+      process.exit(1);
+    }
   } else {
-    console.error('\n❌ Token exchange failed:', err);
+    res.writeHead(404);
+    res.end('Not found');
   }
-  process.exit(1);
-}
+});
+
+server.listen(PORT);
