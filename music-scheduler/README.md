@@ -72,7 +72,7 @@ Spotify personal/premium accounts are **NOT licensed for commercial public playb
 1. Go to https://developer.spotify.com/dashboard
 2. Click "Create App"
 3. Name: "DORO Music Scheduler" (or anything)
-4. Redirect URI: `http://localhost:8888/callback`
+4. Redirect URI: `https://localhost:8888/callback`
 5. Select "Web API"
 6. Save the **Client ID** and **Client Secret**
 

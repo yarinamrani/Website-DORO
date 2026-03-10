@@ -6,14 +6,15 @@
  * exchanges it for tokens, and saves them to tokens.json.
  */
 
-import { createServer } from 'node:http';
+import { createServer as createHttpsServer } from 'node:https';
 import { writeFileSync } from 'node:fs';
+import selfsigned from 'selfsigned';
 import { getEnvRequired, getTokensPath } from '../config/loader.js';
 import type { SpotifyTokens } from '../config/types.js';
 
 const CLIENT_ID = getEnvRequired('SPOTIFY_CLIENT_ID');
 const CLIENT_SECRET = getEnvRequired('SPOTIFY_CLIENT_SECRET');
-const REDIRECT_URI = process.env.SPOTIFY_REDIRECT_URI || 'http://localhost:8888/callback';
+const REDIRECT_URI = process.env.SPOTIFY_REDIRECT_URI || 'https://localhost:8888/callback';
 const PORT = parseInt(process.env.PORT || '8888', 10);
 
 const SCOPES = [
@@ -73,8 +74,9 @@ console.log('3. Accept the permissions');
 console.log('4. You will be redirected back here automatically\n');
 console.log(`Waiting for callback on port ${PORT}...\n`);
 
-const server = createServer(async (req, res) => {
-  const url = new URL(req.url || '/', `http://localhost:${PORT}`);
+const pems = selfsigned.generate([{ name: 'commonName', value: 'localhost' }], { days: 1 });
+const server = createHttpsServer({ key: pems.private, cert: pems.cert }, async (req, res) => {
+  const url = new URL(req.url || '/', `https://localhost:${PORT}`);
 
   if (url.pathname === '/callback') {
     const code = url.searchParams.get('code');
