@@ -6,6 +6,7 @@
  * exchanges it for tokens, and saves them to tokens.json.
  */
 
+import 'dotenv/config';
 import { createServer as createHttpsServer } from 'node:https';
 import { writeFileSync } from 'node:fs';
 import selfsigned from 'selfsigned';
