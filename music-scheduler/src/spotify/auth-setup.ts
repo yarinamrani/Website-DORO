@@ -3,20 +3,19 @@
  * Run with: npm run auth
  *
  * Opens a browser for Spotify login, captures the authorization code
- * via a local HTTPS server, exchanges it for tokens, and saves them.
+ * via a local HTTP server on 127.0.0.1, exchanges it for tokens, and saves them.
  */
 
 import 'dotenv/config';
-import { createServer } from 'node:https';
+import { createServer } from 'node:http';
 import { writeFileSync } from 'node:fs';
-import selfsigned from 'selfsigned';
 import { getEnvRequired, getTokensPath } from '../config/loader.js';
 import type { SpotifyTokens } from '../config/types.js';
 
 const CLIENT_ID = getEnvRequired('SPOTIFY_CLIENT_ID');
 const CLIENT_SECRET = getEnvRequired('SPOTIFY_CLIENT_SECRET');
 const PORT = parseInt(process.env.PORT || '8888', 10);
-const REDIRECT_URI = process.env.SPOTIFY_REDIRECT_URI || `https://localhost:${PORT}/callback`;
+const REDIRECT_URI = process.env.SPOTIFY_REDIRECT_URI || `http://127.0.0.1:${PORT}/callback`;
 
 const SCOPES = [
   'user-read-playback-state',
@@ -72,13 +71,11 @@ console.log('1. Open this URL in your browser:\n');
 console.log(`   ${buildAuthUrl()}\n`);
 console.log('2. Log in with the Spotify Premium account for the restaurant');
 console.log('3. Accept the permissions');
-console.log('4. If the browser shows a certificate warning, click "Advanced" → "Proceed to localhost"');
-console.log('5. Auth will complete automatically\n');
-console.log(`Waiting for callback on https://localhost:${PORT}...\n`);
+console.log('4. Auth will complete automatically\n');
+console.log(`Waiting for callback on http://127.0.0.1:${PORT}...\n`);
 
-const pems = selfsigned.generate([{ name: 'commonName', value: 'localhost' }], { days: 1 });
-const server = createServer({ key: pems.private, cert: pems.cert }, async (req, res) => {
-  const url = new URL(req.url || '/', `https://localhost:${PORT}`);
+const server = createServer(async (req, res) => {
+  const url = new URL(req.url || '/', `http://127.0.0.1:${PORT}`);
 
   if (url.pathname === '/callback') {
     const code = url.searchParams.get('code');
@@ -121,4 +118,4 @@ const server = createServer({ key: pems.private, cert: pems.cert }, async (req, 
   }
 });
 
-server.listen(PORT);
+server.listen(PORT, '127.0.0.1');
