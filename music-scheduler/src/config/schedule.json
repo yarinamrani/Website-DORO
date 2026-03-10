@@ -11,7 +11,7 @@
       "days": [0, 1, 2, 3, 4],
       "startTime": "08:00",
       "endTime": "12:00",
-      "playlistUri": "spotify:playlist:REPLACE_WITH_CALM_MORNING_PLAYLIST_ID",
+      "playlistUri": "spotify:playlist:11nSleISOWGLboWVWPDuwB",
       "priority": 10,
       "enabled": true
     },
@@ -21,7 +21,7 @@
       "days": [0, 1, 2, 3, 4],
       "startTime": "12:00",
       "endTime": "17:00",
-      "playlistUri": "spotify:playlist:REPLACE_WITH_SUNSET_CHILL_PLAYLIST_ID",
+      "playlistUri": "spotify:playlist:6bfxfMIcYKN4ce6XQOxoqY",
       "priority": 10,
       "enabled": true
     },
@@ -31,7 +31,7 @@
       "days": [0, 1, 2, 3, 4],
       "startTime": "17:00",
       "endTime": "23:30",
-      "playlistUri": "spotify:playlist:REPLACE_WITH_UPBEAT_EVENING_PLAYLIST_ID",
+      "playlistUri": "spotify:playlist:3ZrIRwh11hu5L9XC42ohmm",
       "priority": 10,
       "enabled": true
     },
@@ -41,7 +41,7 @@
       "days": [5],
       "startTime": "08:00",
       "endTime": "14:00",
-      "playlistUri": "spotify:playlist:REPLACE_WITH_ISRAELI_MORNING_PLAYLIST_ID",
+      "playlistUri": "spotify:playlist:1ODv6glrAvA5N7JqJcO4KJ",
       "priority": 20,
       "enabled": true
     },
@@ -51,7 +51,7 @@
       "days": [5],
       "startTime": "14:00",
       "endTime": "18:00",
-      "playlistUri": "spotify:playlist:REPLACE_WITH_SUNSET_CHILL_PLAYLIST_ID",
+      "playlistUri": "spotify:playlist:6bfxfMIcYKN4ce6XQOxoqY",
       "priority": 10,
       "enabled": true
     },
@@ -61,7 +61,7 @@
       "days": [5],
       "startTime": "18:00",
       "endTime": "23:59",
-      "playlistUri": "spotify:playlist:REPLACE_WITH_UPBEAT_EVENING_PLAYLIST_ID",
+      "playlistUri": "spotify:playlist:3ZrIRwh11hu5L9XC42ohmm",
       "priority": 10,
       "enabled": true
     },
@@ -71,7 +71,7 @@
       "days": [6],
       "startTime": "08:00",
       "endTime": "14:00",
-      "playlistUri": "spotify:playlist:REPLACE_WITH_ISRAELI_MORNING_PLAYLIST_ID",
+      "playlistUri": "spotify:playlist:1ODv6glrAvA5N7JqJcO4KJ",
       "priority": 20,
       "enabled": true
     },
@@ -81,7 +81,7 @@
       "days": [6],
       "startTime": "14:00",
       "endTime": "17:00",
-      "playlistUri": "spotify:playlist:REPLACE_WITH_SUNSET_CHILL_PLAYLIST_ID",
+      "playlistUri": "spotify:playlist:6bfxfMIcYKN4ce6XQOxoqY",
       "priority": 10,
       "enabled": true
     },
@@ -91,7 +91,7 @@
       "days": [6],
       "startTime": "17:00",
       "endTime": "23:30",
-      "playlistUri": "spotify:playlist:REPLACE_WITH_UPBEAT_EVENING_PLAYLIST_ID",
+      "playlistUri": "spotify:playlist:3ZrIRwh11hu5L9XC42ohmm",
       "priority": 10,
       "enabled": true
     }
