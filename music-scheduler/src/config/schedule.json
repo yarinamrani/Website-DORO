@@ -1,0 +1,99 @@
+{
+  "timezone": "Asia/Jerusalem",
+  "fallbackPlaylistUri": "spotify:playlist:REPLACE_WITH_YOUR_FALLBACK_PLAYLIST_ID",
+  "preferredDeviceName": "DORO-Restaurant",
+  "pollIntervalSeconds": 60,
+  "dryRun": false,
+  "rules": [
+    {
+      "id": "sunth_morning",
+      "mood": "calm_morning",
+      "days": [0, 1, 2, 3, 4],
+      "startTime": "08:00",
+      "endTime": "12:00",
+      "playlistUri": "spotify:playlist:REPLACE_WITH_CALM_MORNING_PLAYLIST_ID",
+      "priority": 10,
+      "enabled": true
+    },
+    {
+      "id": "sunth_afternoon",
+      "mood": "sunset_chill",
+      "days": [0, 1, 2, 3, 4],
+      "startTime": "12:00",
+      "endTime": "17:00",
+      "playlistUri": "spotify:playlist:REPLACE_WITH_SUNSET_CHILL_PLAYLIST_ID",
+      "priority": 10,
+      "enabled": true
+    },
+    {
+      "id": "sunth_evening",
+      "mood": "upbeat_evening",
+      "days": [0, 1, 2, 3, 4],
+      "startTime": "17:00",
+      "endTime": "23:30",
+      "playlistUri": "spotify:playlist:REPLACE_WITH_UPBEAT_EVENING_PLAYLIST_ID",
+      "priority": 10,
+      "enabled": true
+    },
+    {
+      "id": "friday_morning",
+      "mood": "israeli_morning",
+      "days": [5],
+      "startTime": "08:00",
+      "endTime": "14:00",
+      "playlistUri": "spotify:playlist:REPLACE_WITH_ISRAELI_MORNING_PLAYLIST_ID",
+      "priority": 20,
+      "enabled": true
+    },
+    {
+      "id": "friday_afternoon",
+      "mood": "sunset_chill",
+      "days": [5],
+      "startTime": "14:00",
+      "endTime": "18:00",
+      "playlistUri": "spotify:playlist:REPLACE_WITH_SUNSET_CHILL_PLAYLIST_ID",
+      "priority": 10,
+      "enabled": true
+    },
+    {
+      "id": "friday_evening",
+      "mood": "upbeat_evening",
+      "days": [5],
+      "startTime": "18:00",
+      "endTime": "23:59",
+      "playlistUri": "spotify:playlist:REPLACE_WITH_UPBEAT_EVENING_PLAYLIST_ID",
+      "priority": 10,
+      "enabled": true
+    },
+    {
+      "id": "saturday_morning",
+      "mood": "israeli_morning",
+      "days": [6],
+      "startTime": "08:00",
+      "endTime": "14:00",
+      "playlistUri": "spotify:playlist:REPLACE_WITH_ISRAELI_MORNING_PLAYLIST_ID",
+      "priority": 20,
+      "enabled": true
+    },
+    {
+      "id": "saturday_afternoon",
+      "mood": "sunset_chill",
+      "days": [6],
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "playlistUri": "spotify:playlist:REPLACE_WITH_SUNSET_CHILL_PLAYLIST_ID",
+      "priority": 10,
+      "enabled": true
+    },
+    {
+      "id": "saturday_evening",
+      "mood": "upbeat_evening",
+      "days": [6],
+      "startTime": "17:00",
+      "endTime": "23:30",
+      "playlistUri": "spotify:playlist:REPLACE_WITH_UPBEAT_EVENING_PLAYLIST_ID",
+      "priority": 10,
+      "enabled": true
+    }
+  ]
+}
