@@ -1,6 +1,6 @@
 {
   "timezone": "Asia/Jerusalem",
-  "fallbackPlaylistUri": "spotify:playlist:REPLACE_WITH_YOUR_FALLBACK_PLAYLIST_ID",
+  "fallbackPlaylistUri": "spotify:playlist:5h1oEk4W9KVMHkOd8WWWlC",
   "preferredDeviceName": "DORO-Restaurant",
   "pollIntervalSeconds": 60,
   "dryRun": false,
