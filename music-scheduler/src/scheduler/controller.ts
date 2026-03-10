@@ -154,26 +154,45 @@ export class PlaybackController {
         return decision;
       }
 
-      // Check if correct playlist is already playing on the right device
-      const alreadyCorrect =
-        playback &&
-        playback.isPlaying &&
-        playback.contextUri === targetPlaylistUri &&
-        playback.deviceId === targetDevice.id;
+      // Check if correct playlist is already playing
+      const correctPlaylist = playback && playback.isPlaying && playback.contextUri === targetPlaylistUri;
+      const correctDevice = playback && playback.deviceId === targetDevice.id;
 
-      if (alreadyCorrect) {
+      if (correctPlaylist && correctDevice) {
         decision.action = 'none';
         decision.reason = `Correct playlist already playing on ${targetDevice.name}`;
         logger.debug(decision.reason);
         return decision;
       }
 
-      // Need to switch
+      // Correct playlist but wrong device — just transfer
+      if (correctPlaylist && !correctDevice) {
+        decision.reason = `Transferring playback to ${targetDevice.name}`;
+        if (!this.config.dryRun) {
+          const success = await this.spotify.transferPlayback(targetDevice.id, true);
+          if (success) {
+            decision.action = 'switch_playlist';
+            this.state.currentPlaylistUri = targetPlaylistUri;
+            this.state.currentRuleId = matchedRule?.id ?? null;
+            this.state.lastActionAt = new Date().toISOString();
+            this.state.lastError = null;
+            logger.info(`Transferred playback to ${targetDevice.name}`);
+          } else {
+            decision.action = 'error';
+            decision.error = 'Failed to transfer playback';
+            this.state.lastError = decision.error;
+          }
+        } else {
+          decision.action = 'switch_playlist';
+          decision.reason = `[DRY RUN] ${decision.reason}`;
+        }
+        return decision;
+      }
+
+      // Need to switch playlist
       const reason = !playback?.isPlaying
         ? 'Playback is stopped/paused — starting playlist'
-        : playback.contextUri !== targetPlaylistUri
-          ? `Switching playlist: ${playback.contextUri} -> ${targetPlaylistUri}`
-          : `Transferring to device: ${targetDevice.name}`;
+        : `Switching playlist: ${playback.contextUri} -> ${targetPlaylistUri}`;
 
       decision.reason = reason;
 
