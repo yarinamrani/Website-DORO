@@ -5,6 +5,9 @@ import HomePage from './pages/HomePage';
 import ShopPage from './pages/ShopPage';
 import ProductPage from './pages/ProductPage';
 import CartPage from './pages/CartPage';
+import InvoiceDashboard from './pages/InvoiceDashboard';
+import InvoicesPage from './pages/InvoicesPage';
+import SuppliersPage from './pages/SuppliersPage';
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
             <Route path="shop" element={<ShopPage />} />
             <Route path="product/:id" element={<ProductPage />} />
             <Route path="cart" element={<CartPage />} />
+            <Route path="invoices" element={<InvoiceDashboard />} />
+            <Route path="invoices/list" element={<InvoicesPage />} />
+            <Route path="invoices/suppliers" element={<SuppliersPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
