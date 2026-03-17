@@ -5,16 +5,16 @@ export default function PaseoLayout() {
   const { pathname } = useLocation();
 
   const links = [
-    { to: '/invoices', label: 'דשבורד', icon: LayoutDashboard },
-    { to: '/invoices/list', label: 'חשבוניות', icon: FileText },
-    { to: '/invoices/suppliers', label: 'ספקים', icon: Users },
+    { to: '/', label: 'דשבורד', icon: LayoutDashboard },
+    { to: '/invoices', label: 'חשבוניות', icon: FileText },
+    { to: '/suppliers', label: 'ספקים', icon: Users },
   ];
 
   return (
     <div className="min-h-screen bg-beige/30">
       <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <Link to="/invoices" className="no-underline flex items-center gap-3">
+          <Link to="/" className="no-underline flex items-center gap-3">
             <h1 className="text-2xl font-black tracking-wider text-text-primary" style={{ fontFamily: 'Heebo' }}>PASEO</h1>
             <span className="text-xs text-text-secondary bg-beige px-2 py-1 rounded-full">ניהול חשבוניות</span>
           </Link>
