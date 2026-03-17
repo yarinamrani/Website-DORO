@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ShoppingBag, Search, User, Heart, Menu, X } from 'lucide-react';
+import { ShoppingBag, Search, User, Heart, Menu, X, FileText } from 'lucide-react';
 import { useState } from 'react';
 import { useCart } from '../../context/CartContext';
 
@@ -39,6 +39,10 @@ export default function Header() {
           <a href="#contact" className="text-text-primary no-underline hover:text-pink-primary transition-colors font-medium text-sm">
             יצירת קשר
           </a>
+          <Link to="/invoices" className="flex items-center gap-1.5 text-text-primary no-underline hover:text-pink-primary transition-colors font-medium text-sm">
+            <FileText size={16} />
+            חשבוניות
+          </Link>
         </nav>
 
         {/* Icons */}
@@ -79,6 +83,10 @@ export default function Header() {
             <a href="#contact" onClick={() => setMenuOpen(false)} className="text-text-primary no-underline hover:text-pink-primary font-medium py-2">
               יצירת קשר
             </a>
+            <Link to="/invoices" onClick={() => setMenuOpen(false)} className="flex items-center gap-2 text-text-primary no-underline hover:text-pink-primary font-medium py-2">
+              <FileText size={16} />
+              חשבוניות
+            </Link>
           </nav>
         </div>
       )}
