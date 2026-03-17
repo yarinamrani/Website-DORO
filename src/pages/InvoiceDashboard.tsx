@@ -76,7 +76,7 @@ export default function InvoiceDashboard() {
       <div className="max-w-6xl mx-auto px-4 py-6">
         {/* Stats Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <Link to="/invoices/suppliers" className="no-underline">
+          <Link to="/suppliers" className="no-underline">
             <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
@@ -88,7 +88,7 @@ export default function InvoiceDashboard() {
             </div>
           </Link>
 
-          <Link to="/invoices/list" className="no-underline">
+          <Link to="/invoices" className="no-underline">
             <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
@@ -143,10 +143,10 @@ export default function InvoiceDashboard() {
               <div className="bg-white rounded-xl p-8 text-center border border-gray-100">
                 <p className="text-text-secondary">אין עדכונים בתקופה הנבחרת</p>
                 <div className="flex gap-3 justify-center mt-4">
-                  <Link to="/invoices/suppliers" className="text-pink-primary text-sm font-medium no-underline">
+                  <Link to="/suppliers" className="text-pink-primary text-sm font-medium no-underline">
                     הוסף ספק
                   </Link>
-                  <Link to="/invoices/list" className="text-pink-primary text-sm font-medium no-underline">
+                  <Link to="/invoices" className="text-pink-primary text-sm font-medium no-underline">
                     הזן חשבונית
                   </Link>
                 </div>
