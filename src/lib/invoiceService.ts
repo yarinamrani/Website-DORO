@@ -51,10 +51,21 @@ export async function deleteSupplier(id: string): Promise<void> {
 export async function getInvoices(): Promise<Invoice[]> {
   const { data, error } = await supabase
     .from('invoices')
-    .select('*, supplier:suppliers(id, name)')
+    .select('*, supplier:suppliers(id, name), items:invoice_items(*)')
     .order('invoice_date', { ascending: false });
   if (error) throw error;
-  return data || [];
+
+  // Calculate total from items if total_amount is 0
+  return (data || []).map(inv => {
+    if ((!inv.total_amount || inv.total_amount === 0) && inv.items && inv.items.length > 0) {
+      const calculatedTotal = inv.items.reduce(
+        (sum: number, item: { quantity: number; unit_price: number; total_price?: number }) =>
+          sum + (item.total_price ?? item.quantity * item.unit_price), 0
+      );
+      return { ...inv, total_amount: calculatedTotal };
+    }
+    return inv;
+  });
 }
 
 export async function getInvoice(id: string): Promise<Invoice> {
@@ -68,6 +79,11 @@ export async function getInvoice(id: string): Promise<Invoice> {
 }
 
 export async function createInvoice(form: InvoiceFormData): Promise<Invoice> {
+  // Always calculate total from items to ensure accuracy
+  const calculatedTotal = form.items.length > 0
+    ? form.items.reduce((sum, item) => sum + (item.quantity * item.unit_price), 0)
+    : form.total_amount;
+
   // Insert invoice
   const { data: invoice, error: invError } = await supabase
     .from('invoices')
@@ -76,7 +92,7 @@ export async function createInvoice(form: InvoiceFormData): Promise<Invoice> {
       invoice_number: form.invoice_number,
       invoice_date: form.invoice_date,
       received_date: form.received_date,
-      total_amount: form.total_amount,
+      total_amount: calculatedTotal,
       status: form.status,
       notes: form.notes,
     })
@@ -122,6 +138,32 @@ export async function deleteInvoice(id: string): Promise<void> {
     .delete()
     .eq('id', id);
   if (error) throw error;
+}
+
+// ==================== FIX ZERO TOTALS ====================
+
+export async function fixZeroTotals(): Promise<number> {
+  // Find invoices with total_amount = 0 that have items
+  const { data: zeroInvoices, error } = await supabase
+    .from('invoices')
+    .select('id, total_amount, items:invoice_items(quantity, unit_price, total_price)')
+    .eq('total_amount', 0);
+  if (error) throw error;
+
+  let fixed = 0;
+  for (const inv of zeroInvoices || []) {
+    if (inv.items && inv.items.length > 0) {
+      const total = inv.items.reduce(
+        (sum: number, item: { quantity: number; unit_price: number; total_price?: number }) =>
+          sum + (item.total_price ?? item.quantity * item.unit_price), 0
+      );
+      if (total > 0) {
+        await supabase.from('invoices').update({ total_amount: total }).eq('id', inv.id);
+        fixed++;
+      }
+    }
+  }
+  return fixed;
 }
 
 // ==================== PRICE TRACKING ====================
@@ -185,16 +227,23 @@ export async function getDashboardAlerts(days: number = 7): Promise<DashboardAle
   // 1. Recent invoices
   const { data: recentInvoices } = await supabase
     .from('invoices')
-    .select('*, supplier:suppliers(name)')
+    .select('*, supplier:suppliers(name), items:invoice_items(quantity, unit_price, total_price)')
     .gte('created_at', since.toISOString())
     .order('created_at', { ascending: false });
 
   for (const inv of recentInvoices || []) {
+    let total = Number(inv.total_amount) || 0;
+    if (total === 0 && inv.items && inv.items.length > 0) {
+      total = inv.items.reduce(
+        (s: number, item: { quantity: number; unit_price: number; total_price?: number }) =>
+          s + (item.total_price ?? item.quantity * item.unit_price), 0
+      );
+    }
     alerts.push({
       id: `inv-${inv.id}`,
       type: 'new_invoice',
       title: `חשבונית חדשה #${inv.invoice_number}`,
-      description: `סה״כ ₪${inv.total_amount}`,
+      description: `סה״כ ₪${total.toLocaleString()}`,
       date: inv.created_at,
       supplier_name: inv.supplier?.name || '',
       severity: 'info',
@@ -276,7 +325,7 @@ export async function getDashboardStats() {
   const [suppliersRes, monthInvRes, monthTotalRes, priceAlertsRes] = await Promise.all([
     supabase.from('suppliers').select('*', { count: 'exact', head: true }),
     supabase.from('invoices').select('*', { count: 'exact', head: true }).gte('invoice_date', monthStart),
-    supabase.from('invoices').select('total_amount').gte('invoice_date', monthStart),
+    supabase.from('invoices').select('total_amount, items:invoice_items(quantity, unit_price, total_price)').gte('invoice_date', monthStart),
     supabase.from('price_history').select('*', { count: 'exact', head: true })
       .not('old_price', 'is', null)
       .gt('price_change_percent', 0)
@@ -289,7 +338,17 @@ export async function getDashboardStats() {
   if (priceAlertsRes.error) throw priceAlertsRes.error;
 
   const monthTotal = (monthTotalRes.data || []).reduce(
-    (sum: number, inv: { total_amount: number }) => sum + Number(inv.total_amount), 0
+    (sum: number, inv: { total_amount: number; items?: { quantity: number; unit_price: number; total_price?: number }[] }) => {
+      // Use total_amount if available, otherwise calculate from items
+      if (inv.total_amount && inv.total_amount > 0) return sum + Number(inv.total_amount);
+      if (inv.items && inv.items.length > 0) {
+        const itemsTotal = inv.items.reduce(
+          (s, item) => s + (item.total_price ?? item.quantity * item.unit_price), 0
+        );
+        return sum + itemsTotal;
+      }
+      return sum;
+    }, 0
   );
 
   return {

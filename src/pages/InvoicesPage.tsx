@@ -362,6 +362,41 @@ export default function InvoicesPage() {
                       </div>
                     </div>
 
+                    {/* Items */}
+                    {inv.items && inv.items.length > 0 && (
+                      <div className="mb-5">
+                        <p className="text-[12px] text-gray-400 font-semibold mb-3 uppercase tracking-wide">פריטים</p>
+                        <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                          <table className="w-full text-sm">
+                            <thead>
+                              <tr className="bg-gray-50 text-gray-500 text-[12px]">
+                                <th className="text-right px-4 py-2.5 font-medium">מוצר</th>
+                                <th className="text-center px-3 py-2.5 font-medium">כמות</th>
+                                <th className="text-left px-3 py-2.5 font-medium">מחיר יחידה</th>
+                                <th className="text-left px-4 py-2.5 font-medium">סה״כ</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {inv.items.map((item, idx) => (
+                                <tr key={item.id || idx} className="border-t border-gray-100">
+                                  <td className="px-4 py-2.5 font-medium text-gray-900">{item.product_name}</td>
+                                  <td className="px-3 py-2.5 text-center text-gray-600 num-ltr" dir="ltr">{item.quantity}</td>
+                                  <td className="px-3 py-2.5 text-gray-600 num-ltr" dir="ltr">₪{Number(item.unit_price).toLocaleString()}</td>
+                                  <td className="px-4 py-2.5 font-bold text-gray-900 num-ltr" dir="ltr">₪{(item.total_price ?? item.quantity * item.unit_price).toLocaleString()}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                            <tfoot>
+                              <tr className="border-t-2 border-gray-200 bg-gray-50">
+                                <td colSpan={3} className="px-4 py-3 font-bold text-gray-700 text-[13px]">סה״כ חשבונית</td>
+                                <td className="px-4 py-3 font-extrabold text-gray-900 num-ltr text-base" dir="ltr">₪{Number(inv.total_amount).toLocaleString()}</td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                      </div>
+                    )}
+
                     {inv.notes && (
                       <div className="bg-white rounded-lg p-4 border border-gray-200 mb-5">
                         <p className="text-[12px] text-gray-400 font-medium mb-1.5">הערות</p>

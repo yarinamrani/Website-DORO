@@ -6,7 +6,7 @@ import {
   Plus, RefreshCw, Calendar, BarChart3, Zap,
   ChevronLeft,
 } from 'lucide-react';
-import { getDashboardAlerts, getDashboardStats, getPriceChanges } from '../lib/invoiceService';
+import { getDashboardAlerts, getDashboardStats, getPriceChanges, fixZeroTotals } from '../lib/invoiceService';
 import type { DashboardAlert, PriceChange } from '../types/invoices';
 
 const alertIcons = {
@@ -48,6 +48,8 @@ export default function InvoiceDashboard() {
   async function loadData() {
     try {
       setLoading(true);
+      // Fix any invoices with total_amount=0 that have items
+      await fixZeroTotals();
       const [a, s, pc] = await Promise.all([
         getDashboardAlerts(alertDays),
         getDashboardStats(),
