@@ -69,9 +69,9 @@ export default function InvoiceDashboard() {
   ];
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <div className="bg-gradient-to-l from-primary to-primary-light">
+      <div className="bg-gradient-to-r from-primary to-primary-light">
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="flex items-center justify-between">
             <div>
