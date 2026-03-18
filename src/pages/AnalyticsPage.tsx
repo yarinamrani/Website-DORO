@@ -216,7 +216,8 @@ function DonutChart({ data }: { data: { label: string; value: number; color: str
   );
 }
 
-function HorizontalBar({
+// HorizontalBar used in supplier tab
+function _HorizontalBar({
   label, value, maxValue, color, suffix = '',
 }: { label: string; value: number; maxValue: number; color: string; suffix?: string }) {
   const pct = maxValue > 0 ? (value / maxValue) * 100 : 0;
@@ -238,8 +239,9 @@ function HorizontalBar({
     </div>
   );
 }
+void _HorizontalBar;
 
-function SparkLine({ values, color = '#1E3A5F' }: { values: number[]; color?: string }) {
+function _SparkLine({ values, color = '#1E3A5F' }: { values: number[]; color?: string }) {
   if (values.length < 2) return null;
   const max = Math.max(...values, 1);
   const min = Math.min(...values, 0);
@@ -266,6 +268,7 @@ function SparkLine({ values, color = '#1E3A5F' }: { values: number[]; color?: st
     </svg>
   );
 }
+void _SparkLine;
 
 // ==================== VOLATILITY METER ====================
 
@@ -611,7 +614,7 @@ function ComparisonBlock({ label, value, subLabel, highlight }: {
 function SuppliersTab({
   supplierSpend,
   topSupplierData,
-  monthly,
+  monthly: _monthly,
 }: {
   supplierSpend: SupplierSpending[];
   topSupplierData: { label: string; value: number; color: string }[];
