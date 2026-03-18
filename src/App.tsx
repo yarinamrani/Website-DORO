@@ -1,9 +1,9 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import PaseoLayout from './components/layout/PaseoLayout';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import InvoiceDashboard from './pages/InvoiceDashboard';
 import InvoicesPage from './pages/InvoicesPage';
 import SuppliersPage from './pages/SuppliersPage';
 import AnalyticsPage from './pages/AnalyticsPage';
+import PaseoLayout from './components/layout/PaseoLayout';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
           <Route path="invoices" element={<InvoicesPage />} />
           <Route path="suppliers" element={<SuppliersPage />} />
           <Route path="analytics" element={<AnalyticsPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </BrowserRouter>

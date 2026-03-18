@@ -1,4 +1,3 @@
-// Supplier (ספק)
 export interface Supplier {
   id: string;
   name: string;
@@ -11,7 +10,6 @@ export interface Supplier {
   updated_at: string;
 }
 
-// Invoice (חשבונית)
 export type InvoiceStatus = 'received' | 'checked' | 'disputed' | 'paid';
 
 export interface Invoice {
@@ -25,12 +23,10 @@ export interface Invoice {
   notes?: string;
   created_at: string;
   updated_at: string;
-  // joined
   supplier?: Supplier;
   items?: InvoiceItem[];
 }
 
-// Invoice Item (פריט בחשבונית)
 export interface InvoiceItem {
   id: string;
   invoice_id: string;
@@ -44,7 +40,6 @@ export interface InvoiceItem {
   created_at: string;
 }
 
-// Price History (היסטוריית מחירים)
 export interface PriceChange {
   id: string;
   supplier_id: string;
@@ -55,11 +50,9 @@ export interface PriceChange {
   price_change_percent: number;
   invoice_id?: string;
   recorded_at: string;
-  // joined
   supplier?: Supplier;
 }
 
-// Dashboard Alert Types
 export type AlertType = 'new_invoice' | 'price_increase' | 'price_decrease' | 'new_product';
 
 export interface DashboardAlert {
@@ -72,7 +65,6 @@ export interface DashboardAlert {
   severity: 'info' | 'warning' | 'success';
 }
 
-// Form types
 export interface SupplierFormData {
   name: string;
   contact_name?: string;

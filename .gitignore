@@ -1,50 +1,11 @@
-# Dependencies
-node_modules/
-
-# Build output
-dist/
-build/
-
-# Environment variables (contains secrets)
-.env
-.env.local
-.env.production
-.env.*.local
-
-# Gmail OAuth credentials
-credentials.json
-token.json
-
-# Ontopo session tokens
-.ontopo_token.json
-
-# Imported data (invoices, PDFs, scanned files)
-imported-data/
-tmp/
-scan-report.json
-
-# Supabase local
-supabase/.temp/
-
-# WhatsApp session data
-.wwebjs_auth/
-.wwebjs_cache/
-
-# OS files
+node_modules
+dist
 .DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Logs
-*.log
-npm-debug.log*
-
-# Python
-__pycache__/
-*.pyc
-.venv/
+imported-data/whatsapp-server/
+imported-data/whatsapp-server/
+imported-data/*.log
+imported-data/.DS_Store
+imported-data/restaurant-invoices/.DS_Store
+imported-data/restaurant-invoices/credentials.json
+imported-data/restaurant-invoices/token.json
+Website-DORO
