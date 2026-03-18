@@ -1,129 +1,83 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, FileText, Users, ChefHat, Bell, Settings } from 'lucide-react';
+import { LayoutDashboard, FileText, Users, BarChart3, ChefHat, Bell, Search } from 'lucide-react';
+import CommandPalette from '../CommandPalette';
 
 const navLinks = [
   { to: '/', label: 'דשבורד', icon: LayoutDashboard },
   { to: '/invoices', label: 'חשבוניות', icon: FileText },
   { to: '/suppliers', label: 'ספקים', icon: Users },
+  { to: '/analytics', label: 'אנליטיקס', icon: BarChart3 },
 ];
 
 export default function PaseoLayout() {
   const { pathname } = useLocation();
 
   return (
-    <div className="min-h-screen bg-surface flex">
-      {/* Desktop Sidebar */}
-      <aside className="hidden lg:flex flex-col w-[260px] bg-navy fixed top-0 right-0 bottom-0 z-40">
-        {/* Logo */}
-        <div className="p-6 pb-2">
-          <Link to="/" className="no-underline flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/25 group-hover:shadow-primary/40 transition-shadow">
-              <ChefHat size={20} className="text-white" />
-            </div>
-            <div className="flex flex-col">
-              <h1 className="text-[18px] font-black tracking-[0.08em] text-white leading-none">PASEO</h1>
-              <span className="text-[10px] text-text-muted tracking-wide mt-0.5">ניהול חשבוניות</span>
-            </div>
-          </Link>
-        </div>
-
-        {/* Restaurant selector */}
-        <div className="mx-4 mt-4 mb-2 p-3 rounded-xl bg-navy-light border border-navy-lighter/50">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center">
-              <span className="text-primary-light text-xs font-bold">גג</span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-white text-sm font-semibold truncate">גג על הים</p>
-              <p className="text-text-muted text-[11px]">PASEO Group</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Navigation */}
-        <nav className="flex-1 px-3 mt-4">
-          <p className="text-text-muted text-[11px] font-semibold uppercase tracking-wider px-3 mb-2">תפריט ראשי</p>
-          <div className="flex flex-col gap-1">
-            {navLinks.map(({ to, label, icon: Icon }) => {
-              const active = pathname === to;
-              return (
-                <Link
-                  key={to}
-                  to={to}
-                  className={`flex items-center gap-3 px-3 py-2.5 rounded-xl no-underline text-[14px] font-medium transition-all duration-200 ${
-                    active
-                      ? 'bg-primary/15 text-primary-light'
-                      : 'text-text-muted hover:text-white hover:bg-navy-light'
-                  }`}
-                >
-                  <Icon size={18} strokeWidth={active ? 2.2 : 1.8} />
-                  <span>{label}</span>
-                  {active && (
-                    <div className="mr-auto w-1.5 h-1.5 rounded-full bg-primary-light" />
-                  )}
-                </Link>
-              );
-            })}
-          </div>
-        </nav>
-
-        {/* Bottom section */}
-        <div className="p-4 border-t border-navy-lighter/30">
-          <div className="flex items-center gap-3 px-2">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
-              <span className="text-white text-sm font-bold">מ</span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-white text-sm font-medium truncate">מנהל מערכת</p>
-              <p className="text-text-muted text-[11px]">admin@paseo.co.il</p>
-            </div>
-            <button className="p-1.5 text-text-muted hover:text-white bg-transparent border-none cursor-pointer transition-colors rounded-lg hover:bg-navy-light">
-              <Settings size={16} />
-            </button>
-          </div>
-        </div>
-      </aside>
-
-      {/* Main content area */}
-      <div className="flex-1 lg:mr-[260px] flex flex-col min-h-screen">
-        {/* Top bar - mobile header + desktop top bar */}
-        <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-xl border-b border-border">
-          <div className="px-4 lg:px-8 h-16 flex items-center justify-between">
-            {/* Mobile logo */}
-            <div className="lg:hidden flex items-center gap-2.5">
-              <div className="w-8 h-8 bg-navy rounded-lg flex items-center justify-center">
-                <ChefHat size={16} className="text-white" />
+    <div className="min-h-screen bg-surface overflow-x-hidden">
+      {/* ===== GLASSMORPHISM TOP NAVIGATION ===== */}
+      <header className="sticky top-0 z-50 glass border-b border-white/20 shadow-sm shadow-purple-500/5">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="h-16 lg:h-[68px] flex items-center justify-between gap-4">
+            {/* Logo */}
+            <Link to="/" className="no-underline flex items-center gap-3 group shrink-0">
+              <div className="w-10 h-10 gradient-hero rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/25 group-hover:shadow-purple-500/40 transition-all duration-300 group-hover:scale-105">
+                <ChefHat size={20} className="text-white" />
               </div>
-              <span className="text-base font-black tracking-wider text-navy">PASEO</span>
-            </div>
+              <div className="flex flex-col">
+                <h1 className="text-lg font-black tracking-[0.1em] text-navy leading-none">PASEO</h1>
+                <span className="text-[10px] text-text-muted tracking-wide mt-0.5 hidden sm:block">ניהול חשבוניות</span>
+              </div>
+            </Link>
 
-            {/* Breadcrumb / page context on desktop */}
-            <div className="hidden lg:block">
-              <p className="text-text-muted text-sm">
-                {pathname === '/' && 'סקירה כללית'}
-                {pathname === '/invoices' && 'ניהול חשבוניות'}
-                {pathname === '/suppliers' && 'ניהול ספקים'}
-              </p>
-            </div>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center gap-1 bg-surface/60 rounded-2xl p-1.5 border border-border-light">
+              {navLinks.map(({ to, label, icon: Icon }) => {
+                const active = pathname === to || (to !== '/' && pathname.startsWith(to));
+                return (
+                  <Link
+                    key={to}
+                    to={to}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-xl no-underline text-[13px] font-semibold transition-all duration-300 ${
+                      active
+                        ? 'gradient-hero text-white shadow-md shadow-purple-500/20'
+                        : 'text-text-secondary hover:text-primary hover:bg-white/80'
+                    }`}
+                  >
+                    <Icon size={15} strokeWidth={active ? 2.2 : 1.8} />
+                    <span>{label}</span>
+                  </Link>
+                );
+              })}
+            </nav>
 
-            {/* Actions */}
-            <div className="flex items-center gap-2">
-              <button className="relative p-2.5 text-text-secondary hover:text-text-primary bg-transparent hover:bg-surface border-none cursor-pointer transition-all rounded-xl">
-                <Bell size={18} />
-                <span className="absolute top-2 left-2 w-2 h-2 bg-danger rounded-full border-2 border-white" />
+            {/* Right Actions */}
+            <div className="flex items-center gap-2 shrink-0">
+              <CommandPalette />
+              <button className="relative p-2.5 text-text-secondary hover:text-primary bg-white/60 hover:bg-white border border-border-light hover:border-primary/20 cursor-pointer transition-all duration-300 rounded-xl">
+                <Bell size={17} />
+                <span className="absolute top-1.5 left-1.5 w-2.5 h-2.5 gradient-hero rounded-full border-2 border-white shadow-sm" />
               </button>
+              <div className="hidden lg:flex items-center gap-2.5 mr-1 pr-3 border-r border-border-light">
+                <div className="w-9 h-9 gradient-hero rounded-xl flex items-center justify-center shadow-sm shadow-purple-500/20">
+                  <span className="text-white text-sm font-bold">מ</span>
+                </div>
+                <div className="hidden xl:block">
+                  <p className="text-sm font-semibold text-text-primary leading-tight">מנהל מערכת</p>
+                  <p className="text-[11px] text-text-muted">PASEO Group</p>
+                </div>
+              </div>
             </div>
           </div>
-        </header>
+        </div>
+      </header>
 
-        {/* Page content */}
-        <main className="flex-1 pb-20 lg:pb-0">
-          <Outlet />
-        </main>
-      </div>
+      {/* ===== PAGE CONTENT ===== */}
+      <main className="pb-24 md:pb-0">
+        <Outlet />
+      </main>
 
-      {/* Mobile bottom navigation */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-t border-border mobile-bottom-bar">
+      {/* ===== MOBILE BOTTOM NAVIGATION ===== */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 glass border-t border-white/20 mobile-bottom-bar shadow-lg shadow-purple-500/5">
         <div className="flex items-center justify-around px-2 pt-2 pb-2">
           {navLinks.map(({ to, label, icon: Icon }) => {
             const active = pathname === to;
@@ -131,16 +85,20 @@ export default function PaseoLayout() {
               <Link
                 key={to}
                 to={to}
-                className={`flex flex-col items-center gap-1 px-4 py-1.5 rounded-xl no-underline transition-all duration-200 min-w-[64px] ${
+                className={`flex flex-col items-center gap-1 px-3 py-1.5 rounded-2xl no-underline transition-all duration-300 min-w-[60px] ${
                   active
                     ? 'text-primary'
                     : 'text-text-muted hover:text-text-secondary'
                 }`}
               >
-                <div className={`p-1.5 rounded-xl transition-all duration-200 ${active ? 'bg-primary-50' : ''}`}>
-                  <Icon size={20} strokeWidth={active ? 2.2 : 1.6} />
+                <div className={`p-2 rounded-xl transition-all duration-300 ${
+                  active
+                    ? 'gradient-hero shadow-md shadow-purple-500/25'
+                    : ''
+                }`}>
+                  <Icon size={18} strokeWidth={active ? 2.2 : 1.6} className={active ? 'text-white' : ''} />
                 </div>
-                <span className={`text-[11px] ${active ? 'font-bold' : 'font-medium'}`}>{label}</span>
+                <span className={`text-[10px] ${active ? 'font-bold text-primary' : 'font-medium'}`}>{label}</span>
               </Link>
             );
           })}
