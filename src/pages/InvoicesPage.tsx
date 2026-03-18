@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Plus, FileText, Trash2, X, ChevronDown, ChevronUp, RefreshCw, Search, Filter, Hash, CalendarDays, Receipt } from 'lucide-react';
+import { Plus, FileText, Trash2, X, ChevronDown, Search, Filter, Hash, CalendarDays, Receipt } from 'lucide-react';
 import {
   getInvoices, getSuppliers, createInvoice,
   updateInvoiceStatus, deleteInvoice,
