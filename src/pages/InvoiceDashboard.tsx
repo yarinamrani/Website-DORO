@@ -167,7 +167,7 @@ export default function InvoiceDashboard() {
       {/* ===== FLOATING STAT CARDS ===== */}
       <div className="max-w-7xl mx-auto px-4 lg:px-8 -mt-14 lg:-mt-16 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5 stagger-children">
-          {statCards.map(({ to, label, value, icon: Icon, color, iconBg, iconText }) => {
+          {statCards.map(({ to, label, value, icon: Icon, iconBg, iconText }) => {
             const card = (
               <div className="bg-white rounded-2xl p-4 lg:p-6 border border-white/80 shadow-xl shadow-purple-500/5 card-hover cursor-pointer group">
                 <div className="flex items-center justify-between mb-4 lg:mb-5">

@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, FileText, Users, BarChart3, ChefHat, Bell, Search } from 'lucide-react';
+import { LayoutDashboard, FileText, Users, BarChart3, ChefHat, Bell } from 'lucide-react';
 import CommandPalette from '../CommandPalette';
 
 const navLinks = [
