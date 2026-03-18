@@ -17,7 +17,7 @@ const statusColors: Record<InvoiceStatus, string> = {
   received: 'bg-indigo-50 text-indigo-600',
   checked: 'bg-emerald-50 text-emerald-600',
   disputed: 'bg-rose-50 text-rose-600',
-  paid: 'bg-gray-100 text-text-secondary',
+  paid: 'bg-gray-100 text-gray-500',
 };
 
 const statusDots: Record<InvoiceStatus, string> = {
@@ -144,30 +144,27 @@ export default function InvoicesPage() {
   }, {} as Record<string, number>);
 
   return (
-    <div className="animate-fade-in">
-      {/* ===== GRADIENT HERO HEADER ===== */}
-      <div className="relative gradient-hero-dark overflow-hidden">
-        <div className="gradient-orb w-80 h-80 bg-violet-600 -top-40 -right-20 opacity-30" />
-        <div className="gradient-orb w-64 h-64 bg-pink-500 bottom-0 left-1/4 opacity-20" />
-
-        <div className="relative max-w-7xl mx-auto px-4 lg:px-8 pt-10 lg:pt-12 pb-20 lg:pb-24">
+    <div>
+      {/* ===== CLEAN HEADER ===== */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/80 text-xs font-medium px-3.5 py-1.5 rounded-full mb-3 border border-white/10">
+              <div className="inline-flex items-center gap-2 bg-gray-100 text-gray-500 text-xs font-medium px-3 py-1.5 rounded-full mb-3">
                 <FileText size={13} />
                 <span>ניהול חשבוניות</span>
               </div>
-              <h1 className="text-3xl lg:text-[38px] font-extrabold text-white tracking-tight">חשבוניות</h1>
-              <p className="text-white/50 text-sm mt-2">
+              <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">חשבוניות</h1>
+              <p className="text-gray-400 text-sm mt-1">
                 <span className="num-ltr" dir="ltr">{invoices.length}</span> חשבוניות סה״כ
                 {filterStatus !== 'all' && (
-                  <span className="text-amber-400 font-medium"> · מציג {filtered.length} תוצאות</span>
+                  <span className="text-teal-600 font-medium"> · מציג {filtered.length} תוצאות</span>
                 )}
               </p>
             </div>
             <button
               onClick={openNew}
-              className="flex items-center gap-2 gradient-accent text-white px-6 py-3 rounded-xl border-none cursor-pointer font-bold text-sm transition-all duration-300 shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 hover:scale-[1.02]"
+              className="flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-xl border-none cursor-pointer font-bold text-sm transition-all duration-200 shadow-sm hover:shadow-md"
             >
               <Plus size={18} />
               חשבונית חדשה
@@ -176,42 +173,42 @@ export default function InvoicesPage() {
         </div>
       </div>
 
-      {/* ===== MAIN CONTENT (floating over hero) ===== */}
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 -mt-10 relative z-10 pb-8">
+      {/* ===== MAIN CONTENT ===== */}
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 pt-6 pb-8">
         {/* Error */}
         {error && (
-          <div className="bg-rose-50 text-rose-600 px-5 py-3.5 rounded-2xl mb-5 text-sm border border-rose-200 flex items-center justify-between animate-slide-up shadow-sm">
+          <div className="bg-rose-50 text-rose-600 px-5 py-3.5 rounded-xl mb-5 text-sm border border-rose-200 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="w-7 h-7 rounded-xl bg-rose-100 flex items-center justify-center shrink-0">
+              <div className="w-7 h-7 rounded-lg bg-rose-100 flex items-center justify-center shrink-0">
                 <X size={13} />
               </div>
               <span className="font-semibold">{error}</span>
             </div>
-            <button onClick={() => setError('')} className="p-2 hover:bg-rose-100 rounded-xl bg-transparent border-none cursor-pointer text-rose-500 transition-colors">
+            <button onClick={() => setError('')} className="p-2 hover:bg-rose-100 rounded-lg bg-transparent border-none cursor-pointer text-rose-500 transition-colors">
               <X size={15} />
             </button>
           </div>
         )}
 
-        {/* Filters Bar - floating white card */}
-        <div className="bg-white rounded-2xl p-3 lg:p-4 border border-border-light shadow-xl shadow-purple-500/5 mb-6">
+        {/* Filters Bar */}
+        <div className="bg-white rounded-xl p-3 lg:p-4 border border-gray-200 shadow-sm mb-6">
           <div className="flex flex-col sm:flex-row gap-3">
             <div className="relative flex-1 max-w-lg">
-              <Search size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted" />
+              <Search size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" />
               <input
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className="w-full pr-11 pl-4 py-2.5 rounded-xl border border-border-light bg-surface/50 text-sm placeholder:text-text-muted transition-all focus:bg-white"
+                className="w-full pr-11 pl-4 py-2.5 rounded-lg border border-gray-200 bg-gray-50 text-sm placeholder:text-gray-400 transition-all focus:bg-white"
                 placeholder="חפש לפי מספר חשבונית או ספק..."
               />
             </div>
-            <div className="flex items-center gap-1 bg-surface/50 border border-border-light rounded-xl p-1 overflow-x-auto">
+            <div className="flex items-center gap-1 bg-gray-50 border border-gray-200 rounded-lg p-1 overflow-x-auto">
               <button
                 onClick={() => setFilterStatus('all')}
-                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-[13px] font-semibold border-none cursor-pointer transition-all duration-300 whitespace-nowrap ${
+                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-md text-[13px] font-semibold border-none cursor-pointer transition-all duration-200 whitespace-nowrap ${
                   filterStatus === 'all'
-                    ? 'gradient-hero text-white shadow-md shadow-purple-500/20'
-                    : 'bg-transparent text-text-secondary hover:bg-white hover:text-text-primary'
+                    ? 'bg-teal-500 text-white shadow-sm'
+                    : 'bg-transparent text-gray-500 hover:bg-white hover:text-gray-700'
                 }`}
               >
                 <Filter size={13} />
@@ -222,10 +219,10 @@ export default function InvoicesPage() {
                 <button
                   key={st}
                   onClick={() => setFilterStatus(st)}
-                  className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-[13px] font-semibold border-none cursor-pointer transition-all duration-300 whitespace-nowrap ${
+                  className={`flex items-center gap-1.5 px-3.5 py-2 rounded-md text-[13px] font-semibold border-none cursor-pointer transition-all duration-200 whitespace-nowrap ${
                     filterStatus === st
-                      ? 'gradient-hero text-white shadow-md shadow-purple-500/20'
-                      : 'bg-transparent text-text-secondary hover:bg-white hover:text-text-primary'
+                      ? 'bg-teal-500 text-white shadow-sm'
+                      : 'bg-transparent text-gray-500 hover:bg-white hover:text-gray-700'
                   }`}
                 >
                   <span className={`w-2 h-2 rounded-full ${filterStatus === st ? 'bg-white/60' : statusDots[st]}`} />
@@ -243,27 +240,27 @@ export default function InvoicesPage() {
         {loading ? (
           <div className="flex flex-col gap-3">
             {[1, 2, 3].map(i => (
-              <div key={i} className="bg-white rounded-2xl p-6 border border-border-light shadow-sm">
+              <div key={i} className="bg-white rounded-xl p-6 border border-gray-200">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl animate-shimmer" />
+                  <div className="w-12 h-12 rounded-lg bg-gray-100 animate-pulse" />
                   <div className="flex-1">
-                    <div className="h-4 w-36 rounded-lg animate-shimmer mb-2.5" />
-                    <div className="h-3 w-52 rounded-lg animate-shimmer" />
+                    <div className="h-4 w-36 rounded bg-gray-100 animate-pulse mb-2.5" />
+                    <div className="h-3 w-52 rounded bg-gray-100 animate-pulse" />
                   </div>
-                  <div className="h-7 w-24 rounded-lg animate-shimmer" />
+                  <div className="h-7 w-24 rounded bg-gray-100 animate-pulse" />
                 </div>
               </div>
             ))}
           </div>
         ) : filtered.length === 0 ? (
-          <div className="text-center py-24 animate-scale-in">
-            <div className="w-28 h-28 gradient-subtle rounded-full flex items-center justify-center mx-auto mb-7 shadow-inner">
-              <Receipt size={44} className="text-primary/40" />
+          <div className="text-center py-24">
+            <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Receipt size={40} className="text-gray-300" />
             </div>
-            <p className="text-text-primary text-xl font-bold mb-2">
+            <p className="text-gray-900 text-xl font-bold mb-2">
               {invoices.length === 0 ? 'אין חשבוניות עדיין' : 'לא נמצאו תוצאות'}
             </p>
-            <p className="text-text-secondary text-sm mb-8 max-w-sm mx-auto leading-relaxed">
+            <p className="text-gray-500 text-sm mb-8 max-w-sm mx-auto leading-relaxed">
               {invoices.length === 0
                 ? 'הוסף את החשבונית הראשונה שלך כדי להתחיל לעקוב אחרי הוצאות'
                 : 'נסה לשנות את מילות החיפוש או הסר פילטרים'}
@@ -271,7 +268,7 @@ export default function InvoicesPage() {
             {invoices.length === 0 && (
               <button
                 onClick={openNew}
-                className="gradient-hero text-white px-7 py-3.5 rounded-xl border-none cursor-pointer font-bold text-sm hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-[1.02]"
+                className="bg-teal-500 hover:bg-teal-600 text-white px-7 py-3.5 rounded-xl border-none cursor-pointer font-bold text-sm transition-all duration-200 shadow-sm hover:shadow-md"
               >
                 <Plus size={16} className="inline ml-1.5 -mt-0.5" />
                 חשבונית ראשונה
@@ -279,111 +276,103 @@ export default function InvoicesPage() {
             )}
           </div>
         ) : (
-          <div className="flex flex-col gap-3 stagger-children">
+          <div className="flex flex-col gap-3">
             {filtered.map(inv => (
-              <div key={inv.id} className="bg-white rounded-2xl border border-border-light overflow-hidden shadow-sm hover:shadow-lg hover:shadow-purple-500/5 transition-all duration-300 hover:border-primary/10">
+              <div key={inv.id} className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-200">
                 {/* Invoice Row */}
                 <div
-                  className="p-4 lg:p-5 flex items-center gap-3 lg:gap-4 cursor-pointer hover:bg-surface/30 transition-colors duration-200"
+                  className="p-4 lg:p-5 flex items-center gap-3 lg:gap-4 cursor-pointer hover:bg-gray-50 transition-colors duration-150"
                   onClick={() => setExpandedId(expandedId === inv.id ? null : inv.id)}
                 >
-                  {/* Icon */}
-                  <div className={`w-11 h-11 lg:w-12 lg:h-12 rounded-xl flex items-center justify-center shrink-0 ${statusColors[inv.status]}`}>
+                  <div className={`w-11 h-11 lg:w-12 lg:h-12 rounded-lg flex items-center justify-center shrink-0 ${statusColors[inv.status]}`}>
                     <FileText size={18} />
                   </div>
 
-                  {/* Details */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2.5 mb-1">
-                      <span className="font-bold text-text-primary text-[15px]">
-                        <span className="text-text-muted font-medium">#</span>{inv.invoice_number}
+                      <span className="font-bold text-gray-900 text-[15px]">
+                        <span className="text-gray-400 font-medium">#</span>{inv.invoice_number}
                       </span>
                       <span className={`status-badge ${statusColors[inv.status]}`}>
                         <span className={`w-1.5 h-1.5 rounded-full ml-1.5 ${statusDots[inv.status]}`} />
                         {statusLabels[inv.status]}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 text-[13px] text-text-secondary">
+                    <div className="flex items-center gap-2 text-[13px] text-gray-500">
                       <span className="font-medium">{inv.supplier?.name}</span>
-                      <span className="text-text-muted">·</span>
+                      <span className="text-gray-300">·</span>
                       <span className="num-ltr" dir="ltr">{new Date(inv.invoice_date).toLocaleDateString('he-IL')}</span>
                     </div>
                   </div>
 
-                  {/* Amount */}
                   <div className="text-left">
-                    <span className="font-extrabold text-lg text-text-primary num-ltr" dir="ltr">
+                    <span className="font-extrabold text-lg text-gray-900 num-ltr" dir="ltr">
                       ₪{Number(inv.total_amount).toLocaleString()}
                     </span>
                   </div>
 
-                  {/* Expand chevron */}
-                  <div className={`text-text-muted transition-transform duration-300 ${expandedId === inv.id ? 'rotate-180' : ''}`}>
+                  <div className={`text-gray-400 transition-transform duration-300 ${expandedId === inv.id ? 'rotate-180' : ''}`}>
                     <ChevronDown size={18} />
                   </div>
                 </div>
 
-                {/* Expanded Details */}
                 {expandedId === inv.id && (
-                  <div className="border-t border-border-light p-4 lg:p-6 bg-surface/30 animate-slide-up">
-                    {/* Status actions */}
+                  <div className="border-t border-gray-200 p-4 lg:p-6 bg-gray-50">
                     <div className="mb-5">
-                      <p className="text-[12px] text-text-muted font-semibold mb-3 uppercase tracking-wide">עדכון סטטוס</p>
+                      <p className="text-[12px] text-gray-400 font-semibold mb-3 uppercase tracking-wide">עדכון סטטוס</p>
                       <div className="flex gap-2 flex-wrap">
                         {(Object.keys(statusLabels) as InvoiceStatus[]).map(st => (
                           <button
                             key={st}
                             onClick={() => handleStatusChange(inv.id, st)}
-                            className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-[13px] font-semibold cursor-pointer transition-all duration-300 border ${
+                            className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-[13px] font-semibold cursor-pointer transition-all duration-200 border ${
                               inv.status === st
                                 ? `${statusColors[st]} border-current/20 shadow-sm`
-                                : 'bg-white text-text-secondary border-border-light hover:border-primary/20 hover:text-text-primary'
+                                : 'bg-white text-gray-500 border-gray-200 hover:border-gray-300 hover:text-gray-700'
                             }`}
                           >
-                            <span className={`w-2 h-2 rounded-full ${inv.status === st ? statusDots[st] : 'bg-text-muted'}`} />
+                            <span className={`w-2 h-2 rounded-full ${inv.status === st ? statusDots[st] : 'bg-gray-300'}`} />
                             {statusLabels[st]}
                           </button>
                         ))}
                       </div>
                     </div>
 
-                    {/* Info grid */}
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-5">
-                      <div className="bg-white rounded-xl p-3.5 border border-border-light shadow-sm">
+                      <div className="bg-white rounded-lg p-3.5 border border-gray-200">
                         <div className="flex items-center gap-1.5 mb-1.5">
-                          <Hash size={12} className="text-primary/60" />
-                          <span className="text-[11px] text-text-muted font-medium">מספר חשבונית</span>
+                          <Hash size={12} className="text-gray-400" />
+                          <span className="text-[11px] text-gray-400 font-medium">מספר חשבונית</span>
                         </div>
-                        <p className="text-sm font-bold text-text-primary num-ltr" dir="ltr">{inv.invoice_number}</p>
+                        <p className="text-sm font-bold text-gray-900 num-ltr" dir="ltr">{inv.invoice_number}</p>
                       </div>
-                      <div className="bg-white rounded-xl p-3.5 border border-border-light shadow-sm">
+                      <div className="bg-white rounded-lg p-3.5 border border-gray-200">
                         <div className="flex items-center gap-1.5 mb-1.5">
-                          <CalendarDays size={12} className="text-primary/60" />
-                          <span className="text-[11px] text-text-muted font-medium">תאריך קבלה</span>
+                          <CalendarDays size={12} className="text-gray-400" />
+                          <span className="text-[11px] text-gray-400 font-medium">תאריך קבלה</span>
                         </div>
-                        <p className="text-sm font-bold text-text-primary num-ltr" dir="ltr">{new Date(inv.received_date).toLocaleDateString('he-IL')}</p>
+                        <p className="text-sm font-bold text-gray-900 num-ltr" dir="ltr">{new Date(inv.received_date).toLocaleDateString('he-IL')}</p>
                       </div>
-                      <div className="bg-white rounded-xl p-3.5 border border-border-light shadow-sm">
+                      <div className="bg-white rounded-lg p-3.5 border border-gray-200">
                         <div className="flex items-center gap-1.5 mb-1.5">
-                          <CalendarDays size={12} className="text-primary/60" />
-                          <span className="text-[11px] text-text-muted font-medium">תאריך חשבונית</span>
+                          <CalendarDays size={12} className="text-gray-400" />
+                          <span className="text-[11px] text-gray-400 font-medium">תאריך חשבונית</span>
                         </div>
-                        <p className="text-sm font-bold text-text-primary num-ltr" dir="ltr">{new Date(inv.invoice_date).toLocaleDateString('he-IL')}</p>
+                        <p className="text-sm font-bold text-gray-900 num-ltr" dir="ltr">{new Date(inv.invoice_date).toLocaleDateString('he-IL')}</p>
                       </div>
                     </div>
 
                     {inv.notes && (
-                      <div className="bg-white rounded-xl p-4 border border-border-light mb-5 shadow-sm">
-                        <p className="text-[12px] text-text-muted font-medium mb-1.5">הערות</p>
-                        <p className="text-sm text-text-secondary leading-relaxed">{inv.notes}</p>
+                      <div className="bg-white rounded-lg p-4 border border-gray-200 mb-5">
+                        <p className="text-[12px] text-gray-400 font-medium mb-1.5">הערות</p>
+                        <p className="text-sm text-gray-600 leading-relaxed">{inv.notes}</p>
                       </div>
                     )}
 
-                    {/* Delete action */}
                     <div className="flex justify-end pt-2">
                       <button
                         onClick={() => handleDelete(inv.id, inv.invoice_number)}
-                        className="flex items-center gap-1.5 px-4 py-2.5 text-rose-500 hover:bg-rose-50 bg-transparent border border-transparent hover:border-rose-200 rounded-xl cursor-pointer text-[13px] font-semibold transition-all duration-300"
+                        className="flex items-center gap-1.5 px-4 py-2.5 text-rose-500 hover:bg-rose-50 bg-transparent border border-transparent hover:border-rose-200 rounded-lg cursor-pointer text-[13px] font-semibold transition-all duration-200"
                       >
                         <Trash2 size={14} />
                         מחק חשבונית
@@ -400,18 +389,16 @@ export default function InvoicesPage() {
       {/* ===== NEW INVOICE MODAL ===== */}
       {showForm && (
         <div className="fixed inset-0 modal-overlay z-50 flex items-start lg:items-center justify-center p-4 pt-8 lg:pt-4 overflow-y-auto">
-          <div className="bg-white rounded-[20px] w-full max-w-2xl shadow-2xl animate-scale-in my-4 border border-border-light overflow-hidden">
-            {/* Modal Header with gradient */}
-            <div className="gradient-hero px-6 py-6 relative overflow-hidden">
-              <div className="gradient-orb w-40 h-40 bg-pink-400 -top-20 -left-10 opacity-30" />
-              <div className="relative flex items-center justify-between">
+          <div className="bg-white rounded-2xl w-full max-w-2xl shadow-2xl my-4 border border-gray-200 overflow-hidden">
+            <div className="bg-teal-500 px-6 py-6">
+              <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-lg font-bold text-white">חשבונית חדשה</h2>
-                  <p className="text-white/60 text-[13px] mt-0.5">הזן את פרטי החשבונית</p>
+                  <p className="text-teal-100 text-[13px] mt-0.5">הזן את פרטי החשבונית</p>
                 </div>
                 <button
                   onClick={() => setShowForm(false)}
-                  className="p-2.5 bg-white/15 hover:bg-white/25 backdrop-blur-sm rounded-xl border border-white/10 cursor-pointer text-white transition-all duration-300"
+                  className="p-2.5 bg-white/20 hover:bg-white/30 rounded-lg border-none cursor-pointer text-white transition-all duration-200"
                 >
                   <X size={18} />
                 </button>
@@ -419,14 +406,13 @@ export default function InvoicesPage() {
             </div>
 
             <form onSubmit={handleSubmit} className="p-6 flex flex-col gap-5 max-h-[65vh] overflow-y-auto">
-              {/* Supplier + Invoice number */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[13px] font-semibold mb-2 text-text-primary">ספק *</label>
+                  <label className="block text-[13px] font-semibold mb-2 text-gray-700">ספק *</label>
                   <select
                     value={form.supplier_id}
                     onChange={e => setForm({ ...form, supplier_id: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border-light text-sm bg-white cursor-pointer transition-all hover:border-primary/30"
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm bg-white cursor-pointer transition-all hover:border-teal-300"
                     dir="rtl"
                   >
                     <option value="">בחר ספק</option>
@@ -436,49 +422,47 @@ export default function InvoicesPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-[13px] font-semibold mb-2 text-text-primary">מספר חשבונית *</label>
+                  <label className="block text-[13px] font-semibold mb-2 text-gray-700">מספר חשבונית *</label>
                   <input
                     value={form.invoice_number}
                     onChange={e => setForm({ ...form, invoice_number: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border-light text-sm transition-all hover:border-primary/30"
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm transition-all hover:border-teal-300"
                     dir="ltr"
                     placeholder="INV-001"
                   />
                 </div>
               </div>
 
-              {/* Dates */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[13px] font-semibold mb-2 text-text-primary">תאריך חשבונית</label>
+                  <label className="block text-[13px] font-semibold mb-2 text-gray-700">תאריך חשבונית</label>
                   <input
                     type="date"
                     value={form.invoice_date}
                     onChange={e => setForm({ ...form, invoice_date: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border-light text-sm transition-all hover:border-primary/30"
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm transition-all hover:border-teal-300"
                     dir="ltr"
                   />
                 </div>
                 <div>
-                  <label className="block text-[13px] font-semibold mb-2 text-text-primary">תאריך קבלה</label>
+                  <label className="block text-[13px] font-semibold mb-2 text-gray-700">תאריך קבלה</label>
                   <input
                     type="date"
                     value={form.received_date}
                     onChange={e => setForm({ ...form, received_date: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border-light text-sm transition-all hover:border-primary/30"
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm transition-all hover:border-teal-300"
                     dir="ltr"
                   />
                 </div>
               </div>
 
-              {/* Items */}
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <label className="text-[13px] font-bold text-text-primary">פריטים</label>
+                  <label className="text-[13px] font-bold text-gray-700">פריטים</label>
                   <button
                     type="button"
                     onClick={addItem}
-                    className="flex items-center gap-1 text-primary text-[13px] font-semibold bg-transparent border-none cursor-pointer hover:text-primary-dark transition-colors"
+                    className="flex items-center gap-1 text-teal-600 text-[13px] font-semibold bg-transparent border-none cursor-pointer hover:text-teal-700 transition-colors"
                   >
                     <Plus size={14} />
                     הוסף פריט
@@ -487,44 +471,44 @@ export default function InvoicesPage() {
 
                 <div className="flex flex-col gap-3">
                   {form.items.map((item, i) => (
-                    <div key={i} className="bg-surface/60 rounded-xl p-4 border border-border-light">
+                    <div key={i} className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                       <div className="grid grid-cols-[1fr_72px_96px_28px] gap-2.5 items-end">
                         <div>
-                          <label className="block text-[11px] text-text-muted font-medium mb-1.5">שם מוצר *</label>
+                          <label className="block text-[11px] text-gray-400 font-medium mb-1.5">שם מוצר *</label>
                           <input
                             value={item.product_name}
                             onChange={e => updateItem(i, 'product_name', e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg border border-border-light text-sm transition-all bg-white hover:border-primary/30"
+                            className="w-full px-3 py-2 rounded-md border border-gray-200 text-sm transition-all bg-white hover:border-teal-300"
                             placeholder="שם המוצר"
                           />
                         </div>
                         <div>
-                          <label className="block text-[11px] text-text-muted font-medium mb-1.5">כמות</label>
+                          <label className="block text-[11px] text-gray-400 font-medium mb-1.5">כמות</label>
                           <input
                             type="number"
                             min="1"
                             value={item.quantity}
                             onChange={e => updateItem(i, 'quantity', parseInt(e.target.value) || 1)}
-                            className="w-full px-3 py-2 rounded-lg border border-border-light text-sm text-center transition-all bg-white hover:border-primary/30"
+                            className="w-full px-3 py-2 rounded-md border border-gray-200 text-sm text-center transition-all bg-white hover:border-teal-300"
                             dir="ltr"
                           />
                         </div>
                         <div>
-                          <label className="block text-[11px] text-text-muted font-medium mb-1.5">מחיר ₪</label>
+                          <label className="block text-[11px] text-gray-400 font-medium mb-1.5">מחיר</label>
                           <input
                             type="number"
                             step="0.01"
                             min="0"
                             value={item.unit_price || ''}
                             onChange={e => updateItem(i, 'unit_price', parseFloat(e.target.value) || 0)}
-                            className="w-full px-3 py-2 rounded-lg border border-border-light text-sm transition-all bg-white hover:border-primary/30"
+                            className="w-full px-3 py-2 rounded-md border border-gray-200 text-sm transition-all bg-white hover:border-teal-300"
                             dir="ltr"
                           />
                         </div>
                         <button
                           type="button"
                           onClick={() => removeItem(i)}
-                          className="p-1.5 text-text-muted hover:text-rose-500 bg-transparent border-none cursor-pointer transition-colors rounded-lg hover:bg-white"
+                          className="p-1.5 text-gray-400 hover:text-rose-500 bg-transparent border-none cursor-pointer transition-colors rounded-md hover:bg-white"
                           disabled={form.items.length <= 1}
                         >
                           <X size={14} />
@@ -534,14 +518,14 @@ export default function InvoicesPage() {
                         <input
                           value={item.sku || ''}
                           onChange={e => updateItem(i, 'sku', e.target.value)}
-                          className="px-3 py-1.5 rounded-lg border border-border-light text-[12px] transition-all bg-white hover:border-primary/30"
+                          className="px-3 py-1.5 rounded-md border border-gray-200 text-[12px] transition-all bg-white hover:border-teal-300"
                           placeholder="מק״ט (אופציונלי)"
                           dir="ltr"
                         />
                         <input
                           value={item.category || ''}
                           onChange={e => updateItem(i, 'category', e.target.value)}
-                          className="px-3 py-1.5 rounded-lg border border-border-light text-[12px] transition-all bg-white hover:border-primary/30"
+                          className="px-3 py-1.5 rounded-md border border-gray-200 text-[12px] transition-all bg-white hover:border-teal-300"
                           placeholder="קטגוריה (אופציונלי)"
                         />
                       </div>
@@ -550,28 +534,25 @@ export default function InvoicesPage() {
                 </div>
               </div>
 
-              {/* Total */}
-              <div className="flex items-center justify-between gradient-hero-dark px-6 py-5 rounded-2xl border border-white/5">
-                <span className="font-bold text-white/80 text-[15px]">סה״כ</span>
+              <div className="flex items-center justify-between bg-gray-900 px-6 py-5 rounded-xl">
+                <span className="font-bold text-gray-300 text-[15px]">סה״כ</span>
                 <span className="font-extrabold text-2xl text-white num-ltr" dir="ltr">₪{form.total_amount.toLocaleString()}</span>
               </div>
 
-              {/* Notes */}
               <div>
-                <label className="block text-[13px] font-semibold mb-2 text-text-primary">הערות</label>
+                <label className="block text-[13px] font-semibold mb-2 text-gray-700">הערות</label>
                 <textarea
                   value={form.notes}
                   onChange={e => setForm({ ...form, notes: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border border-border-light text-sm resize-none transition-all hover:border-primary/30"
+                  className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm resize-none transition-all hover:border-teal-300"
                   rows={2}
                   placeholder="הערות נוספות..."
                 />
               </div>
 
-              {/* Submit */}
               <button
                 type="submit"
-                className="w-full gradient-hero text-white py-4 rounded-xl border-none cursor-pointer font-bold text-[15px] hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-[1.01]"
+                className="w-full bg-teal-500 hover:bg-teal-600 text-white py-4 rounded-xl border-none cursor-pointer font-bold text-[15px] transition-all duration-200 shadow-sm hover:shadow-md"
               >
                 שמור חשבונית
               </button>

@@ -38,7 +38,6 @@ function BarChart({ data, height = 240 }: { data: MonthlySpending[]; height?: nu
   const paddingLeft = 55;
   const usableHeight = chartHeight - paddingBottom - paddingTop;
 
-  // Grid lines
   const gridLines = 5;
   const gridStep = maxVal / gridLines;
 
@@ -49,7 +48,6 @@ function BarChart({ data, height = 240 }: { data: MonthlySpending[]; height?: nu
         className="w-full min-w-[400px]"
         style={{ maxHeight: `${height}px` }}
       >
-        {/* Grid lines */}
         {Array.from({ length: gridLines + 1 }).map((_, i) => {
           const y = paddingTop + usableHeight - (i * usableHeight / gridLines);
           const val = Math.round(gridStep * i);
@@ -77,7 +75,6 @@ function BarChart({ data, height = 240 }: { data: MonthlySpending[]; height?: nu
           );
         })}
 
-        {/* Bars */}
         {data.map((d, i) => {
           const barH = maxVal > 0 ? (d.total / maxVal) * usableHeight : 0;
           const x = paddingLeft + i * (barWidth + 8) + 4;
@@ -86,7 +83,6 @@ function BarChart({ data, height = 240 }: { data: MonthlySpending[]; height?: nu
 
           return (
             <g key={d.month}>
-              {/* Bar with rounded top */}
               <rect
                 x={x}
                 y={y}
@@ -97,7 +93,6 @@ function BarChart({ data, height = 240 }: { data: MonthlySpending[]; height?: nu
                 opacity={i === data.length - 1 ? 1 : 0.7}
                 className="transition-all duration-300 hover:opacity-100"
               />
-              {/* Hover tooltip background */}
               {d.total > 0 && (
                 <text
                   x={x + barWidth / 2}
@@ -109,7 +104,6 @@ function BarChart({ data, height = 240 }: { data: MonthlySpending[]; height?: nu
                   {`₪${d.total.toLocaleString()}`}
                 </text>
               )}
-              {/* Month label */}
               <text
                 x={x + barWidth / 2}
                 y={chartHeight - 28}
@@ -119,7 +113,6 @@ function BarChart({ data, height = 240 }: { data: MonthlySpending[]; height?: nu
               >
                 {shortLabel}
               </text>
-              {/* Invoice count */}
               <text
                 x={x + barWidth / 2}
                 y={chartHeight - 14}
@@ -146,7 +139,7 @@ function DonutChart({ data }: { data: { label: string; value: number; color: str
   const radius = 70;
   const innerRadius = 45;
 
-  let currentAngle = -90; // Start from top
+  let currentAngle = -90;
 
   const slices = data.map(d => {
     const angle = (d.value / total) * 360;
@@ -193,7 +186,6 @@ function DonutChart({ data }: { data: { label: string; value: number; color: str
             strokeWidth="2"
           />
         ))}
-        {/* Center text */}
         <text x={center} y={center - 5} textAnchor="middle" className="text-[11px] fill-[#6B7280]" fontFamily="Heebo, sans-serif">
           סה״כ
         </text>
@@ -205,8 +197,8 @@ function DonutChart({ data }: { data: { label: string; value: number; color: str
         {data.slice(0, 6).map((d, i) => (
           <div key={i} className="flex items-center gap-2 text-sm">
             <div className="w-3 h-3 rounded-sm shrink-0" style={{ backgroundColor: d.color }} />
-            <span className="text-text-secondary truncate max-w-[120px]">{d.label}</span>
-            <span className="text-text-muted text-xs mr-auto" dir="ltr">
+            <span className="text-gray-500 truncate max-w-[120px]">{d.label}</span>
+            <span className="text-gray-400 text-xs mr-auto" dir="ltr">
               {((d.value / total) * 100).toFixed(0)}%
             </span>
           </div>
@@ -216,20 +208,19 @@ function DonutChart({ data }: { data: { label: string; value: number; color: str
   );
 }
 
-// HorizontalBar used in supplier tab
 function _HorizontalBar({
   label, value, maxValue, color, suffix = '',
 }: { label: string; value: number; maxValue: number; color: string; suffix?: string }) {
   const pct = maxValue > 0 ? (value / maxValue) * 100 : 0;
   return (
     <div className="flex items-center gap-3">
-      <span className="text-sm text-text-secondary truncate w-28 shrink-0 text-right">{label}</span>
-      <div className="flex-1 bg-surface rounded-full h-6 overflow-hidden relative">
+      <span className="text-sm text-gray-500 truncate w-28 shrink-0 text-right">{label}</span>
+      <div className="flex-1 bg-gray-100 rounded-full h-6 overflow-hidden relative">
         <div
           className="h-full rounded-full transition-all duration-700 ease-out"
           style={{ width: `${Math.max(pct, 2)}%`, backgroundColor: color }}
         />
-        <span className="absolute inset-0 flex items-center px-3 text-xs font-medium text-text-primary" dir="ltr">
+        <span className="absolute inset-0 flex items-center px-3 text-xs font-medium text-gray-700" dir="ltr">
           {suffix === '₪'
             ? `₪${value.toLocaleString()}`
             : `${value.toFixed(1)}${suffix}`
@@ -277,7 +268,7 @@ function VolatilityMeter({ score }: { score: number }) {
   const label = score > 70 ? 'גבוה' : score > 40 ? 'בינוני' : 'נמוך';
   return (
     <div className="flex items-center gap-2">
-      <div className="w-16 bg-surface rounded-full h-2 overflow-hidden">
+      <div className="w-16 bg-gray-100 rounded-full h-2 overflow-hidden">
         <div
           className="h-full rounded-full transition-all duration-500"
           style={{ width: `${score}%`, backgroundColor: color }}
@@ -364,8 +355,8 @@ export default function AnalyticsPage() {
     return (
       <div className="flex items-center justify-center py-32">
         <div className="flex flex-col items-center gap-3">
-          <RefreshCw size={28} className="text-primary animate-spin" />
-          <p className="text-text-secondary text-sm">טוען אנליטיקס...</p>
+          <RefreshCw size={28} className="text-teal-500 animate-spin" />
+          <p className="text-gray-500 text-sm">טוען אנליטיקס...</p>
         </div>
       </div>
     );
@@ -373,47 +364,45 @@ export default function AnalyticsPage() {
 
   return (
     <div className="overflow-x-hidden">
-      {/* Hero */}
-      <div className="bg-gradient-to-r from-primary to-primary-light">
+      {/* Header */}
+      <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div>
-              <h1 className="text-2xl font-bold text-white mb-1">אנליטיקס הוצאות</h1>
-              <p className="text-blue-200 text-sm">ניתוח מעמיק של הוצאות, ספקים ומגמות מחירים</p>
+              <h1 className="text-2xl font-bold text-gray-900 mb-1">אנליטיקס הוצאות</h1>
+              <p className="text-gray-500 text-sm">ניתוח מעמיק של הוצאות, ספקים ומגמות מחירים</p>
             </div>
             <div className="flex items-center gap-3">
               <select
                 value={periodMonths}
                 onChange={e => setPeriodMonths(Number(e.target.value))}
-                className="bg-white/10 border border-white/20 text-white rounded-lg px-4 py-2.5 text-sm outline-none backdrop-blur-sm cursor-pointer"
+                className="bg-white border border-gray-200 text-gray-700 rounded-lg px-4 py-2.5 text-sm outline-none cursor-pointer hover:border-teal-300 transition-colors"
                 dir="rtl"
               >
-                <option value={3} className="text-text-primary">3 חודשים</option>
-                <option value={6} className="text-text-primary">6 חודשים</option>
-                <option value={12} className="text-text-primary">12 חודשים</option>
+                <option value={3}>3 חודשים</option>
+                <option value={6}>6 חודשים</option>
+                <option value={12}>12 חודשים</option>
               </select>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 -mt-5">
+      <div className="max-w-7xl mx-auto px-6 pt-6">
         {/* Summary Cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
           <SummaryCard
             label="סה״כ הוצאות"
             value={`₪${totalSpend.toLocaleString()}`}
             icon={DollarSign}
-            color="bg-primary"
-            bg="bg-white"
+            color="bg-teal-500"
             sub={`${periodMonths} חודשים אחרונים`}
           />
           <SummaryCard
             label="ממוצע חודשי"
             value={`₪${Math.round(avgMonthly).toLocaleString()}`}
             icon={Calendar}
-            color="bg-info"
-            bg="bg-white"
+            color="bg-blue-500"
             sub={`${totalInvoices} חשבוניות`}
           />
           {comparison && (
@@ -421,14 +410,13 @@ export default function AnalyticsPage() {
               label={comparison.currentLabel}
               value={`₪${comparison.currentMonth.toLocaleString()}`}
               icon={comparison.changePercent >= 0 ? TrendingUp : TrendingDown}
-              color={comparison.changePercent > 5 ? 'bg-danger' : comparison.changePercent < -5 ? 'bg-success' : 'bg-warning'}
-              bg="bg-white"
+              color={comparison.changePercent > 5 ? 'bg-red-500' : comparison.changePercent < -5 ? 'bg-green-500' : 'bg-amber-500'}
               sub={
                 comparison.previousMonth > 0
                   ? `${comparison.changePercent >= 0 ? '+' : ''}${comparison.changePercent.toFixed(1)}% מ${comparison.previousLabel}`
                   : 'אין נתונים להשוואה'
               }
-              subColor={comparison.changePercent > 5 ? 'text-danger' : comparison.changePercent < -5 ? 'text-success' : 'text-warning'}
+              subColor={comparison.changePercent > 5 ? 'text-red-500' : comparison.changePercent < -5 ? 'text-green-500' : 'text-amber-500'}
             />
           )}
           <SummaryCard
@@ -436,21 +424,20 @@ export default function AnalyticsPage() {
             value={String(supplierSpend.length)}
             icon={Activity}
             color="bg-violet-500"
-            bg="bg-white"
             sub={`${volatility.filter(v => v.score > 50).length} עם תנודתיות גבוהה`}
           />
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-1 bg-white border border-border rounded-xl p-1 mb-6 w-fit">
+        <div className="flex gap-1 bg-white border border-gray-200 rounded-lg p-1 mb-6 w-fit">
           {tabs.map(({ key, label, icon: Icon }) => (
             <button
               key={key}
               onClick={() => setTab(key)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border-none cursor-pointer transition-all ${
+              className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium border-none cursor-pointer transition-all ${
                 tab === key
-                  ? 'bg-primary text-white shadow-sm'
-                  : 'bg-transparent text-text-secondary hover:bg-surface'
+                  ? 'bg-teal-500 text-white shadow-sm'
+                  : 'bg-transparent text-gray-500 hover:bg-gray-50'
               }`}
             >
               <Icon size={15} />
@@ -487,27 +474,26 @@ export default function AnalyticsPage() {
 // ==================== SUMMARY CARD ====================
 
 function SummaryCard({
-  label, value, icon: Icon, color, bg, sub, subColor,
+  label, value, icon: Icon, color, sub, subColor,
 }: {
   label: string;
   value: string;
   icon: typeof DollarSign;
   color: string;
-  bg: string;
   sub?: string;
   subColor?: string;
 }) {
   return (
-    <div className={`${bg} rounded-2xl p-5 border border-border-light hover:shadow-md transition-all duration-200`}>
+    <div className="bg-white rounded-xl p-5 border border-gray-200 hover:shadow-md transition-all duration-200">
       <div className="flex items-center justify-between mb-3">
-        <div className={`w-10 h-10 rounded-xl ${color} flex items-center justify-center shadow-sm`}>
+        <div className={`w-10 h-10 rounded-lg ${color} flex items-center justify-center`}>
           <Icon size={18} className="text-white" />
         </div>
       </div>
-      <p className="text-2xl font-bold text-text-primary">{value}</p>
-      <p className="text-sm text-text-secondary mt-0.5">{label}</p>
+      <p className="text-2xl font-bold text-gray-900">{value}</p>
+      <p className="text-sm text-gray-500 mt-0.5">{label}</p>
       {sub && (
-        <p className={`text-xs mt-1 ${subColor || 'text-text-muted'}`}>{sub}</p>
+        <p className={`text-xs mt-1 ${subColor || 'text-gray-400'}`}>{sub}</p>
       )}
     </div>
   );
@@ -526,14 +512,13 @@ function OverviewTab({
 }) {
   return (
     <div className="grid lg:grid-cols-[1fr_380px] gap-6">
-      {/* Monthly Spending Chart */}
-      <div className="bg-white rounded-2xl p-6 border border-border-light">
+      <div className="bg-white rounded-xl p-6 border border-gray-200">
         <div className="flex items-center justify-between mb-5">
           <div>
-            <h3 className="text-lg font-bold text-text-primary">הוצאות חודשיות</h3>
-            <p className="text-sm text-text-secondary mt-0.5">סה״כ הוצאות לפי חודש</p>
+            <h3 className="text-lg font-bold text-gray-900">הוצאות חודשיות</h3>
+            <p className="text-sm text-gray-500 mt-0.5">סה״כ הוצאות לפי חודש</p>
           </div>
-          <BarChart3 size={20} className="text-text-muted" />
+          <BarChart3 size={20} className="text-gray-400" />
         </div>
         {monthly.length > 0 ? (
           <BarChart data={monthly} />
@@ -542,14 +527,13 @@ function OverviewTab({
         )}
       </div>
 
-      {/* Category Breakdown */}
-      <div className="bg-white rounded-2xl p-6 border border-border-light">
+      <div className="bg-white rounded-xl p-6 border border-gray-200">
         <div className="flex items-center justify-between mb-5">
           <div>
-            <h3 className="text-lg font-bold text-text-primary">פילוח לפי קטגוריה</h3>
-            <p className="text-sm text-text-secondary mt-0.5">התפלגות הוצאות לפי סוג מוצר</p>
+            <h3 className="text-lg font-bold text-gray-900">פילוח לפי קטגוריה</h3>
+            <p className="text-sm text-gray-500 mt-0.5">התפלגות הוצאות לפי סוג מוצר</p>
           </div>
-          <PieChart size={20} className="text-text-muted" />
+          <PieChart size={20} className="text-gray-400" />
         </div>
         {categoryData.length > 0 ? (
           <DonutChart data={categoryData} />
@@ -558,10 +542,9 @@ function OverviewTab({
         )}
       </div>
 
-      {/* Month over Month */}
       {comparison && comparison.previousMonth > 0 && (
-        <div className="lg:col-span-2 bg-white rounded-2xl p-6 border border-border-light">
-          <h3 className="text-lg font-bold text-text-primary mb-5">השוואה חודש מול חודש</h3>
+        <div className="lg:col-span-2 bg-white rounded-xl p-6 border border-gray-200">
+          <h3 className="text-lg font-bold text-gray-900 mb-5">השוואה חודש מול חודש</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <ComparisonBlock
               label={comparison.previousLabel}
@@ -569,12 +552,12 @@ function OverviewTab({
               subLabel="חודש קודם"
             />
             <div className="flex items-center justify-center">
-              <div className={`flex items-center gap-2 px-5 py-3 rounded-xl text-lg font-bold ${
+              <div className={`flex items-center gap-2 px-5 py-3 rounded-lg text-lg font-bold ${
                 comparison.changePercent > 0
-                  ? 'bg-danger-light text-danger'
+                  ? 'bg-red-50 text-red-500'
                   : comparison.changePercent < 0
-                    ? 'bg-success-light text-success'
-                    : 'bg-surface text-text-secondary'
+                    ? 'bg-green-50 text-green-500'
+                    : 'bg-gray-50 text-gray-500'
               }`}>
                 {comparison.changePercent > 0 ? <ArrowUpRight size={20} /> :
                  comparison.changePercent < 0 ? <ArrowDownRight size={20} /> :
@@ -599,10 +582,10 @@ function ComparisonBlock({ label, value, subLabel, highlight }: {
   label: string; value: number; subLabel: string; highlight?: boolean;
 }) {
   return (
-    <div className={`text-center p-5 rounded-xl ${highlight ? 'bg-primary/5 border border-primary/10' : 'bg-surface border border-border-light'}`}>
-      <p className="text-sm text-text-secondary mb-1">{subLabel}</p>
-      <p className="text-sm font-medium text-text-primary mb-2">{label}</p>
-      <p className={`text-3xl font-bold ${highlight ? 'text-primary' : 'text-text-primary'}`}>
+    <div className={`text-center p-5 rounded-lg ${highlight ? 'bg-teal-50 border border-teal-200' : 'bg-gray-50 border border-gray-200'}`}>
+      <p className="text-sm text-gray-500 mb-1">{subLabel}</p>
+      <p className="text-sm font-medium text-gray-700 mb-2">{label}</p>
+      <p className={`text-3xl font-bold ${highlight ? 'text-teal-600' : 'text-gray-900'}`}>
         ₪{value.toLocaleString()}
       </p>
     </div>
@@ -624,12 +607,11 @@ function SuppliersTab({
 
   return (
     <div className="grid lg:grid-cols-[1fr_380px] gap-6">
-      {/* Supplier Ranking */}
-      <div className="bg-white rounded-2xl p-6 border border-border-light">
+      <div className="bg-white rounded-xl p-6 border border-gray-200">
         <div className="flex items-center justify-between mb-5">
           <div>
-            <h3 className="text-lg font-bold text-text-primary">דירוג ספקים לפי הוצאה</h3>
-            <p className="text-sm text-text-secondary mt-0.5">הספקים שעולים הכי הרבה</p>
+            <h3 className="text-lg font-bold text-gray-900">דירוג ספקים לפי הוצאה</h3>
+            <p className="text-sm text-gray-500 mt-0.5">הספקים שעולים הכי הרבה</p>
           </div>
         </div>
         {supplierSpend.length > 0 ? (
@@ -638,23 +620,23 @@ function SuppliersTab({
               <div key={s.supplierId}>
                 <div className="flex items-center justify-between mb-1.5">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs text-text-muted w-5 text-center">{i + 1}</span>
-                    <span className="text-sm font-semibold text-text-primary">{s.supplierName}</span>
+                    <span className="text-xs text-gray-400 w-5 text-center">{i + 1}</span>
+                    <span className="text-sm font-semibold text-gray-900">{s.supplierName}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     {s.trend !== 0 && (
                       <span className={`flex items-center gap-0.5 text-xs font-medium ${
-                        s.trend > 0 ? 'text-danger' : 'text-success'
+                        s.trend > 0 ? 'text-red-500' : 'text-green-500'
                       }`}>
                         {s.trend > 0 ? <ArrowUpRight size={12} /> : <ArrowDownRight size={12} />}
                         {Math.abs(s.trend).toFixed(0)}%
                       </span>
                     )}
-                    <span className="text-sm font-bold text-text-primary">₪{s.total.toLocaleString()}</span>
+                    <span className="text-sm font-bold text-gray-900">₪{s.total.toLocaleString()}</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 mr-7">
-                  <div className="flex-1 bg-surface rounded-full h-3 overflow-hidden">
+                  <div className="flex-1 bg-gray-100 rounded-full h-3 overflow-hidden">
                     <div
                       className="h-full rounded-full transition-all duration-700 ease-out"
                       style={{
@@ -663,7 +645,7 @@ function SuppliersTab({
                       }}
                     />
                   </div>
-                  <span className="text-xs text-text-muted w-16 text-left" dir="ltr">
+                  <span className="text-xs text-gray-400 w-16 text-left" dir="ltr">
                     {s.percentOfTotal.toFixed(1)}% | {s.invoiceCount} חש׳
                   </span>
                 </div>
@@ -675,10 +657,9 @@ function SuppliersTab({
         )}
       </div>
 
-      {/* Donut + Stats */}
       <div className="flex flex-col gap-6">
-        <div className="bg-white rounded-2xl p-6 border border-border-light">
-          <h3 className="text-lg font-bold text-text-primary mb-5">חלוקת הוצאות</h3>
+        <div className="bg-white rounded-xl p-6 border border-gray-200">
+          <h3 className="text-lg font-bold text-gray-900 mb-5">חלוקת הוצאות</h3>
           {topSupplierData.length > 0 ? (
             <DonutChart data={topSupplierData} />
           ) : (
@@ -686,10 +667,9 @@ function SuppliersTab({
           )}
         </div>
 
-        {/* Top Supplier Stats */}
         {supplierSpend.length > 0 && (
-          <div className="bg-white rounded-2xl p-6 border border-border-light">
-            <h3 className="text-lg font-bold text-text-primary mb-4">סיכום</h3>
+          <div className="bg-white rounded-xl p-6 border border-gray-200">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">סיכום</h3>
             <div className="flex flex-col gap-3">
               <StatRow
                 label="ספק יקר ביותר"
@@ -707,9 +687,9 @@ function SuppliersTab({
                 value={`${supplierSpend.length} ספקים`}
               />
               {supplierSpend.some(s => s.trend > 20) && (
-                <div className="bg-warning-light border border-warning/20 rounded-lg p-3 flex items-center gap-2 mt-1">
-                  <AlertTriangle size={14} className="text-warning shrink-0" />
-                  <span className="text-xs text-warning font-medium">
+                <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 flex items-center gap-2 mt-1">
+                  <AlertTriangle size={14} className="text-amber-500 shrink-0" />
+                  <span className="text-xs text-amber-600 font-medium">
                     {supplierSpend.filter(s => s.trend > 20).length} ספקים עם עלייה של מעל 20%
                   </span>
                 </div>
@@ -724,11 +704,11 @@ function SuppliersTab({
 
 function StatRow({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
-    <div className="flex items-center justify-between py-2 border-b border-border-light last:border-0">
-      <span className="text-sm text-text-secondary">{label}</span>
+    <div className="flex items-center justify-between py-2 border-b border-gray-200 last:border-0">
+      <span className="text-sm text-gray-500">{label}</span>
       <div className="text-left">
-        <span className="text-sm font-bold text-text-primary">{value}</span>
-        {sub && <p className="text-xs text-text-muted">{sub}</p>}
+        <span className="text-sm font-bold text-gray-900">{value}</span>
+        {sub && <p className="text-xs text-gray-400">{sub}</p>}
       </div>
     </div>
   );
@@ -739,69 +719,68 @@ function StatRow({ label, value, sub }: { label: string; value: string; sub?: st
 function VolatilityTab({ volatility }: { volatility: PriceVolatilityScore[] }) {
   return (
     <div className="grid lg:grid-cols-2 gap-6">
-      {/* Volatility Ranking */}
-      <div className="bg-white rounded-2xl p-6 border border-border-light lg:col-span-2">
+      <div className="bg-white rounded-xl p-6 border border-gray-200 lg:col-span-2">
         <div className="flex items-center justify-between mb-5">
           <div>
-            <h3 className="text-lg font-bold text-text-primary">יציבות מחירים לפי ספק</h3>
-            <p className="text-sm text-text-secondary mt-0.5">
+            <h3 className="text-lg font-bold text-gray-900">יציבות מחירים לפי ספק</h3>
+            <p className="text-sm text-gray-500 mt-0.5">
               ספקים עם תנודתיות גבוהה מעלים מחירים לעיתים קרובות - כדאי לנהל מולם משא ומתן
             </p>
           </div>
-          <Activity size={20} className="text-text-muted" />
+          <Activity size={20} className="text-gray-400" />
         </div>
 
         {volatility.length > 0 ? (
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-border-light">
-                  <th className="text-right py-3 px-3 text-text-secondary font-medium">ספק</th>
-                  <th className="text-center py-3 px-3 text-text-secondary font-medium">תנודתיות</th>
-                  <th className="text-center py-3 px-3 text-text-secondary font-medium">שינויים</th>
-                  <th className="text-center py-3 px-3 text-text-secondary font-medium">העלאות</th>
-                  <th className="text-center py-3 px-3 text-text-secondary font-medium">הורדות</th>
-                  <th className="text-center py-3 px-3 text-text-secondary font-medium">ממוצע שינוי</th>
-                  <th className="text-center py-3 px-3 text-text-secondary font-medium">שיא העלאה</th>
+                <tr className="border-b border-gray-200">
+                  <th className="text-right py-3 px-3 text-gray-500 font-medium">ספק</th>
+                  <th className="text-center py-3 px-3 text-gray-500 font-medium">תנודתיות</th>
+                  <th className="text-center py-3 px-3 text-gray-500 font-medium">שינויים</th>
+                  <th className="text-center py-3 px-3 text-gray-500 font-medium">העלאות</th>
+                  <th className="text-center py-3 px-3 text-gray-500 font-medium">הורדות</th>
+                  <th className="text-center py-3 px-3 text-gray-500 font-medium">ממוצע שינוי</th>
+                  <th className="text-center py-3 px-3 text-gray-500 font-medium">שיא העלאה</th>
                 </tr>
               </thead>
               <tbody>
                 {volatility.map((v, i) => (
                   <tr
                     key={v.supplierId}
-                    className={`border-b border-border-light last:border-0 hover:bg-surface/50 transition-colors ${
-                      v.score > 70 ? 'bg-danger-light/30' : ''
+                    className={`border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors ${
+                      v.score > 70 ? 'bg-red-50/50' : ''
                     }`}
                   >
                     <td className="py-3 px-3">
                       <div className="flex items-center gap-2">
                         <div
-                          className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 text-white text-xs font-bold"
+                          className="w-8 h-8 rounded-md flex items-center justify-center shrink-0 text-white text-xs font-bold"
                           style={{ backgroundColor: CHART_COLORS[i % CHART_COLORS.length] }}
                         >
                           {v.supplierName.charAt(0)}
                         </div>
-                        <span className="font-semibold text-text-primary">{v.supplierName}</span>
+                        <span className="font-semibold text-gray-900">{v.supplierName}</span>
                       </div>
                     </td>
                     <td className="py-3 px-3 text-center">
                       <VolatilityMeter score={v.score} />
                     </td>
-                    <td className="py-3 px-3 text-center text-text-primary font-medium">{v.totalChanges}</td>
+                    <td className="py-3 px-3 text-center text-gray-700 font-medium">{v.totalChanges}</td>
                     <td className="py-3 px-3 text-center">
-                      <span className="text-danger font-medium">{v.increases}</span>
+                      <span className="text-red-500 font-medium">{v.increases}</span>
                     </td>
                     <td className="py-3 px-3 text-center">
-                      <span className="text-success font-medium">{v.decreases}</span>
+                      <span className="text-green-500 font-medium">{v.decreases}</span>
                     </td>
                     <td className="py-3 px-3 text-center">
-                      <span className="font-medium text-text-primary">{v.avgChangePercent.toFixed(1)}%</span>
+                      <span className="font-medium text-gray-700">{v.avgChangePercent.toFixed(1)}%</span>
                     </td>
                     <td className="py-3 px-3 text-center">
                       {v.maxIncrease > 0 ? (
-                        <span className="text-danger font-bold">+{v.maxIncrease.toFixed(1)}%</span>
+                        <span className="text-red-500 font-bold">+{v.maxIncrease.toFixed(1)}%</span>
                       ) : (
-                        <span className="text-text-muted">-</span>
+                        <span className="text-gray-400">-</span>
                       )}
                     </td>
                   </tr>
@@ -814,20 +793,19 @@ function VolatilityTab({ volatility }: { volatility: PriceVolatilityScore[] }) {
         )}
       </div>
 
-      {/* Insights Cards */}
       {volatility.length > 0 && (
         <>
-          <div className="bg-white rounded-2xl p-6 border border-border-light">
-            <h3 className="font-bold text-text-primary mb-4 flex items-center gap-2">
-              <AlertTriangle size={16} className="text-danger" />
+          <div className="bg-white rounded-xl p-6 border border-gray-200">
+            <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <AlertTriangle size={16} className="text-red-500" />
               ספקים לתשומת לב
             </h3>
             <div className="flex flex-col gap-3">
               {volatility.filter(v => v.score > 40).slice(0, 5).map(v => (
-                <div key={v.supplierId} className="flex items-center justify-between p-3 bg-surface rounded-xl">
+                <div key={v.supplierId} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                   <div>
-                    <p className="font-semibold text-sm text-text-primary">{v.supplierName}</p>
-                    <p className="text-xs text-text-muted mt-0.5">
+                    <p className="font-semibold text-sm text-gray-900">{v.supplierName}</p>
+                    <p className="text-xs text-gray-400 mt-0.5">
                       {v.increases} העלאות מחיר, שיא +{v.maxIncrease.toFixed(1)}%
                     </p>
                   </div>
@@ -835,22 +813,22 @@ function VolatilityTab({ volatility }: { volatility: PriceVolatilityScore[] }) {
                 </div>
               ))}
               {volatility.filter(v => v.score > 40).length === 0 && (
-                <p className="text-sm text-text-secondary text-center py-4">כל הספקים יציבים</p>
+                <p className="text-sm text-gray-500 text-center py-4">כל הספקים יציבים</p>
               )}
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 border border-border-light">
-            <h3 className="font-bold text-text-primary mb-4 flex items-center gap-2">
-              <TrendingDown size={16} className="text-success" />
+          <div className="bg-white rounded-xl p-6 border border-gray-200">
+            <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <TrendingDown size={16} className="text-green-500" />
               ספקים יציבים
             </h3>
             <div className="flex flex-col gap-3">
               {volatility.filter(v => v.score <= 40).slice(0, 5).map(v => (
-                <div key={v.supplierId} className="flex items-center justify-between p-3 bg-surface rounded-xl">
+                <div key={v.supplierId} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                   <div>
-                    <p className="font-semibold text-sm text-text-primary">{v.supplierName}</p>
-                    <p className="text-xs text-text-muted mt-0.5">
+                    <p className="font-semibold text-sm text-gray-900">{v.supplierName}</p>
+                    <p className="text-xs text-gray-400 mt-0.5">
                       {v.totalChanges} שינויים, ממוצע {v.avgChangePercent.toFixed(1)}%
                     </p>
                   </div>
@@ -858,7 +836,7 @@ function VolatilityTab({ volatility }: { volatility: PriceVolatilityScore[] }) {
                 </div>
               ))}
               {volatility.filter(v => v.score <= 40).length === 0 && (
-                <p className="text-sm text-text-secondary text-center py-4">אין ספקים יציבים כרגע</p>
+                <p className="text-sm text-gray-500 text-center py-4">אין ספקים יציבים כרגע</p>
               )}
             </div>
           </div>
@@ -873,11 +851,11 @@ function VolatilityTab({ volatility }: { volatility: PriceVolatilityScore[] }) {
 function EmptyState({ message }: { message: string }) {
   return (
     <div className="flex flex-col items-center justify-center py-10 text-center">
-      <div className="w-14 h-14 bg-surface rounded-2xl flex items-center justify-center mb-3">
-        <BarChart3 size={24} className="text-text-muted" />
+      <div className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center mb-3">
+        <BarChart3 size={24} className="text-gray-300" />
       </div>
-      <p className="text-text-secondary text-sm">{message}</p>
-      <p className="text-text-muted text-xs mt-1">הוסף חשבוניות כדי לראות ניתוח מפורט</p>
+      <p className="text-gray-500 text-sm">{message}</p>
+      <p className="text-gray-400 text-xs mt-1">הוסף חשבוניות כדי לראות ניתוח מפורט</p>
     </div>
   );
 }
