@@ -2,7 +2,7 @@ import { supabase } from './supabase';
 import type {
   Supplier, SupplierFormData,
   Invoice, InvoiceFormData, InvoiceStatus,
-  InvoiceItem, InvoiceItemFormData,
+  InvoiceItemFormData,
   PriceChange, DashboardAlert,
 } from '../types/invoices';
 

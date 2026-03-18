@@ -173,7 +173,7 @@ export default function InvoicesPage() {
             {(['all', ...Object.keys(statusLabels)] as const).map(st => (
               <button
                 key={st}
-                onClick={() => setFilterStatus(st)}
+                onClick={() => setFilterStatus(st as InvoiceStatus | 'all')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium border-none cursor-pointer transition-all ${
                   filterStatus === st
                     ? 'bg-primary text-white shadow-sm'
