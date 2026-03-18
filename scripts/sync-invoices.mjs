@@ -36,13 +36,17 @@ function loadEnv() {
 loadEnv();
 
 // ─── Config ────────────────────────────────────────────────────
-const SUPABASE_URL = process.env.VITE_SUPABASE_URL || 'https://vzeowbriddhvhpishmhn.supabase.co';
+const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_KEY = process.env.VITE_SUPABASE_ANON_KEY;
 const GMAIL_CREDS_DIR = resolve(import.meta.dirname || '.', '..', 'imported-data', 'restaurant-invoices');
 const DOWNLOADS_DIR = resolve(import.meta.dirname || '.', '..', 'tmp', 'invoice-downloads');
 
 if (!process.env.GEMINI_API_KEY) {
   console.error('❌ חסר GEMINI_API_KEY');
+  process.exit(1);
+}
+if (!SUPABASE_URL) {
+  console.error('❌ חסר VITE_SUPABASE_URL ב-.env');
   process.exit(1);
 }
 if (!SUPABASE_KEY) {
