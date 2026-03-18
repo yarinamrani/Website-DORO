@@ -113,11 +113,19 @@ async function upsertInvoice(invoiceData, supplierId) {
     `invoices?invoice_number=eq.${encodeURIComponent(invoiceNumber)}&supplier_id=eq.${supplierId}&select=id&limit=1`
   );
 
+  // Calculate total from items if not available
+  let totalAmount = invoiceData.total_amount || 0;
+  if (totalAmount === 0 && invoiceData.items && invoiceData.items.length > 0) {
+    totalAmount = invoiceData.items.reduce(
+      (sum, item) => sum + ((item.quantity || 1) * (item.unit_price || 0)), 0
+    );
+  }
+
   const invoiceRow = {
     supplier_id: supplierId,
     invoice_number: invoiceNumber,
     invoice_date: invoiceData.invoice_date || new Date().toISOString().slice(0, 10),
-    total_amount: invoiceData.total_amount || 0,
+    total_amount: totalAmount,
     status: invoiceData.status || 'received',
     notes: invoiceData.vat_amount
       ? `מע"מ: ${invoiceData.vat_amount} | לפני מע"מ: ${invoiceData.amount_before_vat || ''}`
