@@ -9,7 +9,6 @@ const HEBREW_MONTHS = [
   'יולי', 'אוגוסט', 'ספטמבר', 'אוקטובר', 'נובמבר', 'דצמבר',
 ];
 
-const HEBREW_DAYS = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת'];
 
 interface MonthlySpend {
   key: string;
@@ -23,9 +22,10 @@ interface SupplierStat {
   total: number;
 }
 
-interface DayDistribution {
-  day: string;
+interface MissingAmountGroup {
+  supplier: string;
   count: number;
+  invoices: { invoice_number: string; date: string }[];
 }
 
 function computeAnalytics(invoices: GmailInvoice[]) {
@@ -74,17 +74,35 @@ function computeAnalytics(invoices: GmailInvoice[]) {
     ? ((curMonthTotal - prevMonthTotal) / prevMonthTotal) * 100
     : 0;
 
-  // --- Day-of-week distribution ---
-  const dayCount = [0, 0, 0, 0, 0, 0, 0];
+  // --- Missing amounts grouped by supplier ---
+  const missingMap = new Map<string, MissingAmountGroup>();
   for (const inv of invoices) {
-    if (!inv.date) continue;
-    const dow = new Date(inv.date).getDay();
-    dayCount[dow]++;
+    if (inv.amount) continue;
+    let g = missingMap.get(inv.supplier);
+    if (!g) {
+      g = { supplier: inv.supplier, count: 0, invoices: [] };
+      missingMap.set(inv.supplier, g);
+    }
+    g.count++;
+    g.invoices.push({ invoice_number: inv.invoice_number, date: inv.date });
   }
-  const dayDistribution: DayDistribution[] = dayCount.map((count, i) => ({
-    day: HEBREW_DAYS[i],
-    count,
-  }));
+  const missingAmounts = Array.from(missingMap.values()).sort((a, b) => b.count - a.count);
+  const totalMissing = missingAmounts.reduce((sum, g) => sum + g.count, 0);
+
+  // --- Supplier frequency: how often each supplier invoices (avg days between invoices) ---
+  const supplierFrequency: { name: string; avgDays: number; count: number }[] = [];
+  for (const [name, stat] of supplierMap) {
+    if (stat.count < 2) continue;
+    const dates = invoices
+      .filter(i => i.supplier === name && i.date)
+      .map(i => new Date(i.date).getTime())
+      .sort();
+    if (dates.length < 2) continue;
+    const totalDays = (dates[dates.length - 1] - dates[0]) / (1000 * 60 * 60 * 24);
+    const avgDays = Math.round(totalDays / (dates.length - 1));
+    supplierFrequency.push({ name, avgDays, count: stat.count });
+  }
+  supplierFrequency.sort((a, b) => a.avgDays - b.avgDays);
 
   // --- Recent 15 invoices ---
   const sorted = [...invoices].sort((a, b) => b.date.localeCompare(a.date));
@@ -99,7 +117,9 @@ function computeAnalytics(invoices: GmailInvoice[]) {
     momChange,
     curMonthLabel: HEBREW_MONTHS[now.getMonth()],
     prevMonthLabel: HEBREW_MONTHS[prevDate.getMonth()],
-    dayDistribution,
+    missingAmounts,
+    totalMissing,
+    supplierFrequency,
     recent15,
   };
 }
@@ -139,13 +159,14 @@ export default function AnalyticsPage() {
     monthlySpending, topByCount, topByAmount,
     curMonthTotal, prevMonthTotal, momChange,
     curMonthLabel, prevMonthLabel,
-    dayDistribution, recent15,
+    missingAmounts, totalMissing, supplierFrequency,
+    recent15,
   } = data;
 
   const maxMonthly = Math.max(...monthlySpending.map(m => m.amount), 1);
   const maxCount = Math.max(...topByCount.map(s => s.count), 1);
   const maxAmount = Math.max(...topByAmount.map(s => s.total), 1);
-  const maxDay = Math.max(...dayDistribution.map(d => d.count), 1);
+  void 0; // unused
 
   const blueGradient = [
     'bg-blue-200', 'bg-blue-300', 'bg-blue-400', 'bg-blue-500', 'bg-blue-600', 'bg-blue-700',
@@ -289,62 +310,96 @@ export default function AnalyticsPage() {
           </div>
         </div>
 
-        {/* Row 3: Day-of-Week + Timeline */}
-        <div className="grid md:grid-cols-[380px_1fr] gap-6">
-          {/* Day of Week Distribution */}
+        {/* Row 3: Missing Amounts + Supplier Frequency */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Missing Amounts */}
           <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
-            <div className="flex items-center gap-2 mb-5">
-              <Clock size={20} className="text-amber-500" />
-              <h2 className="text-lg font-bold text-gray-900">התפלגות לפי יום בשבוע</h2>
+            <div className="flex items-center justify-between mb-5">
+              <div className="flex items-center gap-2">
+                <Clock size={20} className="text-orange-500" />
+                <h2 className="text-lg font-bold text-gray-900">חשבוניות ללא סכום</h2>
+              </div>
+              <span className="text-sm font-bold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
+                {totalMissing} חשבוניות
+              </span>
             </div>
-            <div className="space-y-3">
-              {dayDistribution.map(d => (
-                <div key={d.day} className="flex items-center gap-3">
-                  <span className="text-sm text-gray-600 w-14 shrink-0">{d.day}</span>
-                  <div className="flex-1 relative h-7">
-                    <div
-                      className="h-full rounded-md bg-amber-400 transition-all duration-700 ease-out"
-                      style={{ width: `${Math.max((d.count / maxDay) * 100, 3)}%` }}
-                    />
-                  </div>
-                  <span className="text-sm font-semibold text-gray-700 w-8 text-left">{d.count}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Recent Activity Timeline */}
-          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
-            <h2 className="text-lg font-bold text-gray-900 mb-5">פעילות אחרונה</h2>
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute top-2 bottom-2 right-[7px] w-0.5 bg-gray-200" />
-              <div className="space-y-4">
-                {recent15.map((inv, i) => (
-                  <div key={inv.id} className="flex gap-4 relative">
-                    {/* Dot */}
-                    <div className={`w-4 h-4 rounded-full border-2 shrink-0 mt-1 z-10 ${
-                      i === 0
-                        ? 'bg-blue-500 border-blue-500'
-                        : 'bg-white border-gray-300'
-                    }`} />
-                    {/* Content */}
-                    <div className="flex-1 pb-2">
-                      <div className="flex items-start justify-between gap-3">
-                        <div className="min-w-0">
-                          <p className="text-sm font-medium text-gray-900 truncate">{inv.supplier}</p>
-                          <p className="text-xs text-gray-500 mt-0.5">
-                            {new Date(inv.date).toLocaleDateString('he-IL')} &middot; {inv.doc_type}
-                          </p>
-                        </div>
-                        <span className="text-sm font-semibold text-gray-800 shrink-0" dir="ltr">
-                          {inv.amount ? `${inv.amount.toLocaleString()} \u20AA` : '-'}
-                        </span>
-                      </div>
-                    </div>
+            <p className="text-xs text-gray-400 mb-4">הסכום נמצא בקובץ PDF המצורף ולא בגוף המייל</p>
+            {missingAmounts.length === 0 ? (
+              <p className="text-gray-400 text-center py-4">כל החשבוניות כוללות סכום</p>
+            ) : (
+              <div className="space-y-2 max-h-[350px] overflow-y-auto">
+                {missingAmounts.map(g => (
+                  <div key={g.supplier} className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">
+                    <span className="text-sm font-medium text-gray-900">{g.supplier}</span>
+                    <span className="text-sm text-orange-600 font-bold bg-orange-50 px-2.5 py-0.5 rounded-full">
+                      {g.count}
+                    </span>
                   </div>
                 ))}
               </div>
+            )}
+          </div>
+
+          {/* Supplier Frequency */}
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <div className="flex items-center gap-2 mb-5">
+              <Calendar size={20} className="text-indigo-500" />
+              <h2 className="text-lg font-bold text-gray-900">תדירות חשבוניות לפי ספק</h2>
+            </div>
+            <p className="text-xs text-gray-400 mb-4">ממוצע ימים בין חשבוניות - עוזר לזהות חשבוניות שלא הגיעו</p>
+            {supplierFrequency.length === 0 ? (
+              <p className="text-gray-400 text-center py-4">אין מספיק נתונים</p>
+            ) : (
+              <div className="space-y-2 max-h-[350px] overflow-y-auto">
+                {supplierFrequency.map(s => (
+                  <div key={s.name} className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-medium text-gray-900">{s.name}</span>
+                      <span className="text-xs text-gray-400">({s.count} חשבוניות)</span>
+                    </div>
+                    <span className={`text-sm font-bold px-2.5 py-0.5 rounded-full ${
+                      s.avgDays <= 7 ? 'bg-indigo-50 text-indigo-600' :
+                      s.avgDays <= 14 ? 'bg-blue-50 text-blue-600' :
+                      s.avgDays <= 30 ? 'bg-sky-50 text-sky-600' :
+                      'bg-gray-50 text-gray-600'
+                    }`}>
+                      כל {s.avgDays} ימים
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Row 4: Recent Activity Timeline */}
+        <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+          <h2 className="text-lg font-bold text-gray-900 mb-5">פעילות אחרונה</h2>
+          <div className="relative">
+            <div className="absolute top-2 bottom-2 right-[7px] w-0.5 bg-gray-200" />
+            <div className="space-y-4">
+              {recent15.map((inv, i) => (
+                <div key={inv.id} className="flex gap-4 relative">
+                  <div className={`w-4 h-4 rounded-full border-2 shrink-0 mt-1 z-10 ${
+                    i === 0 ? 'bg-blue-500 border-blue-500' : 'bg-white border-gray-300'
+                  }`} />
+                  <div className="flex-1 pb-2">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-gray-900 truncate">{inv.supplier}</p>
+                        <p className="text-xs text-gray-500 mt-0.5">
+                          {new Date(inv.date).toLocaleDateString('he-IL')} &middot; {inv.doc_type}
+                        </p>
+                      </div>
+                      {inv.amount && (
+                        <span className="text-sm font-semibold text-gray-800 shrink-0" dir="ltr">
+                          {inv.amount.toLocaleString()} &#8362;
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

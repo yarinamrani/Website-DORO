@@ -238,8 +238,12 @@ export default function InvoiceDashboard() {
                       <td className="px-4 py-3 font-medium text-gray-900">{inv.supplier}</td>
                       <td className="px-4 py-3 text-gray-600 font-mono text-xs">{inv.invoice_number || '-'}</td>
                       <td className="px-4 py-3 text-gray-600">{new Date(inv.date).toLocaleDateString('he-IL')}</td>
-                      <td className="px-4 py-3 text-gray-900 font-medium">
-                        {inv.amount ? `₪${inv.amount.toLocaleString()}` : '-'}
+                      <td className="px-4 py-3 font-medium">
+                        {inv.amount ? (
+                          <span className="text-gray-900">₪{inv.amount.toLocaleString()}</span>
+                        ) : (
+                          <span className="text-gray-300 text-xs">ב-PDF</span>
+                        )}
                       </td>
                       <td className="px-4 py-3">
                         <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-medium ${
