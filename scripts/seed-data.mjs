@@ -8,12 +8,13 @@
  *   or: SUPABASE_ACCESS_TOKEN=sbp_xxx node scripts/seed-data.mjs
  */
 
-const PROJECT_REF = 'vzeowbriddhvhpishmhn';
+const PROJECT_REF = process.env.SUPABASE_PROJECT_REF || process.argv[3];
 const ACCESS_TOKEN = process.env.SUPABASE_ACCESS_TOKEN || process.argv[2];
 
-if (!ACCESS_TOKEN) {
-  console.error('❌ Missing access token!');
-  console.error('Usage: SUPABASE_ACCESS_TOKEN=sbp_xxx node scripts/seed-data.mjs');
+if (!ACCESS_TOKEN || !PROJECT_REF) {
+  console.error('❌ Missing access token or project ref!');
+  console.error('Usage: SUPABASE_ACCESS_TOKEN=sbp_xxx SUPABASE_PROJECT_REF=your-ref node scripts/seed-data.mjs');
+  console.error('Project ref is in your Supabase URL: https://<PROJECT_REF>.supabase.co');
   process.exit(1);
 }
 

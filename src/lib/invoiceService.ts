@@ -273,12 +273,7 @@ export async function getDashboardStats() {
   const now = new Date();
   const monthStart = new Date(now.getFullYear(), now.getMonth(), 1).toISOString();
 
-  const [
-    { count: totalSuppliers },
-    { count: monthInvoices },
-    { data: monthTotalData },
-    { count: priceAlerts },
-  ] = await Promise.all([
+  const [suppliersRes, monthInvRes, monthTotalRes, priceAlertsRes] = await Promise.all([
     supabase.from('suppliers').select('*', { count: 'exact', head: true }),
     supabase.from('invoices').select('*', { count: 'exact', head: true }).gte('invoice_date', monthStart),
     supabase.from('invoices').select('total_amount').gte('invoice_date', monthStart),
@@ -288,12 +283,19 @@ export async function getDashboardStats() {
       .gte('recorded_at', monthStart),
   ]);
 
-  const monthTotal = (monthTotalData || []).reduce((sum, inv) => sum + Number(inv.total_amount), 0);
+  if (suppliersRes.error) throw suppliersRes.error;
+  if (monthInvRes.error) throw monthInvRes.error;
+  if (monthTotalRes.error) throw monthTotalRes.error;
+  if (priceAlertsRes.error) throw priceAlertsRes.error;
+
+  const monthTotal = (monthTotalRes.data || []).reduce(
+    (sum: number, inv: { total_amount: number }) => sum + Number(inv.total_amount), 0
+  );
 
   return {
-    totalSuppliers: totalSuppliers || 0,
-    monthInvoices: monthInvoices || 0,
+    totalSuppliers: suppliersRes.count || 0,
+    monthInvoices: monthInvRes.count || 0,
     monthTotal,
-    priceAlerts: priceAlerts || 0,
+    priceAlerts: priceAlertsRes.count || 0,
   };
 }
