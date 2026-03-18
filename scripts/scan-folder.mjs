@@ -10,7 +10,7 @@
  * ומכניס את הנתונים ל-Supabase.
  */
 
-import { readFileSync, readdirSync, statSync } from 'fs';
+import { readFileSync, readdirSync, statSync, writeFileSync } from 'fs';
 import { resolve, join, extname } from 'path';
 import { scanInvoice } from './scan-invoice.mjs';
 
