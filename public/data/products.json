@@ -1,0 +1,6026 @@
+{
+  "last_sync": "2026-03-19 13:33",
+  "products": [
+    {
+      "invoice_id": "19d01a6500813bda",
+      "supplier": "בזק",
+      "date": "2026-03-18",
+      "items": [
+        {
+          "name": "תשלום קבוע אספקה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 13.62,
+          "unit_price": 13.62
+        },
+        {
+          "name": "תשלום קבוע חלוקה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 29.26,
+          "unit_price": 29.26
+        },
+        {
+          "name": "תשלום בגין הספק (KVA) חוסכים חכם 24/7 חשמל כללי",
+          "quantity": 55.43,
+          "unit": "KVA",
+          "total": 22.07,
+          "unit_price": 0.4
+        },
+        {
+          "name": "צריכת חשמל חוסכים חכם 24/7 חשמל כללי",
+          "quantity": 10847.27,
+          "unit": "קווט\"ש",
+          "total": 5912.87,
+          "unit_price": 0.55
+        },
+        {
+          "name": "חוסכים חכם 24/7 חשמל כללי",
+          "quantity": 7,
+          "unit": "%",
+          "total": -413.9,
+          "unit_price": -59.13
+        }
+      ]
+    },
+    {
+      "invoice_id": "19d00699bdfee291",
+      "supplier": "קולאיוונט בעמ",
+      "date": "2026-03-18",
+      "items": [
+        {
+          "name": "שיווק ופרסום במרץ 2026",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 800,
+          "unit_price": 800
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cfb4eb19d26805",
+      "supplier": "Tabit",
+      "date": "2026-03-17",
+      "items": [
+        {
+          "name": "חש. מרכזת פבר-26",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 903,
+          "unit_price": 903
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cf798d80453460",
+      "supplier": "עודד דניאל BeeComm",
+      "date": "2026-03-16",
+      "items": [
+        {
+          "name": "מדפסת שירות",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "מסופון דה זה וו קטן שירות",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 90,
+          "unit_price": 45
+        },
+        {
+          "name": "מסופון ד.ז.ו נייד שנרכש מביקום",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 90,
+          "unit_price": 45
+        },
+        {
+          "name": "רישיון ענן",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 900,
+          "unit_price": 900
+        },
+        {
+          "name": "דה זה וו P5 שירות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 45,
+          "unit_price": 45
+        },
+        {
+          "name": "דה זה וו P5 שירות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 45,
+          "unit_price": 45
+        },
+        {
+          "name": "מסופון דה זה וו קטן שירות",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 90,
+          "unit_price": 45
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cf74480d762b3b",
+      "supplier": "עודד דניאל BeeComm",
+      "date": "2026-03-16",
+      "items": [
+        {
+          "name": "רישיון ענן",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 900,
+          "unit_price": 900
+        },
+        {
+          "name": "נייח wisepay",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 75,
+          "unit_price": 75
+        },
+        {
+          "name": "WP נייח שכירות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 85,
+          "unit_price": 85
+        },
+        {
+          "name": "מדפסת נוספת שכירות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 50,
+          "unit_price": 50
+        },
+        {
+          "name": "מסופון ד.ז.ו נייח שנרכש מביקום",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 45,
+          "unit_price": 45
+        },
+        {
+          "name": "מדפסת 880 שנרכשה מביקום",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "סים למסופון",
+          "quantity": 8,
+          "unit": "יחידה",
+          "total": 80,
+          "unit_price": 10
+        },
+        {
+          "name": "שירות Q3 PRO",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 135,
+          "unit_price": 45
+        },
+        {
+          "name": "השכרת מסופון ד.ז.ו נייח",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 85,
+          "unit_price": 85
+        },
+        {
+          "name": "מסופון דה זה וו קטן שירות",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 180,
+          "unit_price": 45
+        },
+        {
+          "name": "שירות Q3 PRO",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 90,
+          "unit_price": 45
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cf73be5a371e77",
+      "supplier": "ברקת חומרי ניקוי",
+      "date": "2026-03-16",
+      "items": []
+    },
+    {
+      "invoice_id": "19cf5b6aa51d0982",
+      "supplier": "קוקה קולה",
+      "date": "2026-03-16",
+      "items": [
+        {
+          "name": "קוקה קולה קלאסי 350 מ\"ל",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 440.11,
+          "unit_price": 88.02
+        },
+        {
+          "name": "פריגת ענבים 330 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 154.13,
+          "unit_price": 77.07
+        },
+        {
+          "name": "נביעות 500 פ.שטוח פיקדון",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 201.16,
+          "unit_price": 50.29
+        },
+        {
+          "name": "נביעות + תפוח 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 103.73,
+          "unit_price": 103.73
+        },
+        {
+          "name": "נביעות + אפרסק 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 103.73,
+          "unit_price": 103.73
+        },
+        {
+          "name": "נביעות + ענבים 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 103.73,
+          "unit_price": 103.73
+        },
+        {
+          "name": "קולה ZERO קלאסי 350 מ\"ל",
+          "quantity": 8,
+          "unit": "יחידה",
+          "total": 704.16,
+          "unit_price": 88.02
+        },
+        {
+          "name": "ספרייט ZERO קלאסי 350 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 176.04,
+          "unit_price": 88.02
+        },
+        {
+          "name": "ספרייט LIME קלאסי 350 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 176.04,
+          "unit_price": 88.02
+        },
+        {
+          "name": "שרינק FUZE tea בטעם אפרסק 0.5 ליטר",
+          "quantity": 4,
+          "unit": "ליטר",
+          "total": 417.69,
+          "unit_price": 104.42
+        },
+        {
+          "name": "קירין בקבוק 330 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 154.32,
+          "unit_price": 154.32
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cf5abd6ff36683",
+      "supplier": "כנם השקעות",
+      "date": "2026-03-16",
+      "items": [
+        {
+          "name": "שכירות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 37052.54,
+          "unit_price": 37052.54
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cf5ab93afedd48",
+      "supplier": "כנם השקעות",
+      "date": "2026-03-16",
+      "items": [
+        {
+          "name": "דמי ניהול.",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 1586.44,
+          "unit_price": 1586.44
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cf5ab436654a05",
+      "supplier": "כנם השקעות",
+      "date": "2026-03-16",
+      "items": [
+        {
+          "name": "שכירות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 26636.44,
+          "unit_price": 26636.44
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cf581a573d5559",
+      "supplier": "בית הבשר גינדי",
+      "date": "2026-03-16",
+      "items": [
+        {
+          "name": "שוארמה פרגיות קפוא",
+          "quantity": 55,
+          "unit": "יחידה",
+          "total": 688.6,
+          "unit_price": 12.52
+        },
+        {
+          "name": "קרפצ'ו סינטה צלחת",
+          "quantity": 14.6,
+          "unit": "יחידה",
+          "total": 1460,
+          "unit_price": 100
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cf3cd41966f8cd",
+      "supplier": "Wolt",
+      "date": "2026-03-15",
+      "items": [
+        {
+          "name": "דמי שירות, משלוח 27%+Wolt",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 158,
+          "unit_price": 158
+        },
+        {
+          "name": "עמלה קבועה של 3.80 Wolt של",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 3.8,
+          "unit_price": 3.8
+        },
+        {
+          "name": "Weekly 10: Pos Integration Fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 12.5,
+          "unit_price": 12.5
+        },
+        {
+          "name": "Weekly 10: SIM Card fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 6,
+          "unit_price": 6
+        },
+        {
+          "name": "Weekly 9: Pos Integration Fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 12.5,
+          "unit_price": 12.5
+        },
+        {
+          "name": "Weekly 9: SIM Card fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 6,
+          "unit_price": 6
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cd7dd365943fda",
+      "supplier": "Tabit",
+      "date": "2026-03-10",
+      "items": [
+        {
+          "name": "Tabit Shift",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 600,
+          "unit_price": 600
+        },
+        {
+          "name": "Tabit Task",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 165,
+          "unit_price": 165
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cd75ce0c978fbc",
+      "supplier": "KSP",
+      "date": "2026-03-10",
+      "items": [
+        {
+          "name": "Cudy 4G LTE AC1200 Dual-Band Wi-Fi Router LT500 6971690791209",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 227.97,
+          "unit_price": 227.97
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cd63f8fc75fd17",
+      "supplier": "הופה דיגיטל",
+      "date": "2026-03-10",
+      "items": [
+        {
+          "name": "תשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 300,
+          "unit_price": 300
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cd63f899b11c56",
+      "supplier": "הופה דיגיטל",
+      "date": "2026-03-10",
+      "items": [
+        {
+          "name": "תשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 300,
+          "unit_price": 300
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cb91be8067c8eb",
+      "supplier": "BuyMe",
+      "date": "2026-03-04",
+      "items": [
+        {
+          "name": "01.26-מימושי ביימי אול",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 474.66,
+          "unit_price": 474.66
+        },
+        {
+          "name": "01.26-מימושי ביימי פודי",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 72,
+          "unit_price": 72
+        },
+        {
+          "name": "01.26-מימושי ביימי לוקאל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 3.6,
+          "unit_price": 3.6
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cb5ce95eafc2ac",
+      "supplier": "טמפו",
+      "date": "2026-03-03",
+      "items": [
+        {
+          "name": "משטח זר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 10,
+          "unit_price": 10
+        },
+        {
+          "name": "משטח זר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 10,
+          "unit_price": 10
+        },
+        {
+          "name": "משטח זר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 10,
+          "unit_price": 10
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cb3fee75ecdae2",
+      "supplier": "מרינה גליל",
+      "date": "2026-03-03",
+      "items": [
+        {
+          "name": "פטריות שמפיניון ארוז יח",
+          "quantity": 72,
+          "unit": "יח'",
+          "total": 468,
+          "unit_price": 6.5
+        },
+        {
+          "name": "מיקרו בזיל יח",
+          "quantity": 2,
+          "unit": "יח'",
+          "total": 12,
+          "unit_price": 6
+        },
+        {
+          "name": "מיקרו כוסברה יח",
+          "quantity": 10,
+          "unit": "יח'",
+          "total": 60,
+          "unit_price": 6
+        },
+        {
+          "name": "פלפל צילי קג",
+          "quantity": 11,
+          "unit": "ק'ג",
+          "total": 203.5,
+          "unit_price": 18.5
+        },
+        {
+          "name": "פלפל צילי יח",
+          "quantity": 20,
+          "unit": "יח'",
+          "total": 90,
+          "unit_price": 4.5
+        },
+        {
+          "name": "בצל ירוק רגיל יח",
+          "quantity": 74,
+          "unit": "יח'",
+          "total": 177.6,
+          "unit_price": 2.4
+        },
+        {
+          "name": "אספרגוס יח",
+          "quantity": 11,
+          "unit": "יח'",
+          "total": 264,
+          "unit_price": 24
+        },
+        {
+          "name": "זוג אנדיב אדום ארוז (מותג מרינה)",
+          "quantity": 54,
+          "unit": "יח'",
+          "total": 837,
+          "unit_price": 15.5
+        },
+        {
+          "name": "לבבות קיסר בנספק",
+          "quantity": 312,
+          "unit": "יח'",
+          "total": 2106,
+          "unit_price": 6.75
+        },
+        {
+          "name": "חסה סלנובה מהדרין יח",
+          "quantity": 160,
+          "unit": "יח'",
+          "total": 1160,
+          "unit_price": 7.25
+        },
+        {
+          "name": "עלי בייבי 120 גר' טעם הטבע",
+          "quantity": 43,
+          "unit": "יח'",
+          "total": 389.15,
+          "unit_price": 9.05
+        },
+        {
+          "name": "עלי רוקט 150 גרם טעם הטבע",
+          "quantity": 85,
+          "unit": "יח'",
+          "total": 769.25,
+          "unit_price": 9.05
+        },
+        {
+          "name": "חסה לליק מהדרין קמעונאי",
+          "quantity": 216,
+          "unit": "יח'",
+          "total": 1566,
+          "unit_price": 7.25
+        },
+        {
+          "name": "עלי תרד ניוזילנדי בנספק",
+          "quantity": 40,
+          "unit": "יח'",
+          "total": 256,
+          "unit_price": 6.4
+        },
+        {
+          "name": "בזיליקום יח freshlid",
+          "quantity": 30,
+          "unit": "יח'",
+          "total": 105,
+          "unit_price": 3.5
+        },
+        {
+          "name": "טימין יח freshlid",
+          "quantity": 8,
+          "unit": "יח'",
+          "total": 28,
+          "unit_price": 3.5
+        },
+        {
+          "name": "רוזמרין יח freshlid",
+          "quantity": 28,
+          "unit": "יח'",
+          "total": 98,
+          "unit_price": 3.5
+        },
+        {
+          "name": "כוסברה יח בשקית",
+          "quantity": 117,
+          "unit": "יח'",
+          "total": 234,
+          "unit_price": 2
+        },
+        {
+          "name": "נענע יח בשקית",
+          "quantity": 65,
+          "unit": "יח'",
+          "total": 130,
+          "unit_price": 2
+        },
+        {
+          "name": "בצל אדום מקולף מהדרין",
+          "quantity": 8,
+          "unit": "שק",
+          "total": 560,
+          "unit_price": 70
+        },
+        {
+          "name": "סלק בואקום יבוא",
+          "quantity": 48,
+          "unit": "יח'",
+          "total": 225.6,
+          "unit_price": 4.7
+        },
+        {
+          "name": "שיני שום קלופות ק\"ג יבוא סין",
+          "quantity": 21,
+          "unit": "יח'",
+          "total": 378,
+          "unit_price": 18
+        },
+        {
+          "name": "שרי תמר קג",
+          "quantity": 48,
+          "unit": "ק'ג",
+          "total": 684,
+          "unit_price": 14.25
+        },
+        {
+          "name": "שרי תמר קג",
+          "quantity": 30,
+          "unit": "ק'ג",
+          "total": 456,
+          "unit_price": 15.2
+        },
+        {
+          "name": "שרי תמר קג",
+          "quantity": 9,
+          "unit": "ק'ג",
+          "total": 115.43,
+          "unit_price": 12.83
+        },
+        {
+          "name": "פלחי דלעת יח",
+          "quantity": 21,
+          "unit": "יח'",
+          "total": 126,
+          "unit_price": 6
+        },
+        {
+          "name": "פלחי דלעת יח",
+          "quantity": 4,
+          "unit": "יח'",
+          "total": 22,
+          "unit_price": 5.5
+        },
+        {
+          "name": "פלחי דלעת יח",
+          "quantity": 2,
+          "unit": "יח'",
+          "total": 13,
+          "unit_price": 6.5
+        },
+        {
+          "name": "פלחי דלעת יח",
+          "quantity": 5,
+          "unit": "יח'",
+          "total": 29.5,
+          "unit_price": 5.9
+        },
+        {
+          "name": "בטטה L קג",
+          "quantity": 14.4,
+          "unit": "ק'ג",
+          "total": 82.08,
+          "unit_price": 5.7
+        },
+        {
+          "name": "בטטה L קג",
+          "quantity": 12.4,
+          "unit": "ק'ג",
+          "total": 64.79,
+          "unit_price": 5.23
+        },
+        {
+          "name": "בטטה L קג",
+          "quantity": 12.6,
+          "unit": "ק'ג",
+          "total": 70.62,
+          "unit_price": 5.6
+        },
+        {
+          "name": "סלק אדום קג",
+          "quantity": 1.2,
+          "unit": "ק'ג",
+          "total": 3.42,
+          "unit_price": 2.85
+        },
+        {
+          "name": "כרובית קג",
+          "quantity": 10,
+          "unit": "ק'ג",
+          "total": 47.5,
+          "unit_price": 4.75
+        },
+        {
+          "name": "כרובית קג",
+          "quantity": 13,
+          "unit": "ק'ג",
+          "total": 67.93,
+          "unit_price": 5.23
+        },
+        {
+          "name": "כרובית קג",
+          "quantity": 68.8,
+          "unit": "ק'ג",
+          "total": 424.85,
+          "unit_price": 6.18
+        },
+        {
+          "name": "חציל פרימיום ק\"ג",
+          "quantity": 8.5,
+          "unit": "ק'ג",
+          "total": 40.38,
+          "unit_price": 4.75
+        },
+        {
+          "name": "חציל פרימיום ק\"ג",
+          "quantity": 26.4,
+          "unit": "ק'ג",
+          "total": 150.48,
+          "unit_price": 5.7
+        },
+        {
+          "name": "חציל פרימיום ק\"ג",
+          "quantity": 9,
+          "unit": "ק'ג",
+          "total": 47.03,
+          "unit_price": 5.23
+        },
+        {
+          "name": "חציל פרימיום ק\"ג",
+          "quantity": 8.6,
+          "unit": "ק'ג",
+          "total": 53.11,
+          "unit_price": 6.18
+        },
+        {
+          "name": "חציל פרימיום ק\"ג",
+          "quantity": 16.8,
+          "unit": "ק'ג",
+          "total": 119.7,
+          "unit_price": 7.13
+        },
+        {
+          "name": "לימון פרימיום",
+          "quantity": 8.4,
+          "unit": "ק'ג",
+          "total": 55.06,
+          "unit_price": 6.55
+        },
+        {
+          "name": "לימון פרימיום",
+          "quantity": 28.4,
+          "unit": "ק'ג",
+          "total": 188.86,
+          "unit_price": 6.65
+        },
+        {
+          "name": "לימון פרימיום",
+          "quantity": 10.8,
+          "unit": "ק'ג",
+          "total": 82.08,
+          "unit_price": 7.6
+        },
+        {
+          "name": "לימון פרימיום",
+          "quantity": 24.3,
+          "unit": "ק'ג",
+          "total": 173.14,
+          "unit_price": 7.13
+        },
+        {
+          "name": "שרי מנומר קג",
+          "quantity": 6,
+          "unit": "ק'ג",
+          "total": 45.03,
+          "unit_price": 7.51
+        },
+        {
+          "name": "שרי מנומר קג",
+          "quantity": 4.2,
+          "unit": "ק'ג",
+          "total": 55.86,
+          "unit_price": 13.3
+        },
+        {
+          "name": "שרי מנומר קג",
+          "quantity": 2,
+          "unit": "ק'ג",
+          "total": 28.5,
+          "unit_price": 14.25
+        },
+        {
+          "name": "שרי מנומר קג",
+          "quantity": 1.4,
+          "unit": "ק'ג",
+          "total": 19.29,
+          "unit_price": 13.78
+        },
+        {
+          "name": "פרסה כרישה ארוז",
+          "quantity": 13,
+          "unit": "יח'",
+          "total": 58.5,
+          "unit_price": 4.5
+        },
+        {
+          "name": "תפוא אדום שק 4 קג",
+          "quantity": 1,
+          "unit": "שק",
+          "total": 13.3,
+          "unit_price": 13.3
+        },
+        {
+          "name": "תפוא אדום שק 4 קג",
+          "quantity": 1,
+          "unit": "שק",
+          "total": 15.2,
+          "unit_price": 15.2
+        },
+        {
+          "name": "תפוא אדום שק 4 קג",
+          "quantity": 4,
+          "unit": "שק",
+          "total": 64.6,
+          "unit_price": 16.15
+        },
+        {
+          "name": "תפוא אדום שק 4 קג",
+          "quantity": 1,
+          "unit": "שק",
+          "total": 13.78,
+          "unit_price": 13.78
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 10.2,
+          "unit": "ק'ג",
+          "total": 145.35,
+          "unit_price": 14.25
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 18,
+          "unit": "ק'ג",
+          "total": 273.6,
+          "unit_price": 15.2
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 11.4,
+          "unit": "ק'ג",
+          "total": 184.11,
+          "unit_price": 16.15
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 6.4,
+          "unit": "ק'ג",
+          "total": 115.52,
+          "unit_price": 18.05
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 6,
+          "unit": "ק'ג",
+          "total": 94.05,
+          "unit_price": 15.68
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 4,
+          "unit": "ק'ג",
+          "total": 66.5,
+          "unit_price": 16.63
+        },
+        {
+          "name": "חציל קמעונאי ארוז ק\"ג",
+          "quantity": 8.4,
+          "unit": "ק'ג",
+          "total": 71.4,
+          "unit_price": 8.5
+        },
+        {
+          "name": "תירס ק\"ג",
+          "quantity": 18.1,
+          "unit": "ק'ג",
+          "total": 171.95,
+          "unit_price": 9.5
+        },
+        {
+          "name": "תירס ק\"ג",
+          "quantity": 2.8,
+          "unit": "ק'ג",
+          "total": 23.94,
+          "unit_price": 8.55
+        },
+        {
+          "name": "תירס ק\"ג",
+          "quantity": 19.6,
+          "unit": "ק'ג",
+          "total": 176.9,
+          "unit_price": 9.03
+        },
+        {
+          "name": "שרי לובלו ק\"ג",
+          "quantity": 8.2,
+          "unit": "ק'ג",
+          "total": 124.64,
+          "unit_price": 15.2
+        },
+        {
+          "name": "שרי לובלו ק\"ג",
+          "quantity": 8.4,
+          "unit": "ק'ג",
+          "total": 143.64,
+          "unit_price": 17.1
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 12.4,
+          "unit": "ק'ג",
+          "total": 117.8,
+          "unit_price": 9.5
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 11.5,
+          "unit": "ק'ג",
+          "total": 65.55,
+          "unit_price": 5.7
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 18.2,
+          "unit": "ק'ג",
+          "total": 121.03,
+          "unit_price": 6.65
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 26.4,
+          "unit": "ק'ג",
+          "total": 200.64,
+          "unit_price": 7.6
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 60.8,
+          "unit": "ק'ג",
+          "total": 375.45,
+          "unit_price": 6.18
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 12.2,
+          "unit": "ק'ג",
+          "total": 98.52,
+          "unit_price": 8.08
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 13,
+          "unit": "ק'ג",
+          "total": 117.33,
+          "unit_price": 9.03
+        },
+        {
+          "name": "גזר ארוז 1 ק\"ג",
+          "quantity": 1,
+          "unit": "יח'",
+          "total": 2.85,
+          "unit_price": 2.85
+        },
+        {
+          "name": "מלפפון פרימיום",
+          "quantity": 13.2,
+          "unit": "ק'ג",
+          "total": 77.75,
+          "unit_price": 5.89
+        },
+        {
+          "name": "מלפפון פרימיום",
+          "quantity": 11.4,
+          "unit": "ק'ג",
+          "total": 59.57,
+          "unit_price": 5.23
+        },
+        {
+          "name": "מלפפון פרימיום",
+          "quantity": 12.4,
+          "unit": "ק'ג",
+          "total": 76.57,
+          "unit_price": 6.17
+        },
+        {
+          "name": "מלפפון פרימיום",
+          "quantity": 12.5,
+          "unit": "ק'ג",
+          "total": 89.06,
+          "unit_price": 7.12
+        },
+        {
+          "name": "תפוזים מארז 1 ק\"ג",
+          "quantity": 4,
+          "unit": "יח'",
+          "total": 26,
+          "unit_price": 6.5
+        },
+        {
+          "name": "תפוזים מארז 1 ק\"ג",
+          "quantity": 2,
+          "unit": "ק'ג",
+          "total": 12,
+          "unit_price": 6
+        },
+        {
+          "name": "שרי וויטני ק\"ג",
+          "quantity": 8,
+          "unit": "ק'ג",
+          "total": 114,
+          "unit_price": 14.25
+        },
+        {
+          "name": "שרי וויטני ק\"ג",
+          "quantity": 8.5,
+          "unit": "ק'ג",
+          "total": 137.28,
+          "unit_price": 16.15
+        },
+        {
+          "name": "אבוקדו בשל FlowPack יח",
+          "quantity": 10,
+          "unit": "יח'",
+          "total": 57,
+          "unit_price": 5.7
+        },
+        {
+          "name": "אבוקדו בשל FlowPack יח",
+          "quantity": 36,
+          "unit": "יח'",
+          "total": 222.31,
+          "unit_price": 6.18
+        },
+        {
+          "name": "תפוח עץ ירוק 7-7.5 יבוא איטליה",
+          "quantity": 20,
+          "unit": "ק'ג",
+          "total": 190,
+          "unit_price": 9.5
+        },
+        {
+          "name": "תפוח עץ ירוק 7-7.5 יבוא איטליה",
+          "quantity": 5.4,
+          "unit": "ק'ג",
+          "total": 46.17,
+          "unit_price": 8.55
+        },
+        {
+          "name": "תפוח עץ ירוק 7-7.5 יבוא איטליה",
+          "quantity": 1,
+          "unit": "ק'ג",
+          "total": 9.03,
+          "unit_price": 9.03
+        },
+        {
+          "name": "פסטו בהכשר עדה חרדית (4 יח)",
+          "quantity": 1,
+          "unit": "קר",
+          "total": 121.96,
+          "unit_price": 121.96
+        }
+      ]
+    },
+    {
+      "invoice_id": "19caf4469a3c194e",
+      "supplier": "Kill Bill",
+      "date": "2026-03-02",
+      "items": [
+        {
+          "name": "פקדון",
+          "quantity": 3.12,
+          "unit": "יח'",
+          "total": 12,
+          "unit_price": 3.85
+        },
+        {
+          "name": "וודרן סירופ אננס",
+          "quantity": 180,
+          "unit": "יח'",
+          "total": 4,
+          "unit_price": 0.02
+        },
+        {
+          "name": "וודרן סירופ תות",
+          "quantity": 90,
+          "unit": "יח'",
+          "total": 2,
+          "unit_price": 0.02
+        },
+        {
+          "name": "וודרן סירופ אבטיח",
+          "quantity": 270,
+          "unit": "יח'",
+          "total": 6,
+          "unit_price": 0.02
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cadc775cd54e3b",
+      "supplier": "פלאפון",
+      "date": "2026-03-02",
+      "items": [
+        {
+          "name": "חיוב בגין שרותים בתשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 45.27,
+          "unit_price": 45.27
+        },
+        {
+          "name": "חיוב על פי שימוש",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cad6ba6370ece1",
+      "supplier": "אונטופו ישראל",
+      "date": "2026-03-02",
+      "items": [
+        {
+          "name": "קידום ושיווק באפליקצית אונטופו מרץ 2026 - פסאו",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 3000,
+          "unit_price": 3000
+        },
+        {
+          "name": "מנוי חודשי תוכנת אירוח מרץ 2026",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 620,
+          "unit_price": 620
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cad694c814b81c",
+      "supplier": "אונטופו ישראל",
+      "date": "2026-03-02",
+      "items": [
+        {
+          "name": "קידום ושיווק באפליקצית אונטופו מרץ 2026",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 2000,
+          "unit_price": 2000
+        },
+        {
+          "name": "אומינו סושי - Umino Sushi",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 550,
+          "unit_price": 550
+        },
+        {
+          "name": "מנוי חודשי תוכנת אירוח מרץ 2026",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 550,
+          "unit_price": 550
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cad368bd9dcad9",
+      "supplier": "משלוחה (דיב אנד רד פרוג'קטס",
+      "date": "2026-03-02",
+      "items": []
+    },
+    {
+      "invoice_id": "19cab0da16d26b7e",
+      "supplier": "אסייתי בחוף ראשון",
+      "date": "2026-03-01",
+      "items": []
+    },
+    {
+      "invoice_id": "19caac7e6d6f333a",
+      "supplier": "קוקה קולה",
+      "date": "2026-03-01",
+      "items": [
+        {
+          "name": "משטח קוקה קו",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 340,
+          "unit_price": 340
+        },
+        {
+          "name": "קק קלס350פק",
+          "quantity": 16,
+          "unit": "יחידה",
+          "total": 1408.35,
+          "unit_price": 88.02
+        },
+        {
+          "name": "ענבי 330 גת",
+          "quantity": 7,
+          "unit": "יחידה",
+          "total": 539.46,
+          "unit_price": 77.07
+        },
+        {
+          "name": "נבי500פ.שטוח",
+          "quantity": 12,
+          "unit": "יחידה",
+          "total": 603.45,
+          "unit_price": 50.29
+        },
+        {
+          "name": "נביעות+תפוח",
+          "quantity": 30,
+          "unit": "יחידה",
+          "total": 311.19,
+          "unit_price": 10.37
+        },
+        {
+          "name": "נביעות+אפרס",
+          "quantity": 30,
+          "unit": "יחידה",
+          "total": 311.19,
+          "unit_price": 10.37
+        },
+        {
+          "name": "נביעות+ענב",
+          "quantity": 30,
+          "unit": "יחידה",
+          "total": 311.19,
+          "unit_price": 10.37
+        },
+        {
+          "name": "קק קלאס zero",
+          "quantity": 29,
+          "unit": "יחידה",
+          "total": 2552.6,
+          "unit_price": 88.02
+        },
+        {
+          "name": "זירוספ קל",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 528.12,
+          "unit_price": 88.02
+        },
+        {
+          "name": "ספ.ליים350קל",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 440.1,
+          "unit_price": 88.02
+        },
+        {
+          "name": "אפר0.5שרFUZE",
+          "quantity": 9,
+          "unit": "יחידה",
+          "total": 939.8,
+          "unit_price": 104.42
+        },
+        {
+          "name": "קירין 330",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 308.64,
+          "unit_price": 154.32
+        },
+        {
+          "name": "סודהNM",
+          "quantity": 250,
+          "unit": "יחידה",
+          "total": 379.68,
+          "unit_price": 1.52
+        },
+        {
+          "name": "חמוציות 1 ל3ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 398.85,
+          "unit_price": 398.85
+        },
+        {
+          "name": "קק 1500 ח\"פ",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 203.33,
+          "unit_price": 40.67
+        },
+        {
+          "name": "נבי+תפוח 1.5ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 75.37,
+          "unit_price": 75.37
+        },
+        {
+          "name": "שרי. FUZEאפר11",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 82.98,
+          "unit_price": 82.98
+        },
+        {
+          "name": "שישיו ZERO",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 122,
+          "unit_price": 40.67
+        },
+        {
+          "name": "ספ.ליים1.5שש",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 81.33,
+          "unit_price": 40.67
+        },
+        {
+          "name": "זירוספ 2215000",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 81.33,
+          "unit_price": 40.67
+        },
+        {
+          "name": "מארז6סודה 21.5ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 37.11,
+          "unit_price": 18.56
+        },
+        {
+          "name": "פריגת תפוז",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 158.98,
+          "unit_price": 79.49
+        },
+        {
+          "name": "פריגת לימונע",
+          "quantity": 9,
+          "unit": "יחידה",
+          "total": 715.41,
+          "unit_price": 79.49
+        }
+      ]
+    },
+    {
+      "invoice_id": "19caabdc568bb49b",
+      "supplier": "קוקה קולה",
+      "date": "2026-03-01",
+      "items": [
+        {
+          "name": "אפרול",
+          "quantity": 36,
+          "unit": "יחידה",
+          "total": 3697.56,
+          "unit_price": 102.71
+        },
+        {
+          "name": "צינזנו ורמוט",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 99.84,
+          "unit_price": 49.92
+        },
+        {
+          "name": "פמיל בוגרייה",
+          "quantity": 16,
+          "unit": "יחידה",
+          "total": 631.84,
+          "unit_price": 39.49
+        },
+        {
+          "name": "קמפרי 1000 מ",
+          "quantity": 7,
+          "unit": "יחידה",
+          "total": 707.56,
+          "unit_price": 101.08
+        },
+        {
+          "name": "טקילה דון חו",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 1122.84,
+          "unit_price": 374.28
+        },
+        {
+          "name": "קפטן מורגן ו",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 259.56,
+          "unit_price": 86.52
+        },
+        {
+          "name": "טקילה דון חו",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 1001.26,
+          "unit_price": 500.63
+        },
+        {
+          "name": "ג'וני ווקר ש",
+          "quantity": 15,
+          "unit": "יחידה",
+          "total": 3793.5,
+          "unit_price": 252.9
+        }
+      ]
+    },
+    {
+      "invoice_id": "19ca9be3730c63a9",
+      "supplier": "פזגז",
+      "date": "2026-03-01",
+      "items": [
+        {
+          "name": "צריכה במ\"ק",
+          "quantity": 50.574,
+          "unit": "מ\"ק",
+          "total": 922.02,
+          "unit_price": 18.23
+        },
+        {
+          "name": "דמי שימוש קבועים (דמ'ש) ל 28 ימים",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 34.77,
+          "unit_price": 34.77
+        },
+        {
+          "name": "הנחה/עיגול",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0.01,
+          "unit_price": 0.01
+        }
+      ]
+    },
+    {
+      "invoice_id": "19ca9be36e7b7eb0",
+      "supplier": "פזגז",
+      "date": "2026-03-01",
+      "items": [
+        {
+          "name": "סה''כ צריכה: 126.436 מ'ק במחיר ממוצע משוקלל של 21.88 ש\"ח",
+          "quantity": 126.436,
+          "unit": "מ'ק",
+          "total": 2766.06,
+          "unit_price": 21.88
+        },
+        {
+          "name": "דמי שימוש קבועים (דמ'ש) ל 28 ימים",
+          "quantity": 28,
+          "unit": "ימים",
+          "total": 34.77,
+          "unit_price": 1.24
+        },
+        {
+          "name": "הנחה/עיגול",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": -0.03,
+          "unit_price": -0.03
+        }
+      ]
+    },
+    {
+      "invoice_id": "19ca8f3e0c2ffb75",
+      "supplier": "Hyp / חשבונית+",
+      "date": "2026-03-01",
+      "items": [
+        {
+          "name": "FIX REST חבילת",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 260,
+          "unit_price": 260
+        },
+        {
+          "name": "הזמן שולחן-Ontopo חיוב יחסי",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 3,
+          "unit_price": 1
+        }
+      ]
+    },
+    {
+      "invoice_id": "19ca695e29da0d54",
+      "supplier": "אסייתי בחוף ראשון",
+      "date": "2026-03-01",
+      "items": []
+    },
+    {
+      "invoice_id": "19ca69b6ea09f727",
+      "supplier": "Wolt",
+      "date": "2026-02-28",
+      "items": [
+        {
+          "name": "דמי שירות, משלוח 27%",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 17.55,
+          "unit_price": 17.55
+        },
+        {
+          "name": "דמי שירות, משלוח 27%+Wolt",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 171.45,
+          "unit_price": 171.45
+        },
+        {
+          "name": "עמלה קבועה של 3.80+Wolt",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 11.4,
+          "unit_price": 3.8
+        },
+        {
+          "name": "Weekly 8: Pos Integration Fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 12.5,
+          "unit_price": 12.5
+        },
+        {
+          "name": "Weekly 8: SIM Card fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 6,
+          "unit_price": 6
+        },
+        {
+          "name": "Weekly 7: Pos Integration Fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 12.5,
+          "unit_price": 12.5
+        },
+        {
+          "name": "Weekly 7: SIM Card fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 6,
+          "unit_price": 6
+        }
+      ]
+    },
+    {
+      "invoice_id": "19ca4188f5add0a8",
+      "supplier": "קבוצת בנדיקט",
+      "date": "2026-02-28",
+      "items": [
+        {
+          "name": "פוקצ'ה אלטליו (12 * 1 יח')",
+          "quantity": 20,
+          "unit": "יח'",
+          "total": 1080,
+          "unit_price": 54
+        },
+        {
+          "name": "דיסקית קראפין גדולה(20*1)",
+          "quantity": 2,
+          "unit": "יח'",
+          "total": 220,
+          "unit_price": 110
+        },
+        {
+          "name": "קרואסון פרעצל חדש (15 יח)",
+          "quantity": 3,
+          "unit": "יח'",
+          "total": 292.5,
+          "unit_price": 97.5
+        },
+        {
+          "name": "המבורגר בריוש 90 (15 * 1 יח')",
+          "quantity": 5,
+          "unit": "יח'",
+          "total": 225,
+          "unit_price": 45
+        },
+        {
+          "name": "לחמנית דלעת תירס (60 * 1 יח')",
+          "quantity": 2,
+          "unit": "יח'",
+          "total": 180,
+          "unit_price": 90
+        },
+        {
+          "name": "פוקצ'ה אלטליו (12 * 1 יח')",
+          "quantity": 21,
+          "unit": "יח'",
+          "total": 1134,
+          "unit_price": 54
+        },
+        {
+          "name": "משטח פלסטיק",
+          "quantity": 1,
+          "unit": "יח'",
+          "total": 50,
+          "unit_price": 50
+        },
+        {
+          "name": "המבורגר בריוש 90 (15 * 1 יח')",
+          "quantity": 11,
+          "unit": "יח'",
+          "total": 495,
+          "unit_price": 45
+        },
+        {
+          "name": "פוקצ'ה אלטליו (12 * 1 יח')",
+          "quantity": 20,
+          "unit": "יח'",
+          "total": 1080,
+          "unit_price": 54
+        },
+        {
+          "name": "משטח פלסטיק",
+          "quantity": 1,
+          "unit": "יח'",
+          "total": 50,
+          "unit_price": 50
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c992e29604375d",
+      "supplier": "קוקה קולה",
+      "date": "2026-02-26",
+      "items": [
+        {
+          "name": "קוקה קולה שישיות 1.5 ליטר",
+          "quantity": 3,
+          "unit": "ליטר",
+          "total": 117.42,
+          "unit_price": 39.14
+        },
+        {
+          "name": "קולה ZERO שישיות 1.5 ליטר",
+          "quantity": 3,
+          "unit": "ליטר",
+          "total": 117.42,
+          "unit_price": 39.14
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c985f2b6120107",
+      "supplier": "קוקה קולה",
+      "date": "2026-02-26",
+      "items": [
+        {
+          "name": "קוקה קולה קלאסי 350 מ\"ל",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 282.48,
+          "unit_price": 94.16
+        },
+        {
+          "name": "פריגת ענבים 330 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 166.98,
+          "unit_price": 83.49
+        },
+        {
+          "name": "נביעות 500 פ.שטוח פיקדון",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 184.11,
+          "unit_price": 61.37
+        },
+        {
+          "name": "נביעות + תפוח 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 97.63,
+          "unit_price": 97.63
+        },
+        {
+          "name": "נביעות + אפרסק 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 97.63,
+          "unit_price": 97.63
+        },
+        {
+          "name": "נביעות + ענבים 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 97.63,
+          "unit_price": 97.63
+        },
+        {
+          "name": "קולה ZERO קלאסי 350 מ\"ל",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 470.8,
+          "unit_price": 94.16
+        },
+        {
+          "name": "ספרייט ZERO קלאסי 350 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 188.32,
+          "unit_price": 94.16
+        },
+        {
+          "name": "ספרייט LIME קלאסי 350 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 188.32,
+          "unit_price": 94.16
+        },
+        {
+          "name": "קירין בקבוק 330 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 169.53,
+          "unit_price": 169.53
+        },
+        {
+          "name": "NM מי סודה 250 מ\"ל",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 177.21,
+          "unit_price": 59.07
+        },
+        {
+          "name": "פריגת אושן ספריי חמוציות 1 ליטר שרינק",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 151.93,
+          "unit_price": 151.93
+        },
+        {
+          "name": "קוקה קולה שישיות 1.5 ליטר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 78.28,
+          "unit_price": 39.14
+        },
+        {
+          "name": "נביעות + תפוח 1.5 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 72.32,
+          "unit_price": 72.32
+        },
+        {
+          "name": "FUZE tea בטעם אפרסק 1.5 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 79.93,
+          "unit_price": 79.93
+        },
+        {
+          "name": "ספרייט LIME שישיות 1.5 ליטר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 78.28,
+          "unit_price": 39.14
+        },
+        {
+          "name": "ZERO ספרייט שישיות 1.5 ליטר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 78.28,
+          "unit_price": 39.14
+        },
+        {
+          "name": "קינלי סודה שישייה 1.5 ליטר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 34.06,
+          "unit_price": 17.03
+        },
+        {
+          "name": "פריגת תפוז 1.5 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 89.93,
+          "unit_price": 89.93
+        },
+        {
+          "name": "פריגת לימונענע 1.5 ליטר",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 269.79,
+          "unit_price": 89.93
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c985dfdd34e40f",
+      "supplier": "Hyp / חשבונית+",
+      "date": "2026-02-26",
+      "items": [
+        {
+          "name": "כוכב מישלן +3צלם פרימיום",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 4,
+          "unit_price": 1
+        },
+        {
+          "name": "כוכב מישלן +3צלם פרימיום",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 9,
+          "unit_price": 3
+        },
+        {
+          "name": "FIX REST חבילת",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 260,
+          "unit_price": 260
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c96b7edc3863a6",
+      "supplier": "IPCOM",
+      "date": "2026-02-25",
+      "items": [
+        {
+          "name": "Practicall - שלוחת מרכזיה ע\"ג סים סלולארי - 15GB",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 59,
+          "unit_price": 59
+        },
+        {
+          "name": "מרכזיה בענן - שלוחת SIM סלולרי 15GB",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 59,
+          "unit_price": 59
+        },
+        {
+          "name": "Practicall - הקלטת שיחות - שלוחה בודדת",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 10,
+          "unit_price": 10
+        },
+        {
+          "name": "Practicall - הקלטת שיחות - שלוחה בודדת",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 10,
+          "unit_price": 10
+        },
+        {
+          "name": "ענן-נתב שיחות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 20,
+          "unit_price": 20
+        },
+        {
+          "name": "ענן-חבילת סמס מהמרכזיה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 30,
+          "unit_price": 30
+        },
+        {
+          "name": "קריאות מונים לחיוב עד לתאריך 28/02/26",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 23.64,
+          "unit_price": 23.64
+        },
+        {
+          "name": "Practicall - דקת שיחה יוצאת",
+          "quantity": 197,
+          "unit": "יחידה",
+          "total": 23.64,
+          "unit_price": 0.12
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c96b623b6c1e30",
+      "supplier": "IPCOM",
+      "date": "2026-02-25",
+      "items": [
+        {
+          "name": "Practicall - שלוחת מרכזיה ע\"ג סים סלולארי - 15GB",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 59,
+          "unit_price": 59
+        },
+        {
+          "name": "Practicall - הקלטת שיחות - שלוחה בודדת",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 10,
+          "unit_price": 10
+        },
+        {
+          "name": "ענן-נתב שיחות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 20,
+          "unit_price": 20
+        },
+        {
+          "name": "קו קל לחיבור אזעקה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 50,
+          "unit_price": 50
+        },
+        {
+          "name": "קו קל לחיבור למערכת גילוי אש",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 50,
+          "unit_price": 50
+        },
+        {
+          "name": "ענן-חבילת סמס מהמרכזיה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 30,
+          "unit_price": 30
+        },
+        {
+          "name": "בזק ברודקום כפול AC2 + 100/10 +סים + MAX4ים",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 1000,
+          "unit_price": 1000
+        },
+        {
+          "name": "קריאות מונים לחיוב עד לתאריך 28/02/26",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 166.44,
+          "unit_price": 166.44
+        },
+        {
+          "name": "דקת שיחה יוצאת - Practicall",
+          "quantity": 1122,
+          "unit": "יחידה",
+          "total": 134.64,
+          "unit_price": 0.12
+        },
+        {
+          "name": "שליחת סמס מהמרכזיה",
+          "quantity": 212,
+          "unit": "יחידה",
+          "total": 31.8,
+          "unit_price": 0.15
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c901e0aa555ea3",
+      "supplier": "ברקת חומרי ניקוי",
+      "date": "2026-02-24",
+      "items": []
+    },
+    {
+      "invoice_id": "19c8ff35ac2b0286",
+      "supplier": "עודד דניאל BeeComm",
+      "date": "2026-02-24",
+      "items": [
+        {
+          "name": "טרייד מסופונים",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 1600,
+          "unit_price": 800
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c8ed64f3b45a8e",
+      "supplier": "Ariel Hemo",
+      "date": "2026-02-24",
+      "items": []
+    },
+    {
+      "invoice_id": "19c8ae3ae9dd98b2",
+      "supplier": "פזגז",
+      "date": "2026-02-23",
+      "items": [
+        {
+          "name": "עלות הקמת מערכת גז ללקוח מסחרי",
+          "quantity": 1,
+          "unit": "יח",
+          "total": 5000,
+          "unit_price": 5000
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c897b30b6a1420",
+      "supplier": "קולאיוונט בעמ",
+      "date": "2026-02-23",
+      "items": [
+        {
+          "name": "שיווק ופרסום בפברואר 2026",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 800,
+          "unit_price": 800
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c75d912daab4af",
+      "supplier": "טרדינג דניאל ששון",
+      "date": "2026-02-19",
+      "items": [
+        {
+          "name": "חבל שזור שחור 1.5 מ' תפסן CKS-ROPE BLACK נירוסטה",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 192,
+          "unit_price": 96
+        },
+        {
+          "name": "צייר 28 מ\"ל EY3001 015182 DELI",
+          "quantity": 30,
+          "unit": "מ\"ל",
+          "total": 69,
+          "unit_price": 2.3
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c752576b29274b",
+      "supplier": "קוקה קולה",
+      "date": "2026-02-19",
+      "items": [
+        {
+          "name": "קוקה קולה קלאסי 350 מ\"ל",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 376.64,
+          "unit_price": 94.16
+        },
+        {
+          "name": "נביעות 500 פ.שטוח פיקדון",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 122.74,
+          "unit_price": 61.37
+        },
+        {
+          "name": "קולה ZERO קלאסי 350 מ\"ל",
+          "quantity": 7,
+          "unit": "יחידה",
+          "total": 659.12,
+          "unit_price": 94.16
+        },
+        {
+          "name": "שרינק FUZE tea בטעם אפרסק 0.5 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 98.32,
+          "unit_price": 98.32
+        },
+        {
+          "name": "פריגת לימונענע 1.5 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 89.93,
+          "unit_price": 89.93
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c74caf4b61440b",
+      "supplier": "ברקת חומרי ניקוי",
+      "date": "2026-02-19",
+      "items": []
+    },
+    {
+      "invoice_id": "19c7630973d1b9d3",
+      "supplier": "Tabit",
+      "date": "2026-02-19",
+      "items": [
+        {
+          "name": "חש. מרכזת ינו-26",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 903,
+          "unit_price": 903
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c7117ba5455820",
+      "supplier": "קולאיוונט בעמ",
+      "date": "2026-02-18",
+      "items": [
+        {
+          "name": "שיווק ופרסום בנובמבר-דצמבר 2025 וינואר 2026",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 2400,
+          "unit_price": 800
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c7115b0997280e",
+      "supplier": "קולאיוונט בעמ",
+      "date": "2026-02-18",
+      "items": [
+        {
+          "name": "שיווק ופרסום בנובמבר 2025",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 1000,
+          "unit_price": 1000
+        },
+        {
+          "name": "שיווק ופרסום בדצמבר 2025",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 1000,
+          "unit_price": 1000
+        },
+        {
+          "name": "שיווק ופרסום בינואר 2026",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 1000,
+          "unit_price": 1000
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c6b048c895f615",
+      "supplier": "הכרם",
+      "date": "2026-02-17",
+      "items": [
+        {
+          "name": "פינו גריג'יו (מונטה זובו)",
+          "quantity": 6,
+          "unit": "יח'",
+          "total": 197.1,
+          "unit_price": 32.85
+        },
+        {
+          "name": "פיקדון",
+          "quantity": 6,
+          "unit": "יח'",
+          "total": 1.53,
+          "unit_price": 0.26
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c6a32125a5e27a",
+      "supplier": "רונן לרר",
+      "date": "2026-02-17",
+      "items": []
+    },
+    {
+      "invoice_id": "19c66c58fe47c599",
+      "supplier": "עודד דניאל BeeComm",
+      "date": "2026-02-16",
+      "items": [
+        {
+          "name": "מדפסת שירות",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "מסופון דה זה וו קטן שירות",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 90,
+          "unit_price": 45
+        },
+        {
+          "name": "מסופון ד.ז.ו נייד שנרכש מביקום",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 90,
+          "unit_price": 45
+        },
+        {
+          "name": "רישיון ענן",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 900,
+          "unit_price": 900
+        },
+        {
+          "name": "דה זה וו P5 שירות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 45,
+          "unit_price": 45
+        },
+        {
+          "name": "דה זה וו P5 שירות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 45,
+          "unit_price": 45
+        },
+        {
+          "name": "מסופון דה זה וו קטן שירות",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 90,
+          "unit_price": 45
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c66a35aaca26ce",
+      "supplier": "עודד דניאל BeeComm",
+      "date": "2026-02-16",
+      "items": [
+        {
+          "name": "רישיון ענן",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 900,
+          "unit_price": 900
+        },
+        {
+          "name": "נייח wisepay",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 75,
+          "unit_price": 75
+        },
+        {
+          "name": "WP נייח שכירות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 85,
+          "unit_price": 85
+        },
+        {
+          "name": "מדפסת נוספת שכירות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 50,
+          "unit_price": 50
+        },
+        {
+          "name": "מסופון ד.ז.ו נייח שנרכש מביקום",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 45,
+          "unit_price": 45
+        },
+        {
+          "name": "מדפסת 880 שנרכשה מביקום",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "סים למסופון",
+          "quantity": 8,
+          "unit": "יחידה",
+          "total": 80,
+          "unit_price": 10
+        },
+        {
+          "name": "מסופון דה זה וו קטן שירות",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 270,
+          "unit_price": 45
+        },
+        {
+          "name": "Q3 PRO שירות",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 135,
+          "unit_price": 45
+        },
+        {
+          "name": "השכרת מסופון ד.ז.ו נייח",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 85,
+          "unit_price": 85
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c65e1b39582e07",
+      "supplier": "קוקה קולה",
+      "date": "2026-02-16",
+      "items": [
+        {
+          "name": "קוקה קולה קלאסי 350 מ\"ל",
+          "quantity": 2,
+          "unit": "מ\"ל",
+          "total": 176.04,
+          "unit_price": 88.02
+        },
+        {
+          "name": "פריגת ענבים 330 מ\"ל",
+          "quantity": 1,
+          "unit": "מ\"ל",
+          "total": 77.07,
+          "unit_price": 77.07
+        },
+        {
+          "name": "נביעות 500 פ.שטוח פיקדון",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 150.87,
+          "unit_price": 50.29
+        },
+        {
+          "name": "נביעות + תפוח 500 מ\"ל",
+          "quantity": 1,
+          "unit": "מ\"ל",
+          "total": 103.73,
+          "unit_price": 103.73
+        },
+        {
+          "name": "נביעות + אפרסק 500 מ\"ל",
+          "quantity": 1,
+          "unit": "מ\"ל",
+          "total": 103.73,
+          "unit_price": 103.73
+        },
+        {
+          "name": "קולה ZERO קלאסי 350 מ\"ל",
+          "quantity": 7,
+          "unit": "מ\"ל",
+          "total": 616.14,
+          "unit_price": 88.02
+        },
+        {
+          "name": "ספרייט ZERO קלאסי 350 מ\"ל",
+          "quantity": 1,
+          "unit": "מ\"ל",
+          "total": 88.02,
+          "unit_price": 88.02
+        },
+        {
+          "name": "ספרייט LIME קלאסי 350 מ\"ל",
+          "quantity": 1,
+          "unit": "מ\"ל",
+          "total": 88.02,
+          "unit_price": 88.02
+        },
+        {
+          "name": "FUZE tea בטעם אפרסק 0.5 ליטר",
+          "quantity": 2,
+          "unit": "ליטר",
+          "total": 208.84,
+          "unit_price": 104.42
+        },
+        {
+          "name": "פריגת לימונענע 1.5 ליטר",
+          "quantity": 1,
+          "unit": "ליטר",
+          "total": 79.49,
+          "unit_price": 79.49
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c63d31a771d3fc",
+      "supplier": "Wolt",
+      "date": "2026-02-16",
+      "items": [
+        {
+          "name": "דמי שירות, משלוח25%+Wolt",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 752,
+          "unit_price": 752
+        },
+        {
+          "name": "דמי שירות, משלוח 25%",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 104,
+          "unit_price": 104
+        },
+        {
+          "name": "עמלה קבועה של 3.80+Wolt של",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 11.4,
+          "unit_price": 3.8
+        },
+        {
+          "name": "Weekly 6: Pos Integration Fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 12.5,
+          "unit_price": 12.5
+        },
+        {
+          "name": "Weekly 6: SIM Card fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 6,
+          "unit_price": 6
+        },
+        {
+          "name": "Weekly 5: Pos Integration Fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 12.5,
+          "unit_price": 12.5
+        },
+        {
+          "name": "Weekly 5: SIM Card fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 6,
+          "unit_price": 6
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c6537fbfc4c6a9",
+      "supplier": "קבוצת בנדיקט",
+      "date": "2026-02-16",
+      "items": []
+    },
+    {
+      "invoice_id": "19c62a9364ebfb47",
+      "supplier": "בזק",
+      "date": "2026-02-15",
+      "items": [
+        {
+          "name": "תשלום קבוע אספקה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 15.08,
+          "unit_price": 15.08
+        },
+        {
+          "name": "תשלום קבוע חלוקה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 32.4,
+          "unit_price": 32.4
+        },
+        {
+          "name": "תשלום בגין הספק (KVA) חוסכים חכם 24/7 חשמל כללי 55.43 KVA",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 24.43,
+          "unit_price": 24.43
+        },
+        {
+          "name": "צריכת חשמל חוסכים חכם 24/7 חשמל כללי",
+          "quantity": 11934.77,
+          "unit": "בקווט\"ש",
+          "total": 6505.62,
+          "unit_price": 0.55
+        },
+        {
+          "name": "חוסכים חכם 24/7 חשמל כללי 7.00%",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": -455.39,
+          "unit_price": -455.39
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c621409d3d6535",
+      "supplier": "בזק",
+      "date": "2026-02-15",
+      "items": [
+        {
+          "name": "תשלום קבוע אספקה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 15.08,
+          "unit_price": 15.08
+        },
+        {
+          "name": "תשלום קבוע חלוקה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 11.67,
+          "unit_price": 11.67
+        },
+        {
+          "name": "תשלום בגין הספק (KVA) חוסכים חכם 24/7 חשמל כללי",
+          "quantity": 55.43,
+          "unit": "KVA",
+          "total": 24.43,
+          "unit_price": 0.44
+        },
+        {
+          "name": "צריכת חשמל חוסכים חכם 24/7 חשמל כללי",
+          "quantity": 12080.58,
+          "unit": "בקווט\"ש",
+          "total": 6585.13,
+          "unit_price": 0.55
+        },
+        {
+          "name": "חוסכים חכם 24/7 חשמל כללי",
+          "quantity": 6,
+          "unit": "%",
+          "total": -395.11,
+          "unit_price": -65.85
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c617dd0aa2f30b",
+      "supplier": "י.א.אבישי שיווק סיקרט קוסמטיקה 2011 בע\"מ",
+      "date": "2026-02-15",
+      "items": []
+    },
+    {
+      "invoice_id": "19c544a02adc8f0c",
+      "supplier": "Tabit",
+      "date": "2026-02-13",
+      "items": [
+        {
+          "name": "Tabit Shift",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 600,
+          "unit_price": 600
+        },
+        {
+          "name": "Tabit Task",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 165,
+          "unit_price": 165
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c50d39878a0ee6",
+      "supplier": "קוקה קולה",
+      "date": "2026-02-12",
+      "items": [
+        {
+          "name": "קוקה קולה קלאסי 350 מ\"ל",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 470.8,
+          "unit_price": 94.16
+        },
+        {
+          "name": "פריגת ענבים 330 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 166.98,
+          "unit_price": 83.49
+        },
+        {
+          "name": "נביעות 500 פ.שטוח פיקדון",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 122.74,
+          "unit_price": 61.37
+        },
+        {
+          "name": "נביעות + אפרסק 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 97.63,
+          "unit_price": 97.63
+        },
+        {
+          "name": "נביעות + ענבים 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 97.63,
+          "unit_price": 97.63
+        },
+        {
+          "name": "קולה ZERO קלאסי 350 מ\"ל",
+          "quantity": 7,
+          "unit": "יחידה",
+          "total": 659.12,
+          "unit_price": 94.16
+        },
+        {
+          "name": "ספרייט ZERO קלאסי 350 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 188.32,
+          "unit_price": 94.16
+        },
+        {
+          "name": "ספרייט LIME קלאסי 350 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 94.16,
+          "unit_price": 94.16
+        },
+        {
+          "name": "שרינק FUZE tea בטעם אפרסק 0.5 ליטר",
+          "quantity": 3,
+          "unit": "ליטר",
+          "total": 294.96,
+          "unit_price": 98.32
+        },
+        {
+          "name": "קירין בקבוק 330 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 169.53,
+          "unit_price": 169.53
+        },
+        {
+          "name": "NM מי סודה 250 מ\"ל",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 177.21,
+          "unit_price": 59.07
+        },
+        {
+          "name": "פריגת אושן ספריי חמוציות 1 ליטר שרינק",
+          "quantity": 1,
+          "unit": "ליטר",
+          "total": 151.93,
+          "unit_price": 151.93
+        },
+        {
+          "name": "פריגת תפוז 1.5 ליטר",
+          "quantity": 1,
+          "unit": "ליטר",
+          "total": 89.93,
+          "unit_price": 89.93
+        },
+        {
+          "name": "פריגת לימונענע 1.5 ליטר",
+          "quantity": 2,
+          "unit": "ליטר",
+          "total": 179.86,
+          "unit_price": 89.93
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c50d395c8b8e64",
+      "supplier": "קוקה קולה",
+      "date": "2026-02-12",
+      "items": [
+        {
+          "name": "קוקה קולה קלאסי 350 מ\"ל",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 470.8,
+          "unit_price": 94.16
+        },
+        {
+          "name": "פריגת ענבים 330 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 166.98,
+          "unit_price": 83.49
+        },
+        {
+          "name": "נביעות 500 פ.שטוח פיקדון",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 122.74,
+          "unit_price": 61.37
+        },
+        {
+          "name": "נביעות + אפרסק 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 97.63,
+          "unit_price": 97.63
+        },
+        {
+          "name": "נביעות + ענבים 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 97.63,
+          "unit_price": 97.63
+        },
+        {
+          "name": "קולה ZERO קלאסי 350 מ\"ל",
+          "quantity": 7,
+          "unit": "יחידה",
+          "total": 659.12,
+          "unit_price": 94.16
+        },
+        {
+          "name": "ספרייט ZERO קלאסי 350 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 188.32,
+          "unit_price": 94.16
+        },
+        {
+          "name": "ספרייט LIME קלאסי 350 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 94.16,
+          "unit_price": 94.16
+        },
+        {
+          "name": "שרינק FUZE tea בטעם אפרסק 0.5 ליטר",
+          "quantity": 3,
+          "unit": "ליטר",
+          "total": 294.96,
+          "unit_price": 98.32
+        },
+        {
+          "name": "קירין בקבוק 330 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 169.53,
+          "unit_price": 169.53
+        },
+        {
+          "name": "NM מי סודה 250 מ\"ל",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 177.21,
+          "unit_price": 59.07
+        },
+        {
+          "name": "פריגת אושן ספריי חמוציות 1 ליטר שרינק",
+          "quantity": 1,
+          "unit": "ליטר",
+          "total": 151.93,
+          "unit_price": 151.93
+        },
+        {
+          "name": "פריגת תפוז 1.5 ליטר",
+          "quantity": 1,
+          "unit": "ליטר",
+          "total": 89.93,
+          "unit_price": 89.93
+        },
+        {
+          "name": "פריגת לימונענע 1.5 ליטר",
+          "quantity": 2,
+          "unit": "ליטר",
+          "total": 179.86,
+          "unit_price": 89.93
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c4b8b83a8b12b3",
+      "supplier": "סמדר נוימן",
+      "date": "2026-02-11",
+      "items": [
+        {
+          "name": "אומינו סושי ראשון לציון - הזמנות אונליין ששולמו בכרטיס אשראי 01/01/2026-31/01/2026",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 2513.56,
+          "unit_price": 2513.56
+        },
+        {
+          "name": "אומינו סושי ראשון לציון - עמלת אשראי",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": -46.52,
+          "unit_price": -46.52
+        },
+        {
+          "name": "אומינו סושי ראשון לציון - פיצוי ושימור לקוח המסעדה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": -29.66,
+          "unit_price": -29.66
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c4b5579d5cd747",
+      "supplier": "סמדר נוימן",
+      "date": "2026-02-11",
+      "items": [
+        {
+          "name": "קמפיין תנועה | משלוחים - דצמבר - עותק",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 315.52,
+          "unit_price": 315.52
+        },
+        {
+          "name": "קמפיין תנועה | משלוחים מגשים - דצמבר חנוכה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 483.78,
+          "unit_price": 483.78
+        },
+        {
+          "name": "מוערבות | אינסטגרם | משפיענית -ינואר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 217.1,
+          "unit_price": 217.1
+        },
+        {
+          "name": "קמפיין תנועה | משלוחים | סושי - סלבסטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 214.78,
+          "unit_price": 214.78
+        },
+        {
+          "name": "קמפיין מוערבות | משלוחים | סושי - סלבסטר- עותק",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 215.09,
+          "unit_price": 215.09
+        },
+        {
+          "name": "מוערבות | אינסטגרם | סרטונים - ינואר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 201.08,
+          "unit_price": 201.08
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c460d827950769",
+      "supplier": "הופה דיגיטל",
+      "date": "2026-02-10",
+      "items": [
+        {
+          "name": "תשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 300,
+          "unit_price": 300
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c460d6097309c7",
+      "supplier": "הופה דיגיטל",
+      "date": "2026-02-10",
+      "items": [
+        {
+          "name": "תשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 300,
+          "unit_price": 300
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c47aabbe589b70",
+      "supplier": "KSP",
+      "date": "2026-02-10",
+      "items": [
+        {
+          "name": "דצמבר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 3250,
+          "unit_price": 3250
+        },
+        {
+          "name": "ינואר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 3250,
+          "unit_price": 3250
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c3da1527c40e57",
+      "supplier": "אבי (partner)",
+      "date": "2026-02-08",
+      "items": [
+        {
+          "name": "נורה לבוסטון",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 870,
+          "unit_price": 290
+        },
+        {
+          "name": "כפתור הדלקה",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 320,
+          "unit_price": 80
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c2d206abe11c3c",
+      "supplier": "הראל פנסיה",
+      "date": "2026-02-05",
+      "items": [
+        {
+          "name": "ניהול תהליכי דיווח פנסיוני לחודש שכר 2025/11 דווחו 16 ת.ז. לחודש שכר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 320,
+          "unit_price": 320
+        },
+        {
+          "name": "ניהול תהליכי דיווח פנסיוני לחודש שכר 2025/01 2025/02 2025/03 2025/04 2025/07 2025/08 2025/09 2025/10 דווחו 11 ת.ז. משלימים לחודש שכר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 220,
+          "unit_price": 220
+        },
+        {
+          "name": "ניהול תהליכי דיווח פנסיוני לחודש שכר 2025/12 דווחו 11 ת.ז. לחודש שכר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 220,
+          "unit_price": 220
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c28d682b2dfe92",
+      "supplier": "חוליה 4",
+      "date": "2026-02-04",
+      "items": []
+    },
+    {
+      "invoice_id": "19c23ee0d4e45c44",
+      "supplier": "BuyMe",
+      "date": "2026-02-03",
+      "items": [
+        {
+          "name": "12.25-מימושי ביימי מיקס",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 43.02,
+          "unit_price": 43.02
+        },
+        {
+          "name": "12.25-מימושי ביימי אול",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 192.78,
+          "unit_price": 192.78
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c23cfd968ba181",
+      "supplier": "מרינה גליל",
+      "date": "2026-02-03",
+      "items": [
+        {
+          "name": "צמד חמד איטלקי יח",
+          "quantity": 4,
+          "unit": "שח",
+          "total": 42,
+          "unit_price": 10.5
+        },
+        {
+          "name": "פטריות שמפיניון ארוז יח",
+          "quantity": 40,
+          "unit": "יח'",
+          "total": 260,
+          "unit_price": 6.5
+        },
+        {
+          "name": "פטריות פורטובלה בייבי מיני יח(צעירות)",
+          "quantity": 16,
+          "unit": "יח'",
+          "total": 108,
+          "unit_price": 6.75
+        },
+        {
+          "name": "מיקרו בייבי אמריטוס",
+          "quantity": 5,
+          "unit": "יח'",
+          "total": 30,
+          "unit_price": 6
+        },
+        {
+          "name": "פלפל צילי קג",
+          "quantity": 8,
+          "unit": "ק'ג",
+          "total": 148,
+          "unit_price": 18.5
+        },
+        {
+          "name": "בצל ירוק רגיל יח",
+          "quantity": 40,
+          "unit": "יח'",
+          "total": 96,
+          "unit_price": 2.4
+        },
+        {
+          "name": "אספרגוס יח",
+          "quantity": 2,
+          "unit": "שח",
+          "total": 48,
+          "unit_price": 24
+        },
+        {
+          "name": "גזר צבעוני ארוז",
+          "quantity": 3,
+          "unit": "יח'",
+          "total": 24,
+          "unit_price": 8
+        },
+        {
+          "name": "שעועית ירוקה ארוזה 1 ק\"ג",
+          "quantity": 1,
+          "unit": "יח'",
+          "total": 17,
+          "unit_price": 17
+        },
+        {
+          "name": "זוג אנדיב לבן ארוז (מותג מרינה)",
+          "quantity": 6,
+          "unit": "יח'",
+          "total": 63,
+          "unit_price": 10.5
+        },
+        {
+          "name": "זוג אנדיב אדום ארוז (מותג מרינה)",
+          "quantity": 17,
+          "unit": "יח'",
+          "total": 263.5,
+          "unit_price": 15.5
+        },
+        {
+          "name": "לבבות קיסר בנספק",
+          "quantity": 192,
+          "unit": "יח'",
+          "total": 1296,
+          "unit_price": 6.75
+        },
+        {
+          "name": "חסה סלנובה מהדרין יח",
+          "quantity": 104,
+          "unit": "יח'",
+          "total": 754,
+          "unit_price": 7.25
+        },
+        {
+          "name": "עלי בייבי 120 גר' טעם הטבע",
+          "quantity": 10,
+          "unit": "יח'",
+          "total": 90.5,
+          "unit_price": 9.05
+        },
+        {
+          "name": "עלי רוקט 150 גרם טעם הטבע",
+          "quantity": 24,
+          "unit": "יח'",
+          "total": 217.2,
+          "unit_price": 9.05
+        },
+        {
+          "name": "חסה לליק מהדרין קמעונאי",
+          "quantity": 120,
+          "unit": "יח'",
+          "total": 870,
+          "unit_price": 7.25
+        },
+        {
+          "name": "עלי תרד ניוזילנדי בנספק",
+          "quantity": 8,
+          "unit": "יח'",
+          "total": 35.2,
+          "unit_price": 4.4
+        },
+        {
+          "name": "עלי תרד ניוזילנדי בנספק",
+          "quantity": 23,
+          "unit": "יח'",
+          "total": 147.2,
+          "unit_price": 6.4
+        },
+        {
+          "name": "אורגנו קג",
+          "quantity": 1,
+          "unit": "ק'ג",
+          "total": 14.3,
+          "unit_price": 14.3
+        },
+        {
+          "name": "בזיליקום יח freshlid",
+          "quantity": 14,
+          "unit": "יח'",
+          "total": 49,
+          "unit_price": 3.5
+        },
+        {
+          "name": "טימין יח freshlid",
+          "quantity": 6,
+          "unit": "יח'",
+          "total": 21,
+          "unit_price": 3.5
+        },
+        {
+          "name": "רוזמרין יח freshlid",
+          "quantity": 23,
+          "unit": "יח'",
+          "total": 80.5,
+          "unit_price": 3.5
+        },
+        {
+          "name": "סלרי עלים ארוז יח",
+          "quantity": 2,
+          "unit": "יח'",
+          "total": 6.2,
+          "unit_price": 3.1
+        },
+        {
+          "name": "כוסברה יח בשקית",
+          "quantity": 48,
+          "unit": "יח'",
+          "total": 96,
+          "unit_price": 2
+        },
+        {
+          "name": "נענע יח בשקית",
+          "quantity": 44,
+          "unit": "יח'",
+          "total": 88,
+          "unit_price": 2
+        },
+        {
+          "name": "בצל אדום מקולף מהדרין",
+          "quantity": 3,
+          "unit": "שק",
+          "total": 210,
+          "unit_price": 70
+        },
+        {
+          "name": "סלק בואקום יבוא",
+          "quantity": 12,
+          "unit": "יח'",
+          "total": 56.4,
+          "unit_price": 4.7
+        },
+        {
+          "name": "שיני שום קלופות ק\"ג יבוא סין",
+          "quantity": 8,
+          "unit": "ק'ג",
+          "total": 144,
+          "unit_price": 18
+        },
+        {
+          "name": "שרי תמר קג",
+          "quantity": 10,
+          "unit": "ק'ג",
+          "total": 190,
+          "unit_price": 19
+        },
+        {
+          "name": "שרי תמר קג",
+          "quantity": 16.8,
+          "unit": "ק'ג",
+          "total": 271.32,
+          "unit_price": 16.15
+        },
+        {
+          "name": "שרי תמר קג",
+          "quantity": 17.4,
+          "unit": "ק'ג",
+          "total": 297.54,
+          "unit_price": 17.1
+        },
+        {
+          "name": "שרי תמר קג",
+          "quantity": 9.6,
+          "unit": "ק'ג",
+          "total": 173.28,
+          "unit_price": 18.05
+        },
+        {
+          "name": "שרי תמר קג",
+          "quantity": 8.8,
+          "unit": "ק'ג",
+          "total": 163.02,
+          "unit_price": 18.52
+        },
+        {
+          "name": "תפוזים קג",
+          "quantity": 2,
+          "unit": "ק'ג",
+          "total": 7.98,
+          "unit_price": 3.99
+        },
+        {
+          "name": "תפוזים קג",
+          "quantity": 5,
+          "unit": "ק'ג",
+          "total": 21.38,
+          "unit_price": 4.28
+        },
+        {
+          "name": "פלחי דלעת יח",
+          "quantity": 8,
+          "unit": "יח'",
+          "total": 45.6,
+          "unit_price": 5.7
+        },
+        {
+          "name": "פלחי דלעת יח",
+          "quantity": 5,
+          "unit": "יח'",
+          "total": 30.88,
+          "unit_price": 6.18
+        },
+        {
+          "name": "פלחי דלעת יח",
+          "quantity": 7,
+          "unit": "יח'",
+          "total": 39.24,
+          "unit_price": 5.61
+        },
+        {
+          "name": "בטטה L קג",
+          "quantity": 23,
+          "unit": "ק'ג",
+          "total": 131.1,
+          "unit_price": 5.7
+        },
+        {
+          "name": "בטטה L קג",
+          "quantity": 10.2,
+          "unit": "ק'ג",
+          "total": 53.3,
+          "unit_price": 5.23
+        },
+        {
+          "name": "כרובית קג",
+          "quantity": 18.2,
+          "unit": "ק'ג",
+          "total": 121.03,
+          "unit_price": 6.65
+        },
+        {
+          "name": "כרובית קג",
+          "quantity": 10,
+          "unit": "ק'ג",
+          "total": 71.25,
+          "unit_price": 7.13
+        },
+        {
+          "name": "חציל פרימיום ק\"ג",
+          "quantity": 8.8,
+          "unit": "ק'ג",
+          "total": 41.8,
+          "unit_price": 4.75
+        },
+        {
+          "name": "חציל פרימיום ק\"ג",
+          "quantity": 7.4,
+          "unit": "ק'ג",
+          "total": 49.21,
+          "unit_price": 6.65
+        },
+        {
+          "name": "חציל פרימיום ק\"ג",
+          "quantity": 17.4,
+          "unit": "ק'ג",
+          "total": 74.39,
+          "unit_price": 4.28
+        },
+        {
+          "name": "חציל פרימיום ק\"ג",
+          "quantity": 8.2,
+          "unit": "ק'ג",
+          "total": 58.43,
+          "unit_price": 7.13
+        },
+        {
+          "name": "בצל יבש לבן קג",
+          "quantity": 11.6,
+          "unit": "ק'ג",
+          "total": 27.55,
+          "unit_price": 2.38
+        },
+        {
+          "name": "לימון פרימיום",
+          "quantity": 6.4,
+          "unit": "ק'ג",
+          "total": 48.64,
+          "unit_price": 7.6
+        },
+        {
+          "name": "לימון פרימיום",
+          "quantity": 5.6,
+          "unit": "ק'ג",
+          "total": 39.9,
+          "unit_price": 7.13
+        },
+        {
+          "name": "לימון פרימיום",
+          "quantity": 5.4,
+          "unit": "ק'ג",
+          "total": 43.61,
+          "unit_price": 8.08
+        },
+        {
+          "name": "לימון פרימיום",
+          "quantity": 5.2,
+          "unit": "ק'ג",
+          "total": 24.21,
+          "unit_price": 4.66
+        },
+        {
+          "name": "לימון פרימיום",
+          "quantity": 10.4,
+          "unit": "ק'ג",
+          "total": 78.06,
+          "unit_price": 7.51
+        },
+        {
+          "name": "פלפל טינקרבל יח",
+          "quantity": 2,
+          "unit": "יח'",
+          "total": 8.8,
+          "unit_price": 4.4
+        },
+        {
+          "name": "תפוא אדום שק 4 קג",
+          "quantity": 3,
+          "unit": "שק",
+          "total": 37.05,
+          "unit_price": 12.35
+        },
+        {
+          "name": "תפוא אדום שק 4 קג",
+          "quantity": 3,
+          "unit": "שק",
+          "total": 39.9,
+          "unit_price": 13.3
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 4,
+          "unit": "ק'ג",
+          "total": 76,
+          "unit_price": 19
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 9,
+          "unit": "ק'ג",
+          "total": 179.55,
+          "unit_price": 19.95
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 11,
+          "unit": "ק'ג",
+          "total": 229.9,
+          "unit_price": 20.9
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 7.6,
+          "unit": "ק'ג",
+          "total": 108.3,
+          "unit_price": 14.25
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 4,
+          "unit": "ק'ג",
+          "total": 64.6,
+          "unit_price": 16.15
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 4,
+          "unit": "ק'ג",
+          "total": 68.4,
+          "unit_price": 17.1
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 5,
+          "unit": "ק'ג",
+          "total": 104.03,
+          "unit_price": 20.81
+        },
+        {
+          "name": "תירס ק\"ג",
+          "quantity": 17.6,
+          "unit": "ק'ג",
+          "total": 167.2,
+          "unit_price": 9.5
+        },
+        {
+          "name": "תירס ק\"ג",
+          "quantity": 2.8,
+          "unit": "ק'ג",
+          "total": 23.94,
+          "unit_price": 8.55
+        },
+        {
+          "name": "תירס ק\"ג",
+          "quantity": 12.8,
+          "unit": "ק'ג",
+          "total": 115.52,
+          "unit_price": 9.02
+        },
+        {
+          "name": "שרי לובלו ק\"ג",
+          "quantity": 7,
+          "unit": "ק'ג",
+          "total": 159.6,
+          "unit_price": 22.8
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 46.7,
+          "unit": "ק'ג",
+          "total": 443.65,
+          "unit_price": 9.5
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 12.2,
+          "unit": "ק'ג",
+          "total": 92.72,
+          "unit_price": 7.6
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 12.2,
+          "unit": "ק'ג",
+          "total": 121.7,
+          "unit_price": 9.98
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 11.8,
+          "unit": "ק'ג",
+          "total": 106.5,
+          "unit_price": 9.03
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 11.4,
+          "unit": "ק'ג",
+          "total": 107.22,
+          "unit_price": 9.41
+        },
+        {
+          "name": "גזר ארוז 1 ק\"ג",
+          "quantity": 4,
+          "unit": "יח'",
+          "total": 11.02,
+          "unit_price": 2.76
+        },
+        {
+          "name": "מלפפון פרימיום",
+          "quantity": 10.8,
+          "unit": "ק'ג",
+          "total": 82.08,
+          "unit_price": 7.6
+        },
+        {
+          "name": "מלפפון פרימיום",
+          "quantity": 13.2,
+          "unit": "ק'ג",
+          "total": 79,
+          "unit_price": 5.98
+        },
+        {
+          "name": "מלפפון פרימיום",
+          "quantity": 14,
+          "unit": "ק'ג",
+          "total": 62.51,
+          "unit_price": 4.47
+        },
+        {
+          "name": "בצל יבש במארז יח בק\"ג",
+          "quantity": 1,
+          "unit": "ק'ג",
+          "total": 4,
+          "unit_price": 4
+        },
+        {
+          "name": "אבוקדו האס ארוז",
+          "quantity": 2,
+          "unit": "יח'",
+          "total": 13.3,
+          "unit_price": 6.65
+        },
+        {
+          "name": "אבוקדו האס ארוז",
+          "quantity": 3,
+          "unit": "יח'",
+          "total": 21.38,
+          "unit_price": 7.13
+        },
+        {
+          "name": "אבוקדו בשל FlowPack יח",
+          "quantity": 8,
+          "unit": "יח'",
+          "total": 53.2,
+          "unit_price": 6.65
+        },
+        {
+          "name": "אבוקדו בשל FlowPack יח",
+          "quantity": 2,
+          "unit": "יח'",
+          "total": 12.35,
+          "unit_price": 6.18
+        },
+        {
+          "name": "אבוקדו בשל FlowPack יח",
+          "quantity": 3,
+          "unit": "יח'",
+          "total": 19.67,
+          "unit_price": 6.56
+        },
+        {
+          "name": "תפוח עץ ירוק 7-7.5 יבוא איטליה",
+          "quantity": 5,
+          "unit": "ק'ג",
+          "total": 47.5,
+          "unit_price": 9.5
+        },
+        {
+          "name": "תפוח עץ ירוק 7-7.5 יבוא איטליה",
+          "quantity": 5.2,
+          "unit": "ק'ג",
+          "total": 46.93,
+          "unit_price": 9.03
+        },
+        {
+          "name": "**פסטו יח 1 ק\"ג - בקרטון 4 יח' ^",
+          "quantity": 4,
+          "unit": "יח'",
+          "total": 101.15,
+          "unit_price": 25.29
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c20932bffca74f",
+      "supplier": "משלוחה (דיב אנד רד פרוג'קטס",
+      "date": "2026-02-03",
+      "items": []
+    },
+    {
+      "invoice_id": "19c2064806944461",
+      "supplier": "טמפו",
+      "date": "2026-02-02",
+      "items": [
+        {
+          "name": "משטח זר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 20,
+          "unit_price": 10
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c20633ae0decd5",
+      "supplier": "טמפו",
+      "date": "2026-02-02",
+      "items": [
+        {
+          "name": "בירה סול 330 מ\"ל בקבוק שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 104.85,
+          "unit_price": 104.85
+        },
+        {
+          "name": "היינקן 20 ליטר חבית",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 754.26,
+          "unit_price": 251.42
+        },
+        {
+          "name": "חבית ריקה גולדסטאר/מכבי/דויד/נשר 20 ליטר",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 825,
+          "unit_price": 275
+        },
+        {
+          "name": "גולדסטאר 20 ליטר חבית",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 197.28,
+          "unit_price": 197.28
+        },
+        {
+          "name": "חבית ריקה גולדסטאר/מכבי/דויד/נשר 20 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 275,
+          "unit_price": 275
+        },
+        {
+          "name": "כוס היינקן ח\"פ סימון 330 מ\"ל 1000",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 192,
+          "unit_price": 192
+        },
+        {
+          "name": "אבסולוט 1 ליטר",
+          "quantity": 12,
+          "unit": "יחידה",
+          "total": 790.92,
+          "unit_price": 65.91
+        },
+        {
+          "name": "בלוגה נובל 1 ליטר שישייה",
+          "quantity": 18,
+          "unit": "יחידה",
+          "total": 1987.88,
+          "unit_price": 110.44
+        },
+        {
+          "name": "ואן גוך אננס 1 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 116.56,
+          "unit_price": 116.56
+        },
+        {
+          "name": "ואן גוך אבטיח ליצ'י 750 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 97.14,
+          "unit_price": 97.14
+        },
+        {
+          "name": "ואן גוך אסאי 1 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 116.56,
+          "unit_price": 116.56
+        },
+        {
+          "name": "ביפאיטר לונדון יבש 1 ליטר",
+          "quantity": 8,
+          "unit": "יחידה",
+          "total": 717.5,
+          "unit_price": 89.69
+        },
+        {
+          "name": "ביפיטר 700 מ\"ל 2021 מל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 62.56,
+          "unit_price": 62.56
+        },
+        {
+          "name": "ערק אשקלון 700 מ\"ל כהל מקומי",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 252.09,
+          "unit_price": 42.02
+        },
+        {
+          "name": "אוזו מיני 700 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 119.01,
+          "unit_price": 59.51
+        },
+        {
+          "name": "סודה 1.5 ליטר שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 13.74,
+          "unit_price": 13.74
+        },
+        {
+          "name": "סן בנדטו 500 מ\"ל 4 שישיות",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 183.31,
+          "unit_price": 36.66
+        },
+        {
+          "name": "פרייה מים 330 מ\"ל רביעייה זכוכית",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 152.96,
+          "unit_price": 76.48
+        },
+        {
+          "name": "ג'אמפ אקסטרה פרוט תפוזים 1.5 שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 33.35,
+          "unit_price": 33.35
+        },
+        {
+          "name": "1.5 ZERO פפסי",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 29.92,
+          "unit_price": 29.92
+        },
+        {
+          "name": "פפסי 330 בקבוק 24 יח'",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 187.39,
+          "unit_price": 62.46
+        },
+        {
+          "name": "בקבוק 24 יח 330 ZERO פפסי",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 187.39,
+          "unit_price": 62.46
+        },
+        {
+          "name": "משטח זר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 20,
+          "unit_price": 10
+        },
+        {
+          "name": "חבית ריקה 30 פאולנר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": -370.94,
+          "unit_price": -185.47
+        },
+        {
+          "name": "חבית ריקה גולדסטאר/מכבי/דויד/נשר 20 ליטר",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": -1375,
+          "unit_price": -275
+        },
+        {
+          "name": "גולדסטאר ח\"פ 330 מ\"ל בקבוק שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 102.84,
+          "unit_price": 102.84
+        },
+        {
+          "name": "פאולנר 330 מ\"ל בקבוק 24 יח'",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 149.74,
+          "unit_price": 149.74
+        },
+        {
+          "name": "היינקן 20 ליטר חבית",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 1257.1,
+          "unit_price": 251.42
+        },
+        {
+          "name": "חבית ריקה גולדסטאר/מכבי/דויד/נשר 20 ליטר",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 1375,
+          "unit_price": 275
+        },
+        {
+          "name": "פאולנר חבית 30 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 462.52,
+          "unit_price": 462.52
+        },
+        {
+          "name": "חבית ריקה 30 פאולנר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 185.47,
+          "unit_price": 185.47
+        },
+        {
+          "name": "מלא C02 מיכל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 35,
+          "unit_price": 35
+        },
+        {
+          "name": "ריק C02 מיכל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 500,
+          "unit_price": 500
+        },
+        {
+          "name": "כוס היינקן ח\"פ סימון 330 מ\"ל 1000",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 192,
+          "unit_price": 192
+        },
+        {
+          "name": "אבסולוט 1 ליטר",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 395.46,
+          "unit_price": 65.91
+        },
+        {
+          "name": "בלוגה נובל 1 ליטר",
+          "quantity": 15,
+          "unit": "יחידה",
+          "total": 1656.56,
+          "unit_price": 110.44
+        },
+        {
+          "name": "ואן גוך אסאי 1 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 116.56,
+          "unit_price": 116.56
+        },
+        {
+          "name": "ואן גוך אננס 1 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 116.56,
+          "unit_price": 116.56
+        },
+        {
+          "name": "ביפאיטר לונדון יבש 1 ליטר",
+          "quantity": 12,
+          "unit": "יחידה",
+          "total": 1076.26,
+          "unit_price": 89.69
+        },
+        {
+          "name": "ערק אשקלון 700 מ\"ל כהל מקומי",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 252.09,
+          "unit_price": 42.02
+        },
+        {
+          "name": "קאווה איבריקה לבן יבש 750 מ\"ל 12 יח'",
+          "quantity": 12,
+          "unit": "יחידה",
+          "total": 255.6,
+          "unit_price": 21.3
+        },
+        {
+          "name": "סודה 1.5 ליטר שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 13.74,
+          "unit_price": 13.74
+        },
+        {
+          "name": "סן בנדטו זכוכית 500 מ\"ל בקבוק 20 יח'",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 249.82,
+          "unit_price": 83.27
+        },
+        {
+          "name": "פרייה מים 330 מ\"ל רביעייה זכוכית",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 76.48,
+          "unit_price": 76.48
+        },
+        {
+          "name": "פפסי 1.5 שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 29.92,
+          "unit_price": 29.92
+        },
+        {
+          "name": "1.5 ZERO פפסי",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 29.92,
+          "unit_price": 29.92
+        },
+        {
+          "name": "סבן אפ 1.5 ליטר שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 29.92,
+          "unit_price": 29.92
+        },
+        {
+          "name": "פפסי 330 בקבוק 24 יח'",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 187.39,
+          "unit_price": 62.46
+        },
+        {
+          "name": "בקבוק 24 יח 330 ZERO פפסי",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 249.86,
+          "unit_price": 62.47
+        },
+        {
+          "name": "סבן אפ 330 מ\"ל בקבוק 24 יח'",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 62.46,
+          "unit_price": 62.46
+        },
+        {
+          "name": "בקבוק 24 יח ZERO סבן אפ 330 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 62.46,
+          "unit_price": 62.46
+        },
+        {
+          "name": "מ\"ל פחית 24 יח 250 XL",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 222.36,
+          "unit_price": 44.47
+        },
+        {
+          "name": "משטח זר",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 30,
+          "unit_price": 10
+        },
+        {
+          "name": "חבית ריקה גולדסטאר/מכבי/דויד/נשר 20 ליטר",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": -1650,
+          "unit_price": -275
+        },
+        {
+          "name": "חבית ריקה 30 פאולנר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": -185.47,
+          "unit_price": -185.47
+        },
+        {
+          "name": "ריק C02 מיכל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": -500,
+          "unit_price": -500
+        },
+        {
+          "name": "חבית ריקה 30 פאולנר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": -370.94,
+          "unit_price": -185.47
+        },
+        {
+          "name": "חבית ריקה גולדסטאר/מכבי/דויד/נשר 20 ליטר",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": -1100,
+          "unit_price": -275
+        },
+        {
+          "name": "כוס היינקן זכוכית 350 6 יח 2020",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 12,
+          "unit_price": 6
+        },
+        {
+          "name": "כוס 1/2 זכוכית היינקן קרטון 6",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 192,
+          "unit_price": 96
+        },
+        {
+          "name": "כוס היינקן ח\"פ סימון 330 מ\"ל 1000",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 192,
+          "unit_price": 192
+        },
+        {
+          "name": "ואן גוך אסאי 1 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 116.56,
+          "unit_price": 116.56
+        },
+        {
+          "name": "ג'יימסון 1 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 94.79,
+          "unit_price": 94.79
+        },
+        {
+          "name": "ביפאיטר לונדון יבש 1 ליטר",
+          "quantity": 10,
+          "unit": "יחידה",
+          "total": 896.88,
+          "unit_price": 89.69
+        },
+        {
+          "name": "מי טוניק 1.5 ליטר שישייה בודד",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 40.54,
+          "unit_price": 40.54
+        },
+        {
+          "name": "סודה 1.5 ליטר שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 13.74,
+          "unit_price": 13.74
+        },
+        {
+          "name": "סן בנדטו זכוכית 500 מ\"ל בקבוק 20 יח'",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 83.27,
+          "unit_price": 83.27
+        },
+        {
+          "name": "פרייה מים 330 מ\"ל רביעייה זכוכית",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 152.96,
+          "unit_price": 76.48
+        },
+        {
+          "name": "ג'אמפ אקסטרה פרוט תפוזים 1.5 שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 33.35,
+          "unit_price": 33.35
+        },
+        {
+          "name": "פפסי 330 בקבוק 24 יח'",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 124.93,
+          "unit_price": 62.47
+        },
+        {
+          "name": "בקבוק 24 יח 330 ZERO פפסי",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 249.86,
+          "unit_price": 62.47
+        },
+        {
+          "name": "סבן אפ 330 מ\"ל בקבוק 24 יח'",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 62.46,
+          "unit_price": 62.46
+        },
+        {
+          "name": "בקבוק 24 יח ZERO סבן אפ 330 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 62.46,
+          "unit_price": 62.46
+        },
+        {
+          "name": "וודקה בלוגה נובל 1 ל\"- מהדורת סנט מוריץ",
+          "quantity": 12,
+          "unit": "יחידה",
+          "total": 1325.25,
+          "unit_price": 110.44
+        },
+        {
+          "name": "משטח זר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 10,
+          "unit_price": 10
+        },
+        {
+          "name": "גולדסטאר ח\"פ 330 מ\"ל בקבוק שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 102.84,
+          "unit_price": 102.84
+        },
+        {
+          "name": "פאולנר 330 מ\"ל בקבוק 24 יח'",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 149.74,
+          "unit_price": 149.74
+        },
+        {
+          "name": "היינקן 20 ליטר חבית",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 251.42,
+          "unit_price": 251.42
+        },
+        {
+          "name": "חבית ריקה גולדסטאר/מכבי/דויד/נשר 20 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 275,
+          "unit_price": 275
+        },
+        {
+          "name": "פאולנר חבית 30 ליטר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 925.04,
+          "unit_price": 462.52
+        },
+        {
+          "name": "חבית ריקה 30 פאולנר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 370.94,
+          "unit_price": 185.47
+        },
+        {
+          "name": "ואן גוך אסאי 1 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 116.56,
+          "unit_price": 116.56
+        },
+        {
+          "name": "ג'יימסון 1 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 94.79,
+          "unit_price": 94.79
+        },
+        {
+          "name": "קאווה איבריקה לבן יבש 750 מ\"ל 12 יח'",
+          "quantity": 12,
+          "unit": "יחידה",
+          "total": 255.6,
+          "unit_price": 21.3
+        },
+        {
+          "name": "סן פלגרינו 750 מ\"ל 12 יח'",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 61.33,
+          "unit_price": 61.33
+        },
+        {
+          "name": "סן בנדטו זכוכית 500 מ\"ל בקבוק 20 יח'",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 249.83,
+          "unit_price": 83.28
+        },
+        {
+          "name": "פרייה מים 330 מ\"ל רביעייה זכוכית",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 76.48,
+          "unit_price": 76.48
+        },
+        {
+          "name": "פפסי 330 בקבוק 24 יח'",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 124.93,
+          "unit_price": 62.47
+        },
+        {
+          "name": "בקבוק 24 יח 330 ZERO פפסי",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 187.39,
+          "unit_price": 62.46
+        },
+        {
+          "name": "סבן אפ 330 מ\"ל בקבוק 24 יח'",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 62.46,
+          "unit_price": 62.46
+        },
+        {
+          "name": "בקבוק 24 יח ZERO סבן אפ 330 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 62.46,
+          "unit_price": 62.46
+        },
+        {
+          "name": "מ\"ל פחית 24 יח 250 XL",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 177.89,
+          "unit_price": 44.47
+        },
+        {
+          "name": "משטח זר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 10,
+          "unit_price": 10
+        },
+        {
+          "name": "חבית ריקה 30 פאולנר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": -370.94,
+          "unit_price": -185.47
+        },
+        {
+          "name": "חבית ריקה גולדסטאר/מכבי/דויד/נשר 20 ליטר",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": -1375,
+          "unit_price": -275
+        },
+        {
+          "name": "היינקן 20 ליטר חבית",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 502.84,
+          "unit_price": 251.42
+        },
+        {
+          "name": "חבית ריקה גולדסטאר/מכבי/דויד/נשר 20 ליטר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 550,
+          "unit_price": 275
+        },
+        {
+          "name": "פאולנר חבית 30 ליטר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 462.52,
+          "unit_price": 462.52
+        },
+        {
+          "name": "חבית ריקה 30 פאולנר",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 185.47,
+          "unit_price": 185.47
+        },
+        {
+          "name": "אבסולוט 1 ליטר",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 263.64,
+          "unit_price": 65.91
+        },
+        {
+          "name": "סודה 1.5 ליטר שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 13.74,
+          "unit_price": 13.74
+        },
+        {
+          "name": "סן בנדטו 500 מ\"ל 4 שישיות",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 146.65,
+          "unit_price": 36.66
+        },
+        {
+          "name": "סן בנדטו זכוכית 500 מ\"ל בקבוק 20 יח'",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 83.27,
+          "unit_price": 83.27
+        },
+        {
+          "name": "פפסי 1.5 שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 29.92,
+          "unit_price": 29.92
+        },
+        {
+          "name": "1.5 ZERO פפסי",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 29.92,
+          "unit_price": 29.92
+        },
+        {
+          "name": "סבן אפ 1.5 ליטר שישייה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 29.92,
+          "unit_price": 29.92
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c1f631c3b41eb5",
+      "supplier": "אסייתי בחוף ראשון",
+      "date": "2026-02-02",
+      "items": []
+    },
+    {
+      "invoice_id": "19c1e907c3921a49",
+      "supplier": "אונטופו ישראל",
+      "date": "2026-02-02",
+      "items": [
+        {
+          "name": "קידום ושיווק באפליקצית אונטופו פברואר 2026",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 3000,
+          "unit_price": 3000
+        },
+        {
+          "name": "מנוי חודשי תוכנת אירוח פברואר 2026",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 620,
+          "unit_price": 620
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c1e88af381aaa8",
+      "supplier": "אונטופו ישראל",
+      "date": "2026-02-02",
+      "items": [
+        {
+          "name": "קידום ושיווק באפליקצית אונטופו פברואר 2026",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 2000,
+          "unit_price": 2000
+        },
+        {
+          "name": "אומינו סושי - Umino Sushi",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 550,
+          "unit_price": 550
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c1d7a33fc5768d",
+      "supplier": "ג'ומון",
+      "date": "2026-02-02",
+      "items": [
+        {
+          "name": "טובירו אררה (מסאגו) פנינים קטנים 300 גר'",
+          "quantity": 2,
+          "unit": "גר'",
+          "total": 130,
+          "unit_price": 65
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c1d7a140a908ba",
+      "supplier": "ג'ומון",
+      "date": "2026-02-02",
+      "items": [
+        {
+          "name": "נאמס טופו וירקות 120 יחידות",
+          "quantity": 2,
+          "unit": "יחידות",
+          "total": 720,
+          "unit_price": 360
+        },
+        {
+          "name": "באן עגול 60 גרם 64 יחידות",
+          "quantity": 7,
+          "unit": "יחידות",
+          "total": 582.4,
+          "unit_price": 83.2
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c1d6a58b4acb15",
+      "supplier": "קוקה קולה",
+      "date": "2026-02-02",
+      "items": [
+        {
+          "name": "קוקה קולה קלאסי 350 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 176.04,
+          "unit_price": 88.02
+        },
+        {
+          "name": "פריגת ענבים 330 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 154.13,
+          "unit_price": 77.07
+        },
+        {
+          "name": "נביעות 500 פ.שטוח פיקדון",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 100.57,
+          "unit_price": 50.29
+        },
+        {
+          "name": "נביעות + תפוח 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 103.73,
+          "unit_price": 103.73
+        },
+        {
+          "name": "נביעות + ענבים 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 103.73,
+          "unit_price": 103.73
+        },
+        {
+          "name": "קולה ZERO קלאסי 350 מ\"ל",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 264.07,
+          "unit_price": 88.02
+        },
+        {
+          "name": "ספרייט ZERO קלאסי 350 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 88.02,
+          "unit_price": 88.02
+        },
+        {
+          "name": "ספרייט LIME קלאסי 350 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 88.02,
+          "unit_price": 88.02
+        },
+        {
+          "name": "FUZE tea בטעם אפרסק 0.5 ליטר",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 313.27,
+          "unit_price": 104.42
+        },
+        {
+          "name": "NM מי סודה 250 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 54.24,
+          "unit_price": 54.24
+        },
+        {
+          "name": "פריגת אושן ספריי חמוציות 1 ליטר שרינק",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 132.95,
+          "unit_price": 132.95
+        },
+        {
+          "name": "פריגת לימונענע 1.5 ליטר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 158.98,
+          "unit_price": 79.49
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c1ce915e1aaf87",
+      "supplier": "פזגז",
+      "date": "2026-02-01",
+      "items": [
+        {
+          "name": "סה''כ צריכה",
+          "quantity": 44.022,
+          "unit": "מ'ק",
+          "total": 802.57,
+          "unit_price": 18.23
+        },
+        {
+          "name": "דמי שימוש קבועים (דמ'ש) ל 29 ימים",
+          "quantity": 29,
+          "unit": "ימים",
+          "total": 35.99,
+          "unit_price": 1.24
+        },
+        {
+          "name": "הנחה/עיגול",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0.03,
+          "unit_price": 0.03
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c1ce911cb57d51",
+      "supplier": "פזגז",
+      "date": "2026-02-01",
+      "items": [
+        {
+          "name": "סה''כ צריכה: 116.514 מ'ק במחיר ממוצע משוקלל של 21.88 ש''ח",
+          "quantity": 116.514,
+          "unit": "מ'ק",
+          "total": 2549,
+          "unit_price": 21.88
+        },
+        {
+          "name": "דמי שימוש קבועים (דמ'ש) ל 29 ימים",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 35.99,
+          "unit_price": 35.99
+        },
+        {
+          "name": "הנחה/עיגול",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0.01,
+          "unit_price": 0.01
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c1a9e9c69b78a7",
+      "supplier": "קוקה קולה",
+      "date": "2026-02-01",
+      "items": [
+        {
+          "name": "אפרול",
+          "quantity": 12,
+          "unit": "יחידה",
+          "total": 1232.52,
+          "unit_price": 102.71
+        },
+        {
+          "name": "פמיל בוגרייה",
+          "quantity": 9,
+          "unit": "יחידה",
+          "total": 355.41,
+          "unit_price": 39.49
+        },
+        {
+          "name": "קמפרי 1000 מ",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 101.08,
+          "unit_price": 101.08
+        },
+        {
+          "name": "ג'וני ווקר ש",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 1264.5,
+          "unit_price": 252.9
+        },
+        {
+          "name": "גוני ווקר אד",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 452.16,
+          "unit_price": 150.72
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c1a9afb410f22b",
+      "supplier": "קוקה קולה",
+      "date": "2026-02-01",
+      "items": [
+        {
+          "name": "קק קלס350פק",
+          "quantity": 11,
+          "unit": "יחידה",
+          "total": 1035.76,
+          "unit_price": 94.16
+        },
+        {
+          "name": "ענבי 330 גת",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 166.98,
+          "unit_price": 83.49
+        },
+        {
+          "name": "נבי500פ.שטוח",
+          "quantity": 7,
+          "unit": "יחידה",
+          "total": 429.59,
+          "unit_price": 61.37
+        },
+        {
+          "name": "נביעות+תפוח",
+          "quantity": 10,
+          "unit": "יחידה",
+          "total": 97.63,
+          "unit_price": 9.76
+        },
+        {
+          "name": "נביעות+אפרס",
+          "quantity": 20,
+          "unit": "יחידה",
+          "total": 195.26,
+          "unit_price": 9.76
+        },
+        {
+          "name": "נביעות+ענב",
+          "quantity": 20,
+          "unit": "יחידה",
+          "total": 195.26,
+          "unit_price": 9.76
+        },
+        {
+          "name": "קק קלאס zero",
+          "quantity": 19,
+          "unit": "יחידה",
+          "total": 1789.04,
+          "unit_price": 94.16
+        },
+        {
+          "name": "זירוספ קל",
+          "quantity": 43,
+          "unit": "יחידה",
+          "total": 376.64,
+          "unit_price": 8.76
+        },
+        {
+          "name": "ספ.ליים350קל",
+          "quantity": 20,
+          "unit": "יחידה",
+          "total": 188.32,
+          "unit_price": 9.42
+        },
+        {
+          "name": "אפר0.5שרFUZE",
+          "quantity": 8,
+          "unit": "יחידה",
+          "total": 786.56,
+          "unit_price": 98.32
+        },
+        {
+          "name": "קירין 1 לל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 169.53,
+          "unit_price": 169.53
+        },
+        {
+          "name": "סודהNM",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 295.35,
+          "unit_price": 59.07
+        },
+        {
+          "name": "חמוציות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 151.93,
+          "unit_price": 151.93
+        },
+        {
+          "name": "פריגת תפוז",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 89.93,
+          "unit_price": 89.93
+        },
+        {
+          "name": "פריגת לימונע5",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 449.65,
+          "unit_price": 89.93
+        },
+        {
+          "name": "קר 330 אלומי",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 960.78,
+          "unit_price": 160.13
+        },
+        {
+          "name": "330 אלומי",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 960.78,
+          "unit_price": 160.13
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c18f3d14321f60",
+      "supplier": "אשכול הארץ",
+      "date": "2026-02-01",
+      "items": []
+    },
+    {
+      "invoice_id": "19c17ffb40d479b5",
+      "supplier": "קבוצת בנדיקט",
+      "date": "2026-02-01",
+      "items": [
+        {
+          "name": "מונית",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 211.86,
+          "unit_price": 211.86
+        },
+        {
+          "name": "פוקצ'ה אלטליו (12 * 1 יח')",
+          "quantity": 10,
+          "unit": "יחידה",
+          "total": 540,
+          "unit_price": 54
+        },
+        {
+          "name": "המבורגר בריוש 90 (15 * 1 יח')",
+          "quantity": 10,
+          "unit": "יחידה",
+          "total": 450,
+          "unit_price": 45
+        },
+        {
+          "name": "פוקצ'ה אלטליו (12 * 1 יח')",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 324,
+          "unit_price": 54
+        },
+        {
+          "name": "משטח פלסטיק",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 50,
+          "unit_price": 50
+        },
+        {
+          "name": "המבורגר ללא גלוטן (48 * 1 יח')",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 528,
+          "unit_price": 264
+        },
+        {
+          "name": "תחתית פיצה ללא גלוטן קוטר 30 חדש (1* (24",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 672,
+          "unit_price": 336
+        },
+        {
+          "name": "המבורגר בריוש 90 (15 * 1 יח')",
+          "quantity": 10,
+          "unit": "יחידה",
+          "total": 450,
+          "unit_price": 45
+        },
+        {
+          "name": "קסטן פאן דה מי פרוס 11 (2 * 1 יח')",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 140,
+          "unit_price": 70
+        },
+        {
+          "name": "קסטן קטן פתוח עובי 22 (2 * 1 יח')",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 156,
+          "unit_price": 52
+        },
+        {
+          "name": "פוקצ'ה אלטליו (12 * 1 יח')",
+          "quantity": 11,
+          "unit": "יחידה",
+          "total": 594,
+          "unit_price": 54
+        },
+        {
+          "name": "משטח פלסטיק",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 50,
+          "unit_price": 50
+        },
+        {
+          "name": "לחמנית בריוש (86 * 1 יח')",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 344,
+          "unit_price": 172
+        },
+        {
+          "name": "המבורגר בריוש 90 (15 * 1 יח')",
+          "quantity": 14,
+          "unit": "יחידה",
+          "total": 630,
+          "unit_price": 45
+        },
+        {
+          "name": "לחמנית כוסמין (60 * 1 יח')",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 180,
+          "unit_price": 90
+        },
+        {
+          "name": "קסטן פאן דה מי פרוס 11 (2 * 1 יח')",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 210,
+          "unit_price": 70
+        },
+        {
+          "name": "קסטן קטן פתוח עובי 22 (2 * 1 יח')",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 104,
+          "unit_price": 52
+        },
+        {
+          "name": "פוקצ'ה אלטליו (12 * 1 יח')",
+          "quantity": 16,
+          "unit": "יחידה",
+          "total": 864,
+          "unit_price": 54
+        },
+        {
+          "name": "משטח פלסטיק",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 50,
+          "unit_price": 50
+        },
+        {
+          "name": "המבורגר בריוש 90 (15 * 1 יח')",
+          "quantity": 19,
+          "unit": "יחידה",
+          "total": 855,
+          "unit_price": 45
+        },
+        {
+          "name": "קסטן קטן פתוח עובי 22 (2 * 1 יח')",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 312,
+          "unit_price": 52
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c1699508b1152c",
+      "supplier": "אסייתי בחוף ראשון",
+      "date": "2026-02-01",
+      "items": []
+    },
+    {
+      "invoice_id": "19c167204463f89d",
+      "supplier": "Wolt",
+      "date": "2026-01-31",
+      "items": [
+        {
+          "name": "דמי שירות, משלוח 25%",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 195,
+          "unit_price": 195
+        },
+        {
+          "name": "דמי שירות, משלוח 25%+Wolt",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 200.5,
+          "unit_price": 200.5
+        },
+        {
+          "name": "עמלה קבועה של 3.80+Wolt",
+          "quantity": 5,
+          "unit": "יחידה",
+          "total": 19,
+          "unit_price": 3.8
+        },
+        {
+          "name": "Weekly 4: Pos Integration Fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 12.5,
+          "unit_price": 12.5
+        },
+        {
+          "name": "Weekly 4: SIM Card fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 6,
+          "unit_price": 6
+        },
+        {
+          "name": "Weekly 3: Pos Integration Fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 12.5,
+          "unit_price": 12.5
+        },
+        {
+          "name": "Weekly 3: SIM Card fee",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 6,
+          "unit_price": 6
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c0f5425d4fc179",
+      "supplier": "Kill Bill",
+      "date": "2026-01-30",
+      "items": [
+        {
+          "name": "פקדון",
+          "quantity": 34,
+          "unit": "יח'",
+          "total": 8.84,
+          "unit_price": 0.26
+        },
+        {
+          "name": "הרדיס VR קברנה סובניון",
+          "quantity": 12,
+          "unit": "יח'",
+          "total": 300,
+          "unit_price": 25
+        },
+        {
+          "name": "וודרן סירופ אננס",
+          "quantity": 9,
+          "unit": "יח'",
+          "total": 405,
+          "unit_price": 45
+        },
+        {
+          "name": "וודרן סירופ תות",
+          "quantity": 3,
+          "unit": "יח'",
+          "total": 135,
+          "unit_price": 45
+        },
+        {
+          "name": "וודרן סירופ אבטיח",
+          "quantity": 10,
+          "unit": "יח'",
+          "total": 450,
+          "unit_price": 45
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c08fc4292ec57f",
+      "supplier": "פלאפון",
+      "date": "2026-01-29",
+      "items": [
+        {
+          "name": "חיוב בגין שרותים בתשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 45.27,
+          "unit_price": 45.27
+        },
+        {
+          "name": "חיוב על פי שימוש",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "תשלום חודשי קבוע (דמי מנוי)",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 40.33,
+          "unit_price": 40.33
+        },
+        {
+          "name": "חבילת גלישה בנפח 500GB",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "לגלישה בטוחה ברשת Pelephone Cyber",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 4.94,
+          "unit_price": 4.94
+        },
+        {
+          "name": "דקות שיחה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "דקות שיחה חינם 1800",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "דקות שיחה כלולות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "שליחת SMS - יחידות כלולות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "נפח גלישת אינטרנט כלול ב - MB",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c09ccc0eefb775",
+      "supplier": "IPCOM",
+      "date": "2026-01-29",
+      "items": [
+        {
+          "name": "Practicall - שלוחת מרכזיה ע\"ג סים סלולארי - 15GB",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 59,
+          "unit_price": 59
+        },
+        {
+          "name": "מרכזיה בענן - שלוחת SIM סלולרי 15GB",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 59,
+          "unit_price": 59
+        },
+        {
+          "name": "Practicall - הקלטת שיחות - שלוחה בודדת",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 10,
+          "unit_price": 10
+        },
+        {
+          "name": "Practicall - הקלטת שיחות - שלוחה בודדת",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 10,
+          "unit_price": 10
+        },
+        {
+          "name": "ענן-נתב שיחות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 20,
+          "unit_price": 20
+        },
+        {
+          "name": "ענן-חבילת סמס מהמרכזיה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 30,
+          "unit_price": 30
+        },
+        {
+          "name": "תשלום לחוזה קריאות מונים לחיוב עד לתאריך 31/01/26",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 26.76,
+          "unit_price": 26.76
+        },
+        {
+          "name": "דקת שיחה יוצאת - Practicall",
+          "quantity": 223,
+          "unit": "יחידה",
+          "total": 26.76,
+          "unit_price": 0.12
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c09ccac16f5d14",
+      "supplier": "IPCOM",
+      "date": "2026-01-29",
+      "items": [
+        {
+          "name": "Practicall - שלוחת מרכזיה ע\"ג סים סלולארי - 15GB",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 59,
+          "unit_price": 59
+        },
+        {
+          "name": "Practicall - הקלטת שיחות - שלוחה בודדת",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 10,
+          "unit_price": 10
+        },
+        {
+          "name": "ענן-נתב שיחות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 20,
+          "unit_price": 20
+        },
+        {
+          "name": "קו קל לחיבור אזעקה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 50,
+          "unit_price": 50
+        },
+        {
+          "name": "קו קל לחיבור למערכת גילוי אש",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 50,
+          "unit_price": 50
+        },
+        {
+          "name": "ענן-חבילת סמס מהמרכזיה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 30,
+          "unit_price": 30
+        },
+        {
+          "name": "בזק ברודקום כפול AC2 + 100/10 +סים + MAX4ים",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 1000,
+          "unit_price": 1000
+        },
+        {
+          "name": "תשלום לחוזה קריאות מונים לחיוב עד לתאריך 31/01/26",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 191.88,
+          "unit_price": 191.88
+        },
+        {
+          "name": "דקת שיחה יוצאת - Practicall",
+          "quantity": 1349,
+          "unit": "יחידה",
+          "total": 161.88,
+          "unit_price": 0.12
+        },
+        {
+          "name": "שליחת סמס מהמרכזיה",
+          "quantity": 200,
+          "unit": "יחידה",
+          "total": 30,
+          "unit_price": 0.15
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c08d69db3c59de",
+      "supplier": "ביסקוטי",
+      "date": "2026-01-29",
+      "items": [
+        {
+          "name": "כיבוד",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 1308,
+          "unit_price": 1308
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c08c4d86bce612",
+      "supplier": "nota1976",
+      "date": "2026-01-29",
+      "items": [
+        {
+          "name": "חלב סויה 1 ל",
+          "quantity": 25,
+          "unit": "יחידה",
+          "total": 226.35,
+          "unit_price": 9.05
+        },
+        {
+          "name": "יחלב בקרטון 3% 1ל",
+          "quantity": 56,
+          "unit": "יחידה",
+          "total": 313.768,
+          "unit_price": 5.6
+        },
+        {
+          "name": "ג' שמנת טבעי 30%( 2קייג)",
+          "quantity": 15,
+          "unit": "יחידה",
+          "total": 684.45,
+          "unit_price": 45.63
+        },
+        {
+          "name": "מוצרלה במים (2 קייג)",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 107.78,
+          "unit_price": 107.78
+        },
+        {
+          "name": "פרמזין פדנו שמינית",
+          "quantity": 26.072,
+          "unit": "יחידה",
+          "total": 1694.68,
+          "unit_price": 65
+        },
+        {
+          "name": "שמנת של פעם 27% 200 גרי ערבה",
+          "quantity": 64,
+          "unit": "יחידה",
+          "total": 256.576,
+          "unit_price": 4.01
+        },
+        {
+          "name": "מוצרלה מגורדת (3קייג)",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 661.5,
+          "unit_price": 110.25
+        },
+        {
+          "name": "ישמנת מתוקה 42% טרה בקרטון 2ל",
+          "quantity": 44,
+          "unit": "יחידה",
+          "total": 2049.872,
+          "unit_price": 46.59
+        },
+        {
+          "name": "L ביצים",
+          "quantity": 34,
+          "unit": "יחידה",
+          "total": 1071,
+          "unit_price": 31.5
+        },
+        {
+          "name": "M ביצים",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 62,
+          "unit_price": 31
+        },
+        {
+          "name": "מסרקפונה תבור (2 קייג)",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 298.28,
+          "unit_price": 74.57
+        },
+        {
+          "name": "לאבנה ראמה (2 קייג)",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 84,
+          "unit_price": 42
+        },
+        {
+          "name": "פטה פח (4קייג)",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 480,
+          "unit_price": 80
+        },
+        {
+          "name": "גאודה פרוס 1 קייג הולנדי",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 55,
+          "unit_price": 55
+        },
+        {
+          "name": "חמאה בלגית 6 קייג",
+          "quantity": 3,
+          "unit": "יחידה",
+          "total": 558,
+          "unit_price": 186
+        },
+        {
+          "name": "דר פרוס 1.033וואקום",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 48,
+          "unit_price": 48
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c089c636e00f61",
+      "supplier": "קוקה קולה",
+      "date": "2026-01-29",
+      "items": [
+        {
+          "name": "קוקה קולה קלאסי 350 מ\"ל",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 352.09,
+          "unit_price": 88.02
+        },
+        {
+          "name": "נביעות 500 פ.שטוח פיקדון",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 100.57,
+          "unit_price": 50.29
+        },
+        {
+          "name": "נביעות + תפוח 500 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 103.73,
+          "unit_price": 103.73
+        },
+        {
+          "name": "קולה ZERO קלאסי 350 מ\"ל",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 528.13,
+          "unit_price": 88.02
+        },
+        {
+          "name": "ספרייט ZERO קלאסי 350 מ\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 88.02,
+          "unit_price": 88.02
+        },
+        {
+          "name": "FUZE tea בטעם אפרסק 0.5 ליטר",
+          "quantity": 4,
+          "unit": "יחידה",
+          "total": 417.69,
+          "unit_price": 104.42
+        },
+        {
+          "name": "NM מי סודה 250 מ\"ל",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 108.47,
+          "unit_price": 54.24
+        },
+        {
+          "name": "פריגת לימונענע 1.5 ליטר",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 158.98,
+          "unit_price": 79.49
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c0723f381005cd",
+      "supplier": "Hyp / חשבונית+",
+      "date": "2026-01-29",
+      "items": [
+        {
+          "name": "תשלום עבור שיחות רסט",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 3,
+          "unit_price": 3
+        },
+        {
+          "name": "לפי מפרט החבילה",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 260,
+          "unit_price": 260
+        },
+        {
+          "name": "הזמן שולחן-Ontopo חיוב יחסי",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 2,
+          "unit_price": 1
+        }
+      ]
+    },
+    {
+      "invoice_id": "19c06f8698e8a2e6",
+      "supplier": "Hyp / חשבונית+",
+      "date": "2026-01-29",
+      "items": [
+        {
+          "name": "כוכב מישלן +3צלם פרימיום",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 2,
+          "unit_price": 1
+        },
+        {
+          "name": "כוכב מישלן +3צלם פרימיום",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 6,
+          "unit_price": 3
+        },
+        {
+          "name": "FIX REST חבילת",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 260,
+          "unit_price": 260
+        }
+      ]
+    },
+    {
+      "invoice_id": "19bf92a623a6e478",
+      "supplier": "עודד דניאל BeeComm",
+      "date": "2026-01-26",
+      "items": [
+        {
+          "name": "מדפסת שירות",
+          "quantity": 6,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "מסופון דה זה וו קטן שירות",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 90,
+          "unit_price": 45
+        },
+        {
+          "name": "מסופון ד.ז.ו נייד שנרכש מביקום",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 90,
+          "unit_price": 45
+        },
+        {
+          "name": "רישיון ענן",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 900,
+          "unit_price": 900
+        },
+        {
+          "name": "דה זה וו P5 שירות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 45,
+          "unit_price": 45
+        },
+        {
+          "name": "דה זה וו P5 שירות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 45,
+          "unit_price": 45
+        },
+        {
+          "name": "מסופון דה זה וו קטן שירות",
+          "quantity": 2,
+          "unit": "יחידה",
+          "total": 90,
+          "unit_price": 45
+        }
+      ]
+    },
+    {
+      "invoice_id": "19bfb1c8bc483ba6",
+      "supplier": "סמדר נוימן",
+      "date": "2026-01-26",
+      "items": [
+        {
+          "name": "אחזקה חודשית",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 1200,
+          "unit_price": 1200
+        }
+      ]
+    },
+    {
+      "invoice_id": "19bf9c6a5811b117",
+      "supplier": "אלפרד שירותי מידע בע״מ",
+      "date": "2026-01-26",
+      "items": []
+    },
+    {
+      "invoice_id": "19bf9c1494665a62",
+      "supplier": "כנם השקעות",
+      "date": "2026-01-26",
+      "items": [
+        {
+          "name": "דמי ניהול",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 10705.93,
+          "unit_price": 10705.93
+        }
+      ]
+    },
+    {
+      "invoice_id": "19bdf5a5654ac565",
+      "supplier": "סמדר נוימן",
+      "date": "2026-01-21",
+      "items": []
+    },
+    {
+      "invoice_id": "19be089beb06b691",
+      "supplier": "קולאיוונט בעמ",
+      "date": "2026-01-21",
+      "items": [
+        {
+          "name": "שיווק ופרסום בינואר 2026",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 1000,
+          "unit_price": 1000
+        }
+      ]
+    },
+    {
+      "invoice_id": "19ba65ea6be46436",
+      "supplier": "הופה דיגיטל",
+      "date": "2026-01-10",
+      "items": [
+        {
+          "name": "תשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 300,
+          "unit_price": 300
+        }
+      ]
+    },
+    {
+      "invoice_id": "19ba65e96e7df5a7",
+      "supplier": "הופה דיגיטל",
+      "date": "2026-01-10",
+      "items": [
+        {
+          "name": "תשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 300,
+          "unit_price": 300
+        }
+      ]
+    },
+    {
+      "invoice_id": "19b780a89bf0c0b4",
+      "supplier": "פזגז",
+      "date": "2025-12-31",
+      "items": [
+        {
+          "name": "סה\"כ צריכה: 49.441 מ'ק במחיר ממוצע משוקלל של 18.23 ש\"ח",
+          "quantity": 49.441,
+          "unit": "מ'ק",
+          "total": 901.35,
+          "unit_price": 18.23
+        },
+        {
+          "name": "דמי שימוש קבועים (דמ'ש) ל 31 ימים",
+          "quantity": 31,
+          "unit": "ימים",
+          "total": 38.48,
+          "unit_price": 1.24
+        },
+        {
+          "name": "הנחה/עיגול",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": -0.03,
+          "unit_price": -0.03
+        }
+      ]
+    },
+    {
+      "invoice_id": "19b780a89988329d",
+      "supplier": "פזגז",
+      "date": "2025-12-31",
+      "items": [
+        {
+          "name": "סה''כ צריכה: 115.780 מ'ק במחיר ממוצע משוקלל של 21.88 ש''ח",
+          "quantity": 115.78,
+          "unit": "מ'ק",
+          "total": 2532.94,
+          "unit_price": 21.88
+        },
+        {
+          "name": "דמי שימוש קבועים (דמ'ש) ל 31 ימים",
+          "quantity": 31,
+          "unit": "ימים",
+          "total": 38.48,
+          "unit_price": 1.24
+        },
+        {
+          "name": "הנחה/עיגול",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": -0.02,
+          "unit_price": -0.02
+        }
+      ]
+    },
+    {
+      "invoice_id": "19b6957c0f43d2b8",
+      "supplier": "פלאפון",
+      "date": "2025-12-29",
+      "items": [
+        {
+          "name": "תשלום חודשי קבוע (דמי מנוי)",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 40.33,
+          "unit_price": 40.33
+        },
+        {
+          "name": "חבילת גלישה בנפח 500GB",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "לגלישה בטוחה ברשת Pelephone Cyber",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 4.94,
+          "unit_price": 4.94
+        },
+        {
+          "name": "דקות שיחה כלולות",
+          "quantity": 528.5,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "שליחת SMS יחידות כלולות",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "גלישה באפליקציות מובילות בחו\"ל MB",
+          "quantity": 25405.664,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "יחידות כלולות - SMS יוצא בחו\"ל",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "דקות כלולות תאילנד",
+          "quantity": 188,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "דקות כלולות תאילנד",
+          "quantity": 167,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "נפח גלישה ב MB תאילנד",
+          "quantity": 5064.355,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "נפח גלישת אינטרנט כלול ב - MB",
+          "quantity": 16701.72,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "חיוב בגין חו\"ל מושלמת L אתר ללא חיוב במע\"מ",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 299,
+          "unit_price": 299
+        }
+      ]
+    },
+    {
+      "invoice_id": "19b06bff41c4d168",
+      "supplier": "הופה דיגיטל",
+      "date": "2025-12-10",
+      "items": [
+        {
+          "name": "תשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 300,
+          "unit_price": 300
+        }
+      ]
+    },
+    {
+      "invoice_id": "19b06bff2f1fd675",
+      "supplier": "הופה דיגיטל",
+      "date": "2025-12-10",
+      "items": [
+        {
+          "name": "תשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 300,
+          "unit_price": 300
+        }
+      ]
+    },
+    {
+      "invoice_id": "19ad941f977d6e9b",
+      "supplier": "פזגז",
+      "date": "2025-12-01",
+      "items": [
+        {
+          "name": "סה\"כ צריכה: 46.501 מ'ק במחיר ממוצע משוקלל של 17.70 ש\"ח",
+          "quantity": 46.501,
+          "unit": "מ'ק",
+          "total": 823.07,
+          "unit_price": 17.7
+        },
+        {
+          "name": "דמי שימוש קבועים (דמ'ש) ל 30 ימים",
+          "quantity": 30,
+          "unit": "ימים",
+          "total": 37.23,
+          "unit_price": 1.24
+        }
+      ]
+    },
+    {
+      "invoice_id": "19ad941f734d1c9c",
+      "supplier": "פזגז",
+      "date": "2025-12-01",
+      "items": [
+        {
+          "name": "סה\"כ צריכה: 105.492 מ'ק במחיר ממוצע משוקלל של 21.24 ש''ח",
+          "quantity": 105.492,
+          "unit": "מ'ק",
+          "total": 2240.65,
+          "unit_price": 21.24
+        },
+        {
+          "name": "דמי שימוש קבועים (דמ'ש) ל 30 ימים",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 37.23,
+          "unit_price": 37.23
+        },
+        {
+          "name": "הנחה/עיגול",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0.02,
+          "unit_price": 0.02
+        }
+      ]
+    },
+    {
+      "invoice_id": "19ac45495d05be8a",
+      "supplier": "פלאפון",
+      "date": "2025-11-27",
+      "items": [
+        {
+          "name": "חיוב בגין שרותים בתשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 45.27,
+          "unit_price": 45.27
+        },
+        {
+          "name": "חיוב על פי שימוש",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "הטבות/הנחות שפלאפון מעניקה לכם",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": -18.58,
+          "unit_price": -18.58
+        },
+        {
+          "name": "תשלום חודשי קבוע (דמי מנוי)",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 40.33,
+          "unit_price": 40.33
+        },
+        {
+          "name": "חבילת גלישה בנפח 500GB",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 0,
+          "unit_price": 0
+        },
+        {
+          "name": "Pelephone Cyber לגלישה בטוחה ברשת",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 4.94,
+          "unit_price": 4.94
+        }
+      ]
+    },
+    {
+      "invoice_id": "19ac0c72cd45f79f",
+      "supplier": "הופה דיגיטל",
+      "date": "2025-11-26",
+      "items": [
+        {
+          "name": "שירות חודשי",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 300,
+          "unit_price": 300
+        }
+      ]
+    },
+    {
+      "invoice_id": "19ac0c5235f63298",
+      "supplier": "הופה דיגיטל",
+      "date": "2025-11-26",
+      "items": [
+        {
+          "name": "תשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 300,
+          "unit_price": 300
+        }
+      ]
+    },
+    {
+      "invoice_id": "19aba9072a5006b1",
+      "supplier": "פרומו טים",
+      "date": "2025-11-25",
+      "items": []
+    },
+    {
+      "invoice_id": "19aa03c48f45011a",
+      "supplier": "פזגז",
+      "date": "2025-11-20",
+      "items": []
+    },
+    {
+      "invoice_id": "19a6c3440d14d6e6",
+      "supplier": "הופה דיגיטל",
+      "date": "2025-11-10",
+      "items": [
+        {
+          "name": "תשלום חודשי קבוע",
+          "quantity": 1,
+          "unit": "יחידה",
+          "total": 300,
+          "unit_price": 300
+        }
+      ]
+    },
+    {
+      "invoice_id": "19cb5cd563317243",
+      "supplier": "טמפו",
+      "date": "2026-03-03",
+      "items": []
+    }
+  ]
+}
