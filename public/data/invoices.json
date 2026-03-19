@@ -1,6 +1,6 @@
 {
-  "last_sync": "2026-03-19 00:21",
-  "total": 140,
+  "last_sync": "2026-03-19 12:13",
+  "total": 163,
   "invoices": [
     {
       "id": "19d01a6500813bda",
@@ -1540,6 +1540,259 @@
       "doc_type": "חיוב",
       "subject": "עדכון על חיוב שבוצע על ידי הופה דיגיטל בע\"מ",
       "from_email": "c+245791763@sumit.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a674538a2e0da3",
+      "supplier": "אור פעמית",
+      "invoice_number": "",
+      "date": "2025-11-09",
+      "amount": 14852,
+      "doc_type": "כרטסת",
+      "subject": "אור פעמית כרטסת",
+      "from_email": "orpeamit@gmail.com",
+      "status": "received"
+    },
+    {
+      "id": "19a58ad1d2065e7c",
+      "supplier": "Tabit",
+      "invoice_number": "SI256028336",
+      "date": "2025-11-06",
+      "amount": 708,
+      "doc_type": "חשבונית מס",
+      "subject": "Tabit SI256028336",
+      "from_email": "billing-il@tabit.cloud",
+      "status": "received"
+    },
+    {
+      "id": "19a588ba438360fa",
+      "supplier": "קוקה קולה",
+      "invoice_number": "",
+      "date": "2025-11-06",
+      "amount": 0,
+      "doc_type": "חשבונית",
+      "subject": "קוקה קולה 11.2025",
+      "from_email": "Invoice@cocacola.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a5846480de68f8",
+      "supplier": "קוקה קולה",
+      "invoice_number": "",
+      "date": "2025-11-06",
+      "amount": 1900.64,
+      "doc_type": "חשבונית",
+      "subject": "קוקה קולה 11.2025",
+      "from_email": "Invoice@cocacola.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a537bbe40742dc",
+      "supplier": "IPCOM",
+      "invoice_number": "RC259017402",
+      "date": "2025-11-05",
+      "amount": 472,
+      "doc_type": "קבלה",
+      "subject": "IPCOM קבלה RC259017402",
+      "from_email": "invoice@ip-com.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a537a0b483f93e",
+      "supplier": "IPCOM",
+      "invoice_number": "SI256018683",
+      "date": "2025-11-05",
+      "amount": 472,
+      "doc_type": "חשבונית מס",
+      "subject": "IPCOM SI256018683",
+      "from_email": "invoice@ip-com.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a52d83c61663eb",
+      "supplier": "צביקה קלמן",
+      "invoice_number": "",
+      "date": "2025-11-05",
+      "amount": 16242,
+      "doc_type": "כרטסת",
+      "subject": "צביקה קלמן כרטסית",
+      "from_email": "zvika123alc@gmail.com",
+      "status": "received"
+    },
+    {
+      "id": "19a52d77f08d326e",
+      "supplier": "הכרם",
+      "invoice_number": "",
+      "date": "2025-11-05",
+      "amount": 1199.26,
+      "doc_type": "דוח גיול חובות",
+      "subject": "הכרם דוח גיול חובות",
+      "from_email": "donotreply@pepperi.com",
+      "status": "received"
+    },
+    {
+      "id": "19a4ef55676ee219",
+      "supplier": "עודד דניאל BeeComm",
+      "invoice_number": "142293",
+      "date": "2025-11-04",
+      "amount": 2124,
+      "doc_type": "חשבונית מס",
+      "subject": "עודד דניאל BeeComm 142293",
+      "from_email": "sender@invoice-one.com",
+      "status": "received"
+    },
+    {
+      "id": "19a4ec5d5639c86a",
+      "supplier": "BuyMe",
+      "invoice_number": "DB24.2512361",
+      "date": "2025-11-04",
+      "amount": 859.37,
+      "doc_type": "חשבונית",
+      "subject": "BuyMe DB24.2512361",
+      "from_email": "finpart@buyme.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a4e4df9b54e869",
+      "supplier": "Wolt",
+      "invoice_number": "",
+      "date": "2025-11-04",
+      "amount": 1180,
+      "doc_type": "דוח תשלום",
+      "subject": "Wolt transactions 11/2025",
+      "from_email": "info@wolt.com",
+      "status": "received"
+    },
+    {
+      "id": "19a4e49a9b78ed6e",
+      "supplier": "Wolt",
+      "invoice_number": "",
+      "date": "2025-11-04",
+      "amount": 2063.82,
+      "doc_type": "דוח תשלום",
+      "subject": "Wolt transactions 11/2025",
+      "from_email": "info@wolt.com",
+      "status": "received"
+    },
+    {
+      "id": "19a4bc54e01b7791",
+      "supplier": "טמפו",
+      "invoice_number": "0103256488",
+      "date": "2025-11-03",
+      "amount": 2709.21,
+      "doc_type": "חשבונית",
+      "subject": "טמפו 0103256488",
+      "from_email": "jobrun@tempo.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a4bc407f88e5c1",
+      "supplier": "טמפו",
+      "invoice_number": "0103256440",
+      "date": "2025-11-03",
+      "amount": 58842.23,
+      "doc_type": "חשבונית",
+      "subject": "טמפו 0103256440",
+      "from_email": "jobrun@tempo.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a4a47f7946055b",
+      "supplier": "מרינה גליל",
+      "invoice_number": "SI256M006956",
+      "date": "2025-11-03",
+      "amount": 19383,
+      "doc_type": "חשבונית מס",
+      "subject": "מרינה גליל SI256M006956 אוק-25",
+      "from_email": "eti.adukay@marina-galil.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a487014edd193d",
+      "supplier": "קוקה קולה",
+      "invoice_number": "",
+      "date": "2025-11-03",
+      "amount": 1912.99,
+      "doc_type": "חשבונית",
+      "subject": "קוקה קולה 11.2025",
+      "from_email": "Invoice@cocacola.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a44df758b4f219",
+      "supplier": "אונטופו ישראל",
+      "invoice_number": "645794",
+      "date": "2025-11-02",
+      "amount": 3009,
+      "doc_type": "חשבונית מס",
+      "subject": "אונטופו ישראל 645794",
+      "from_email": "outgoing@icount.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a44ddbbf4ff2e1",
+      "supplier": "אונטופו ישראל",
+      "invoice_number": "645748",
+      "date": "2025-11-02",
+      "amount": 4271.6,
+      "doc_type": "חשבונית מס",
+      "subject": "אונטופו ישראל 645748",
+      "from_email": "outgoing@icount.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a4465e1d256bf6",
+      "supplier": "Kill Bill",
+      "invoice_number": "SI256002518",
+      "date": "2025-11-02",
+      "amount": 1181,
+      "doc_type": "חשבונית מס",
+      "subject": "Kill Bill SI256002518 אוק-25",
+      "from_email": "order@kill-bill.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a441efc3187a18",
+      "supplier": "תפוז תרי",
+      "invoice_number": "SI256012485",
+      "date": "2025-11-02",
+      "amount": 3543,
+      "doc_type": "חשבונית מס",
+      "subject": "תפוז תרי SI256012485 אוק-25",
+      "from_email": "jenny@tapuztari.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a441a509ff3039",
+      "supplier": "אשכול הארץ",
+      "invoice_number": "38363",
+      "date": "2025-11-02",
+      "amount": 14020.19,
+      "doc_type": "חשבונית מס",
+      "subject": "אשכול הארץ 38363",
+      "from_email": "eshkol.haaretz@gmail.com",
+      "status": "received"
+    },
+    {
+      "id": "19a45fc93935293f",
+      "supplier": "קוקה קולה",
+      "invoice_number": "",
+      "date": "2025-11-02",
+      "amount": 3490.96,
+      "doc_type": "חשבונית",
+      "subject": "קוקה קולה 102025",
+      "from_email": "invoice@cocacola.co.il",
+      "status": "received"
+    },
+    {
+      "id": "19a45f262ae67ce1",
+      "supplier": "קוקה קולה",
+      "invoice_number": "",
+      "date": "2025-11-02",
+      "amount": 16018.77,
+      "doc_type": "חשבונית",
+      "subject": "קוקה קולה 102025",
+      "from_email": "invoice@cocacola.co.il",
       "status": "received"
     }
   ]
