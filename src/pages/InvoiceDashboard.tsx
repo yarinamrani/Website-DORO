@@ -1,12 +1,30 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FileText, Users, TrendingUp, AlertTriangle, ArrowUpRight, ArrowDownRight, ShoppingBag, RefreshCw, Search, BarChart3 } from 'lucide-react';
-import { getDashboardStats, getPriceAlerts, getInvoices } from '../lib/gmailInvoiceService';
-import type { GmailInvoice, PriceAlert } from '../lib/gmailInvoiceService';
+import { getDashboardStats, getInvoices } from '../lib/gmailInvoiceService';
+import type { GmailInvoice } from '../lib/gmailInvoiceService';
+
+interface ProductPriceAlert {
+  product: string;
+  supplier: string;
+  previous_price: number;
+  current_price: number;
+  change_percent: number;
+  previous_date: string;
+  current_date: string;
+}
+
+async function loadProductAlerts(): Promise<ProductPriceAlert[]> {
+  try {
+    const res = await fetch('/data/price-alerts.json');
+    const data = await res.json();
+    return data.alerts || [];
+  } catch { return []; }
+}
 
 export default function InvoiceDashboard() {
   const [stats, setStats] = useState({ totalInvoices: 0, totalSuppliers: 0, monthInvoices: 0, lastMonthInvoices: 0, monthTotal: 0, priceAlerts: 0, lastSync: '' });
-  const [priceAlerts, setPriceAlerts] = useState<PriceAlert[]>([]);
+  const [priceAlerts, setPriceAlerts] = useState<ProductPriceAlert[]>([]);
   const [recentInvoices, setRecentInvoices] = useState<GmailInvoice[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -66,10 +84,10 @@ export default function InvoiceDashboard() {
       setLoading(true);
       const [s, pa, recent] = await Promise.all([
         getDashboardStats(),
-        getPriceAlerts(),
+        loadProductAlerts(),
         getInvoices(),
       ]);
-      setStats(s);
+      setStats({ ...s, priceAlerts: pa.length });
       setPriceAlerts(pa);
       setRecentInvoices(recent.slice(0, 10));
     } catch (e) {
@@ -274,29 +292,29 @@ export default function InvoiceDashboard() {
             ) : (
               <div className="flex flex-col gap-2 max-h-[500px] overflow-y-auto">
                 {priceAlerts.slice(0, 15).map((alert, i) => {
-                  const isUp = alert.changePercent > 0;
+                  const isUp = alert.change_percent > 0;
                   return (
                     <div key={i} className={`rounded-xl p-4 border ${
                       isUp ? 'bg-red-50 border-red-100' : 'bg-green-50 border-green-100'
                     }`}>
                       <div className="flex items-center justify-between mb-1">
-                        <span className="font-medium text-sm text-gray-900">{alert.supplier}</span>
+                        <span className="font-medium text-sm text-gray-900">{alert.product}</span>
                         <span className={`flex items-center gap-1 text-sm font-bold ${
                           isUp ? 'text-red-600' : 'text-green-600'
                         }`}>
                           {isUp ? <ArrowUpRight size={14} /> : <ArrowDownRight size={14} />}
-                          {Math.abs(alert.changePercent).toFixed(1)}%
+                          {Math.abs(alert.change_percent).toFixed(1)}%
                         </span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <span>₪{alert.previousAmount.toLocaleString()}</span>
+                        <span>₪{alert.previous_price.toLocaleString()}</span>
                         <span>←</span>
                         <span className={`font-medium ${isUp ? 'text-red-600' : 'text-green-600'}`}>
-                          ₪{alert.currentAmount.toLocaleString()}
+                          ₪{alert.current_price.toLocaleString()}
                         </span>
                       </div>
                       <p className="text-xs text-gray-400 mt-1">
-                        {new Date(alert.date).toLocaleDateString('he-IL')}
+                        {alert.supplier} · {new Date(alert.current_date).toLocaleDateString('he-IL')}
                       </p>
                     </div>
                   );
