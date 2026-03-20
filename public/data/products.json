@@ -2,6 +2,188 @@
   "last_sync": "2026-03-20 01:46",
   "products": [
     {
+      "invoice_id": "19d0893a5829c446",
+      "supplier": "מרינה גליל",
+      "date": "2026-03-20",
+      "items": [
+        {
+          "name": "שר לובן ק\"ג",
+          "quantity": 6.2,
+          "unit": "ק\"ג",
+          "total": 135.47,
+          "unit_price": 21.85
+        },
+        {
+          "name": "מלפפון פרמיום",
+          "quantity": 13.6,
+          "unit": "ק\"ג",
+          "total": 90.44,
+          "unit_price": 6.65
+        },
+        {
+          "name": "לבבות קיסר בוסק",
+          "quantity": 8,
+          "unit": "יח",
+          "total": 54,
+          "unit_price": 6.75
+        },
+        {
+          "name": "עגבניה חממה ק\"ג",
+          "quantity": 11.4,
+          "unit": "ק\"ג",
+          "total": 162.45,
+          "unit_price": 14.25
+        },
+        {
+          "name": "חסה לליף מהדרין",
+          "quantity": 8,
+          "unit": "יח",
+          "total": 58,
+          "unit_price": 7.25
+        },
+        {
+          "name": "בצל אדום מקולף מהדרין",
+          "quantity": 1,
+          "unit": "ק\"ג",
+          "total": 70,
+          "unit_price": 70
+        },
+        {
+          "name": "בצל ירוק רגיל יח",
+          "quantity": 6,
+          "unit": "יח",
+          "total": 14.4,
+          "unit_price": 2.4
+        },
+        {
+          "name": "שרי צהוב ק\"ג",
+          "quantity": 2,
+          "unit": "ק\"ג",
+          "total": 41.8,
+          "unit_price": 20.9
+        },
+        {
+          "name": "חציל פרמיום ק\"ג",
+          "quantity": 8.6,
+          "unit": "ק\"ג",
+          "total": 40.65,
+          "unit_price": 4.73
+        },
+        {
+          "name": "כרובית ק\"ג",
+          "quantity": 8.6,
+          "unit": "ק\"ג",
+          "total": 57.19,
+          "unit_price": 6.65
+        },
+        {
+          "name": "פלפל דלעת יח",
+          "quantity": 6,
+          "unit": "יח",
+          "total": 12,
+          "unit_price": 2
+        },
+        {
+          "name": "שיני שום קלופות ק\"ג",
+          "quantity": 4,
+          "unit": "ק\"ג",
+          "total": 72,
+          "unit_price": 18
+        },
+        {
+          "name": "פלפל צילי יח",
+          "quantity": 6,
+          "unit": "יח",
+          "total": 27,
+          "unit_price": 4.5
+        },
+        {
+          "name": "בטטה L ק\"ג",
+          "quantity": 11.8,
+          "unit": "ק\"ג",
+          "total": 67.26,
+          "unit_price": 5.7
+        },
+        {
+          "name": "עלי רוקט 150 גרם",
+          "quantity": 5,
+          "unit": "יח",
+          "total": 45.25,
+          "unit_price": 9.05
+        },
+        {
+          "name": "עלי תרד ניוזילנדי בוסק",
+          "quantity": 4,
+          "unit": "יח",
+          "total": 25.6,
+          "unit_price": 6.4
+        },
+        {
+          "name": "בזיליקום freshlid",
+          "quantity": 4,
+          "unit": "יח",
+          "total": 14,
+          "unit_price": 3.5
+        },
+        {
+          "name": "מרווה freshlid",
+          "quantity": 1,
+          "unit": "יח",
+          "total": 4.8,
+          "unit_price": 4.8
+        },
+        {
+          "name": "נענע יח בשקית",
+          "quantity": 8,
+          "unit": "יח",
+          "total": 16,
+          "unit_price": 2
+        },
+        {
+          "name": "כוסברה יח בשקית",
+          "quantity": 10,
+          "unit": "יח",
+          "total": 20,
+          "unit_price": 2
+        },
+        {
+          "name": "רוזמרין freshlid",
+          "quantity": 3,
+          "unit": "יח",
+          "total": 10.5,
+          "unit_price": 3.5
+        },
+        {
+          "name": "לימון פרמיום",
+          "quantity": 6.6,
+          "unit": "ק\"ג",
+          "total": 43.89,
+          "unit_price": 6.65
+        },
+        {
+          "name": "זנג אדום ארוז",
+          "quantity": 5,
+          "unit": "יח",
+          "total": 77.5,
+          "unit_price": 15.5
+        },
+        {
+          "name": "תפוח עץ ירוק איטליה",
+          "quantity": 3,
+          "unit": "יח",
+          "total": 25.65,
+          "unit_price": 8.55
+        },
+        {
+          "name": "תפוח אדום שק 4 קג",
+          "quantity": 1,
+          "unit": "שק",
+          "total": 15.2,
+          "unit_price": 15.2
+        }
+      ]
+    },
+    {
       "invoice_id": "19d01a6500813bda",
       "supplier": "בזק",
       "date": "2026-03-18",
